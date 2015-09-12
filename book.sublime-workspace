@@ -1,0 +1,1282 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"total",
+				"totalDuration〔variable〕"
+			],
+			[
+				"addr",
+				"address"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"all",
+				"allMarker"
+			],
+			[
+				"template",
+				"template_directory"
+			],
+			[
+				"yea",
+				"yearsUrl"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"adja",
+				"adjacent_post"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"scro",
+				"scrollTop"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"load",
+				"loadedPage"
+			],
+			[
+				"arrmer",
+				"array_merge〔function〕"
+			],
+			[
+				"cat",
+				"cat_ID"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"page",
+				"pageNum"
+			],
+			[
+				"ri",
+				"right_Col"
+			],
+			[
+				"lef",
+				"left_Col〔variable〕"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"vi",
+				"videos"
+			],
+			[
+				"ca",
+				"caption"
+			],
+			[
+				"parse",
+				"parseInt〔function〕"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"gutter",
+				"gutter-medium"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"get_template",
+				"get_template_part"
+			],
+			[
+				"gallerie",
+				"gallerieId"
+			],
+			[
+				"ga",
+				"$gallery〔variable〕"
+			],
+			[
+				"galel",
+				"gallerie_id"
+			],
+			[
+				"catego",
+				"categorie"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"add",
+				"addClass〔function〕"
+			],
+			[
+				"border-left",
+				"border-left-color: 〔property〕"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"lig",
+				"lighter〔value〕"
+			],
+			[
+				"margin",
+				"margin-right: 〔property〕"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"background-",
+				"background-color: 〔property〕"
+			],
+			[
+				"gu",
+				"gutter"
+			],
+			[
+				"border",
+				"border-bottom:   (property)"
+			],
+			[
+				"wid",
+				"width:   (property)"
+			],
+			[
+				"min",
+				"min-width:   (property)"
+			],
+			[
+				"backgro",
+				"background-color:   (property)"
+			],
+			[
+				"column",
+				"column-width"
+			],
+			[
+				"backg",
+				"background-color:   (property)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "{\n    // The tab key will cycle through the settings when first created\n    // Visit http://wbond.net/sublime_packages/sftp/settings for help\n\n    // sftp, ftp or ftps\n    \"type\": \"sftp\",\n\n    \"save_before_upload\": true,\n    \"upload_on_save\": true,\n    \"sync_down_on_open\": false,\n    \"sync_skip_deletes\": false,\n    \"confirm_downloads\": false,\n    \"confirm_sync\": false,\n    \"confirm_overwrite_newer\": false,\n\n    // \"host\": \"1and1\",\n    // \"user\": \"u54944036\",\n    // \"ssh_key_file\": \"~/.ssh/1and1_hosting\",\n    // \"remote_path\": \"/client/oniris/wp-content/themes/oniris-v2\",\n    \n    \"host\" : \"195.154.86.75\",\n    \"user\" : \"laventurier\",\n    \"password\" :  \"36tI6TszaFkC\",\n    \"ssh_key_file\" : \"~/.ssh/id_onlinet\",\n    \"remote_path\": \"/var/www/html/laventurierviking/book\",\n\n    \"ignore_regexes\": [\n        \"\\\\.sublime-(project|workspace)\", \"sftp-config(-alt\\\\d?)?\\\\.json\",\n        \"sftp-settings\\\\.json\",\"package\\\\.json\",\"Gruntfile\\\\.js\", \"/venv/\", \"\\\\.svn\", \"\\\\.md\", \"\\\\.hg\", \"\\\\.git\",\n        \"\\\\.bzr\", \"_darcs\", \"CVS\", \"\\\\.DS_Store\", \"Thumbs\\\\.db\", \"desktop\\\\.ini\", \"\\\\.rb\", \"\\\\.sass-cache\", \"scss\", \"node_modules\", \"SOURCE\", \"assets/less\"\n    ],\n    //\"file_permissions\": \"664\",\n    //\"dir_permissions\": \"775\",\n\n    //\"extra_list_connections\": 0,\n\n    \"connect_timeout\": 30,\n    //\"keepalive\": 120,\n    //\"ftp_passive_mode\": true,\n    //\"ssh_key_file\": \"~/.ssh/id_rsa\",\n    //\"sftp_flags\": [\"-F\", \"/path/to/ssh_config\"],\n\n    //\"preserve_modification_times\": false,\n    //\"remote_time_offset_in_hours\": 0,\n    //\"remote_encoding\": \"utf-8\",\n    //\"remote_locale\": \"C\",\n}",
+			"file": "sftp-config.json",
+			"file_size": 1576,
+			"file_write_time": 130865533320000000,
+			"settings":
+			{
+				"buffer_size": 1576,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 5,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "book.sublime-project",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "bro",
+		"selected_items":
+		[
+			[
+				"bro",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"brow",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"rem",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"remo",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"br",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"b",
+				"SFTP: Browse Remote…"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"brp",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"ren",
+				"Emmet: Rename Tag"
+			],
+			[
+				"rena",
+				"Emmet: Rename Tag"
+			],
+			[
+				"pcl",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book"
+	],
+	"file_history":
+	[
+		"/Users/nuagegraphik/.ssh/config",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Downloads/kevinliteon-spot-6fd6decdee8a/bootstrap.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/cleanup.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/head.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/header.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/shame.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/entry-meta.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/hentry.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/layout.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/toto.md",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/map.php",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1430163414/mapped/var/www/html/laventurierviking/wp-content/plugins/wp-findmespot/wp-findmespot.php",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1430163812/mapped/var/www/html/laventurierviking/wp-content/plugins/wp-findmespot/wp-findmespot.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/less/media.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/post-like.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/vendor/post-like.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/scripts.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/vendor/post-like.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/variables.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/nav.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uri-path/test/main.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/sidebar.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/base.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/single.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/index.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/searchform.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/navbar.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/man/man3ctype/ctio.3ctype",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/request/node_modules/http-signature/node_modules/ctype/ctio.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/findup-sync/node_modules/glob/test/cwd-test.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/theme.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/theme.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/rhino/test-header.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dwlaventurier.min.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/simple_html_dom.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-main-options.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-main-spec.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/iconv-lite/test/main-test.js",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1426499573/mapped/var/www/html/laventurierviking/wp-content/plugins/wp-plugin-afac_1.4b/kwebble_archives_by_cat.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/flat.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/vendor/fotorama.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/mixins.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/comments.php",
+		"/Users/nuagegraphik/Desktop/commandling-util",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/page.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/media.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/custom.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/optimist/example/boolean_double.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/source-map/test/source-map/test-dog-fooding.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/source-map/test/source-map/test-dog-fooding.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-modify-vars-options.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-production-options.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/comments.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/comment.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/variables-in-at-rules.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/img/vikingcaribous.svg",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/sftp-config.json",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/variables.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/ajax-gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/vendor/fotorama.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/vendor/magnific-popup.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/ajaxs.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/single-scripts.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/node_modules/livereload-server/lib/connection.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/templates/content-none.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/node_modules/underscore.string/test/strings_standalone.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/.idea/scopes/scope_settings.xml",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/node_modules/.bin/image-size",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/.bin/shjs",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt/.npmignore",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/mixins.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/debug/linenumbers-all.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-livereload/LICENSE",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/scripts/run-tests.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/browser/runner-relative-urls-options.js",
+		"/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/sublime-sftp-browse-1425376518/mapped/var/www/html/laventurierviking/wp-config.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/widgets.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/font-awesome/rotated-flipped.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/font-awesome/font-awesome.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/font-awesome/less/rotated-flipped.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/flat/timeline.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/extend-nest.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dw-timeline-pro-flat.css.map",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dw-timeline-pro-flat.min.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dw-timeline-pro.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/css/dw-timeline-pro.min.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/img/fond.jpg",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/customizer.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/less/bootstrap/progress-bars.less",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/fonts/glyphicons-halflings-regular.svg",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/social-share-count.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/make.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-less/node_modules/less/test/css/mixins-important.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Projet/mongolia/recherche/mailing",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/archive.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/assets/js/vendor/jquery.lazyload.min.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/node_modules/grunt-contrib-uglify/node_modules/uglify-js/node_modules/optimist/example/line_count_options.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/dw-importer/dw-importer.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/dw-timeline-pro-flat.min.css.map",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/dwpro.sublime-project",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/style.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/main.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-list.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ajax-gallery.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/videos-list.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/fotorama.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.modal.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier",
+			"",
+			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss",
+			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris",
+			"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/ink"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"465",
+			"page-description",
+			"lastupd",
+			".bg",
+			".gb",
+			"fond.jpg",
+			"head.php",
+			"left",
+			"icon-",
+			"script",
+			"font-awesome",
+			"iframe",
+			"64",
+			"media",
+			"screen-xs-max",
+			"@media",
+			"@media (min-width: 768px)",
+			"acf-map",
+			"location",
+			"0",
+			"locations",
+			"locations[0].lat",
+			"var ",
+			"consol",
+			"img",
+			"glyphicon",
+			"navbar-toggle",
+			".navbar-toggle",
+			"p",
+			"nav-bar-home",
+			"address",
+			"locations",
+			"location",
+			"file_exists(",
+			"function bookmarks_shortcode( $atts = array() ) {\n    $defaults = array(\n        'title_li'         => false,\n        'title_before'     => '<hr><h2>',\n        'title_after'      => '</h2>',\n        'category'         => ' ',\n        'category_before'  => false,\n        'category_after'   => false,\n        'categorize'       => true,\n        'show_description' => true,\n        'between'          => '<br />',\n        'show_images'      => false,\n        'show_rating'      => false,\n        'echo'             => false,\n    );\n\n    $args = wp_parse_args( $atts, $defaults );\n    return wp_list_bookmarks( $args );\n}\nadd_shortcode( 'links', 'bookmarks_shortcode' );",
+			"content",
+			".content",
+			"cat",
+			"point",
+			"loaded",
+			"oniris.nuagegraphik",
+			"www.galerie-oniris",
+			"sidebar_hieght",
+			"right_Col",
+			"40",
+			"id=\"comments\"",
+			"comments",
+			"single",
+			"comments",
+			"single",
+			"close",
+			"10",
+			"fullscreen",
+			"fullscree",
+			"fotorama",
+			"5",
+			"#000",
+			"$image",
+			"$image-",
+			"entry-date",
+			"fotoramaLightbox",
+			"no-cover",
+			".no-cover",
+			".single",
+			"p",
+			"h4",
+			"adjacent",
+			"dw_timeline_adjacent_post",
+			"$adjacent_post",
+			"adjacent_post",
+			"escapade suivante",
+			"single-scripts",
+			"quote-box",
+			"adjacent-post",
+			"adjacent-post-link",
+			"read next",
+			"fotorama__fullscreen-icon",
+			"sub-nav-open",
+			"nav",
+			"opacity",
+			"opacity: .3",
+			".navbar-toggle",
+			"scrubber",
+			"glyphicon",
+			"href",
+			"awesome",
+			"h2",
+			"php echo",
+			"fotorama",
+			"[0]",
+			"linkContent",
+			"echo",
+			"link",
+			"reply",
+			"mfp-content",
+			"get_comments_number",
+			"comments_template",
+			" $post",
+			"post",
+			"galleryId",
+			"bimLa_gallery",
+			"get_gallery",
+			"wp_ajax_nopriv_get_gallery",
+			"bimLa_gallery",
+			"console",
+			"php echo ",
+			" <",
+			" ",
+			"fotorama",
+			".dwtl-right",
+			"div",
+			"sidebar-primary",
+			"sidebar_hieght",
+			"main-side",
+			"$('body')",
+			"html",
+			".main-sidebar-open",
+			"sidebar-toggle",
+			"navbar-toggle",
+			"sidebar-primary",
+			".main-sidebar-open",
+			".transition",
+			"@mixin transition",
+			".transform",
+			"transform",
+			"140px",
+			"280",
+			"min-height: 660px"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$title-font",
+			"$body-font",
+			"$title-font-family",
+			"$lighter-grey"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sftp-config.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								188,
+								188
+							]
+						],
+						"settings":
+						{
+							"auto_complete": true,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								5
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "book.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 122.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 122.0
+	},
+	"pinned_build_system": "",
+	"project": "book.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fun",
+				"functions.php"
+			],
+			[
+				"entry",
+				"templates/entry-meta.php"
+			],
+			[
+				"map",
+				"templates/map.php"
+			],
+			[
+				"scri",
+				"assets/js/scripts.js"
+			],
+			[
+				"lay",
+				"assets/less/flat/layout.less"
+			],
+			[
+				"layout",
+				"assets/less/flat/layout.less"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"scrip",
+				"assets/js/scripts.js"
+			],
+			[
+				"layou",
+				"assets/less/flat/layout.less"
+			],
+			[
+				"side",
+				"templates/sidebar.php"
+			],
+			[
+				"them",
+				"assets/less/flat/theme.less"
+			],
+			[
+				"funct",
+				"functions.php"
+			],
+			[
+				"mai",
+				"node_modules/grunt-contrib-uglify/node_modules/uri-path/test/main.js"
+			],
+			[
+				"main",
+				"node_modules/grunt-contrib-uglify/node_modules/uri-path/test/main.js"
+			],
+			[
+				"hentry",
+				"assets/less/flat/hentry.less"
+			],
+			[
+				"hentr",
+				"assets/less/flat/hentry.less"
+			],
+			[
+				"hent",
+				"assets/less/flat/hentry.less"
+			],
+			[
+				"meta",
+				"templates/entry-meta.php"
+			],
+			[
+				"contsing",
+				"templates/content-single.php"
+			],
+			[
+				"single",
+				"single.php"
+			],
+			[
+				"todo",
+				"toto.md"
+			],
+			[
+				"commen",
+				"lib/comments.php"
+			],
+			[
+				"varia",
+				"assets/less/bootstrap/variables.less"
+			],
+			[
+				"he",
+				"assets/less/flat/hentry.less"
+			],
+			[
+				"to",
+				"toto.md"
+			],
+			[
+				"aja",
+				"ajax-gallery.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"hen",
+				"assets/less/flat/hentry.less"
+			],
+			[
+				"cus",
+				"lib/custom.php"
+			],
+			[
+				"connt",
+				"templates/content.php"
+			],
+			[
+				"cust",
+				"lib/custom.php"
+			],
+			[
+				"contens",
+				"templates/content-single.php"
+			],
+			[
+				"sin",
+				"single.php"
+			],
+			[
+				"heade",
+				"templates/header.php"
+			],
+			[
+				"functi",
+				"functions.php"
+			],
+			[
+				"conte",
+				"templates/content.php"
+			],
+			[
+				"entr",
+				"templates/entry-meta.php"
+			],
+			[
+				"sidebar",
+				"templates/sidebar.php"
+			],
+			[
+				"hea",
+				"templates/header.php"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"mix",
+				"assets/less/bootstrap/mixins.less"
+			],
+			[
+				"conten",
+				"templates/content.php"
+			],
+			[
+				"layo",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"loop",
+				"oniris/loop-flex.php"
+			],
+			[
+				"ma",
+				"oniris/js/main.js"
+			],
+			[
+				"gall",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"aside",
+				"oniris/scss/elements/_aside.scss"
+			],
+			[
+				"galler",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"foto",
+				"oniris/js/vendor/fotorama.js"
+			],
+			[
+				"fot",
+				"oniris/js/vendor/fotorama.js"
+			],
+			[
+				"sha",
+				"oniris/scss/_shame.scss"
+			],
+			[
+				"g",
+				"oniris/Gruntfile.js"
+			],
+			[
+				"lop",
+				"oniris/loop-flex.php"
+			],
+			[
+				"head",
+				"oniris/header.php"
+			],
+			[
+				"sham",
+				"oniris/scss/_shame.scss"
+			],
+			[
+				"galle",
+				"oniris/templates/gallery.php"
+			],
+			[
+				"elem",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"fu",
+				"oniris/ft/asap-regular-demo.html"
+			],
+			[
+				"actu",
+				"oniris/templates/actu-highlight.php"
+			],
+			[
+				"singl",
+				"oniris/single.php"
+			],
+			[
+				"si",
+				"oniris/templates/simple.php"
+			],
+			[
+				"basi",
+				"oniris/scss/_basic.scss"
+			],
+			[
+				"loppf",
+				"oniris/loop-flex.php"
+			],
+			[
+				"lis",
+				"oniris/loop-list.php"
+			],
+			[
+				"loopfl",
+				"oniris/loop-flex.php"
+			],
+			[
+				"list",
+				"oniris/loop-list.php"
+			],
+			[
+				"mixi",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"simp",
+				"oniris/templates/simple.php"
+			],
+			[
+				"la",
+				"oniris/scss/_layout.scss"
+			],
+			[
+				"lo",
+				"oniris/loop-flex.php"
+			],
+			[
+				"el",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"ac",
+				"oniris/templates/actu-highlight.php"
+			],
+			[
+				"actus",
+				"oniris/templates/actus.php"
+			],
+			[
+				"llo",
+				"oniris/loop-flex.php"
+			],
+			[
+				"index",
+				"oniris/index.php"
+			],
+			[
+				"ctu",
+				"oniris/templates/actu.php"
+			],
+			[
+				"act",
+				"oniris/templates/actu-highlight.php"
+			],
+			[
+				"bloc",
+				"oniris/scss/elements/_bloc.scss"
+			],
+			[
+				"elemen",
+				"oniris/scss/_element.scss"
+			],
+			[
+				"loo",
+				"oniris/loop-flex.php"
+			],
+			[
+				"cle",
+				"oniris/lib/clean.php"
+			],
+			[
+				"cl",
+				"oniris/lib/clean.php"
+			],
+			[
+				"in",
+				"oniris/index.php"
+			],
+			[
+				"mixin",
+				"oniris/scss/_mixins.scss"
+			],
+			[
+				"bas",
+				"oniris/scss/_basic.scss"
+			],
+			[
+				"pa",
+				"oniris/scss/_page.scss"
+			],
+			[
+				"ind",
+				"oniris/index.php"
+			],
+			[
+				"function",
+				"oniris/functions.php"
+			],
+			[
+				"page",
+				"oniris/scss/_page.scss"
+			],
+			[
+				"funti",
+				"oniris/functions.php"
+			],
+			[
+				"font",
+				"oniris/scss/_font.scss"
+			],
+			[
+				"fle",
+				"oniris/loop-flex.php"
+			],
+			[
+				"sytl",
+				"oniris/scss/style.scss"
+			],
+			[
+				"icon.s",
+				"oniris/scss/_icons.scss"
+			],
+			[
+				"sty",
+				"oniris/scss/style.scss"
+			],
+			[
+				"clea",
+				"oniris/lib/clean.php"
+			],
+			[
+				"baic",
+				"oniris/scss/_basic.scss"
+			],
+			[
+				"style",
+				"oniris/scss/style.scss"
+			],
+			[
+				"grun",
+				"oniris/Gruntfile.js"
+			],
+			[
+				"content",
+				"oniris/content.php"
+			],
+			[
+				"styp",
+				"oniris/node_modules/load-grunt-tasks/node_modules/multimatch/node_modules/minimatch/node_modules/brace-expansion/test/same-type.js"
+			],
+			[
+				"inkflex",
+				"oniris/scss/ink/ink-flex.scss"
+			],
+			[
+				"inkfl",
+				"oniris/.sass-cache/a3ab731bd02709f8a419a95ae779830a683c8013/ink-flex.scssc"
+			],
+			[
+				"functio",
+				"oniris/functions.php"
+			],
+			[
+				"vari",
+				"oniris/scss/_variables.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 237.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
