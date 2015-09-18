@@ -1,0 +1,32 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+@font-face {
+  font-family: 'Code-Pro-Light';
+  src: url('../fonts/sourcecodepro-regular-webfont.eot');
+  src: url('../fonts/sourcecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecodepro-regular-webfont.woff') format('woff'), url('../fonts/sourcecodepro-regular-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Code-Pro-Light';
+  src: url('../fonts/sourcecpl-webfont.eot');
+  src: url('../fonts/sourcecpl-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sourcecpl-webfont.woff') format('woff'), url('../fonts/sourcecpl-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #737373;
+    background-color: black;
+}
+
+body {
+    background-image: url("../img/fond.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+}

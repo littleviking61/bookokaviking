@@ -1,0 +1,42 @@
+// element.scss
+// 
+
+.timeline-pale{
+	text-align: center;
+
+	span {
+    padding: $gutter 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: $gutter;
+    text-transform: uppercase;
+    font-family: 'Poiret One', sans-serif;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-weight: 700;
+    border-radius: $one;
+    background-color: black;
+    margin: $gutter-large 0;
+	}
+
+	&:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    content: '';
+    z-index: -1;
+  }
+}
+
+.content{
+	background-color: black;
+	font-size: $ft-size-large;
+}

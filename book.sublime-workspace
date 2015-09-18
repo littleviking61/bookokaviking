@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"over",
-				"overflow-y"
+				"gutter",
+				"gutter-large"
+			],
+			[
+				"back",
+				"background-color"
 			],
 			[
 				"mar",
-				"margin-right"
+				"margin-top"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"over",
+				"overflow-y"
 			],
 			[
 				"text",
@@ -148,10 +160,6 @@
 				"height"
 			],
 			[
-				"gutter",
-				"gutter-medium"
-			],
-			[
 				"re",
 				"relative"
 			],
@@ -251,33 +259,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "{\n    // The tab key will cycle through the settings when first created\n    // Visit http://wbond.net/sublime_packages/sftp/settings for help\n\n    // sftp, ftp or ftps\n    \"type\": \"sftp\",\n\n    \"save_before_upload\": true,\n    \"upload_on_save\": true,\n    \"sync_down_on_open\": false,\n    \"sync_skip_deletes\": false,\n    \"confirm_downloads\": false,\n    \"confirm_sync\": false,\n    \"confirm_overwrite_newer\": false,\n\n    // \"host\": \"1and1\",\n    // \"user\": \"u54944036\",\n    // \"ssh_key_file\": \"~/.ssh/1and1_hosting\",\n    // \"remote_path\": \"/client/oniris/wp-content/themes/oniris-v2\",\n    \n    \"host\" : \"195.154.86.75\",\n    \"user\" : \"laventurier\",\n    \"password\" :  \"36tI6TszaFkC\",\n    \"ssh_key_file\" : \"~/.ssh/id_onlinet\",\n    \"remote_path\": \"/var/www/html/laventurierviking/book\",\n\n    \"ignore_regexes\": [\n        \"\\\\.sublime-(project|workspace)\", \"sftp-config(-alt\\\\d?)?\\\\.json\",\n        \"sftp-settings\\\\.json\",\"package\\\\.json\",\"Gruntfile\\\\.js\", \"/venv/\", \"\\\\.svn\", \"\\\\.md\", \"\\\\.hg\", \"\\\\.git\",\n        \"\\\\.bzr\", \"_darcs\", \"CVS\", \"\\\\.DS_Store\", \"Thumbs\\\\.db\", \"desktop\\\\.ini\", \"\\\\.rb\", \"\\\\.sass-cache\", \"scss\", \"node_modules\", \"SOURCE\", \"assets/less\"\n    ],\n    //\"file_permissions\": \"664\",\n    //\"dir_permissions\": \"775\",\n\n    //\"extra_list_connections\": 0,\n\n    \"connect_timeout\": 30,\n    //\"keepalive\": 120,\n    //\"ftp_passive_mode\": true,\n    //\"ssh_key_file\": \"~/.ssh/id_rsa\",\n    //\"sftp_flags\": [\"-F\", \"/path/to/ssh_config\"],\n\n    //\"preserve_modification_times\": false,\n    //\"remote_time_offset_in_hours\": 0,\n    //\"remote_encoding\": \"utf-8\",\n    //\"remote_locale\": \"C\",\n}",
-			"file": "sftp-config.json",
-			"file_size": 1576,
-			"file_write_time": 130865533320000000,
-			"settings":
-			{
-				"buffer_size": 1576,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 5,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "book.sublime-project",
-			"settings":
-			{
-				"buffer_size": 45,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -363,10 +344,23 @@
 	},
 	"expanded_folders":
 	[
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book"
+		"/Users/nuagegraphik/Sites/book"
 	],
 	"file_history":
 	[
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/js/vendor/covervid.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/js/main.js",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/js/vendor/p5.min.js",
+		"/private/var/folders/97/0823_bmx1wl5ctx4y9mdwz7c0000gn/T/fz3temp-1/pluggable.php",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/scss/_layout.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/scss/_element.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/scss/style.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/scss/_mixins.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/scss/_functions.scss",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/css/dwlaventurier.min.css",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/index.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/indexx.html",
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/book/sftp-config.json",
 		"/Users/nuagegraphik/.ssh/config",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Downloads/kevinliteon-spot-6fd6decdee8a/bootstrap.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/dwlaventurier/lib/cleanup.php",
@@ -481,24 +475,11 @@
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_modal.scss",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/gallery.php",
 		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/_element.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ajax-gallery.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.magnific-popup.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/lib/clean.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/actu.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/scss/elements/_bloc.scss",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/templates/videos-list.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/ft/asap-regular-demo.html",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/css/fotorama.css",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/loop-flex.php",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.reveal.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/js/vendor/jquery.modal.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/Gruntfile.js",
-		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/single.php"
+		"/Volumes/Macintosh HD/Users/nuagegraphik/Dropbox/Sites/theme/oniris/functions.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 29.0
 	},
 	"find_in_files":
 	{
@@ -517,6 +498,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"masthead",
+			"@sc",
+			"@s",
+			"@scr",
+			"@grid-gutter-width",
+			"@conta",
+			"$container-sm",
+			"@cont",
+			"@",
+			"10px",
+			"h3",
+			"h2",
+			"h3",
+			"voices",
+			"video",
+			"media",
 			"465",
 			"page-description",
 			"lastupd",
@@ -628,23 +625,7 @@
 			"fotorama",
 			".dwtl-right",
 			"div",
-			"sidebar-primary",
-			"sidebar_hieght",
-			"main-side",
-			"$('body')",
-			"html",
-			".main-sidebar-open",
-			"sidebar-toggle",
-			"navbar-toggle",
-			"sidebar-primary",
-			".main-sidebar-open",
-			".transition",
-			"@mixin transition",
-			".transform",
-			"transform",
-			"140px",
-			"280",
-			"min-height: 660px"
+			"sidebar-primary"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -666,112 +647,14 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sftp-config.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1576,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								188,
-								188
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5,
-								5
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "book.sublime-project",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 45,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 29.0
 	},
 	"input":
 	{
@@ -816,7 +699,7 @@
 	"project": "book.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":

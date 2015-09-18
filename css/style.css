@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  min-height: 100%;
+  width: 100%;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  background-color: black; }
+
+nav ul, aside ul {
+  list-style: none;
+  padding-left: 0; }
+
+/* LINK BASIC */
+a {
+  color: #555555;
+  text-decoration: none; }
+  a:hover:not(.button), a.active {
+    color: #ea7559; }
+
+/* paragraphe and title basic */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poiret One", serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1; }
+
+h1, .h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 1.875rem; }
+
+.container {
+  display: block; }
+
+p {
+  font-size: 1rem; }
+
+.content p {
+  line-height: 1.5; }
+.content > *:first-child {
+  margin-top: 0; }
+.content > *:last-child {
+  margin-bottom: 0; }
+
+/* utilities class */
+.hide {
+  display: none; }
+
+/* GENERAL BODY */
+/* HEADER */
+.banner {
+  color: #fff;
+  position: relative;
+  text-align: center; }
+  .banner .viking {
+    margin-bottom: 1.25rem; }
+    .banner .viking img {
+      max-width: 400px;
+      width: 30vw; }
+  .banner .page-title {
+    position: relative;
+    font-weight: lighter;
+    text-transform: uppercase;
+    padding: 13px 0 10px;
+    line-height: 1;
+    display: inline-block;
+    z-index: 1;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+    margin-bottom: 0;
+    margin-top: -0.3125rem; }
+  .banner .page-description {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    z-index: 1;
+    position: relative; }
+
+.container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 1.25rem; }
+  @media (min-width: 768px) {
+    .container {
+      width: 45.625rem; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 59.375rem; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 71.875rem; } }
+
+.timeline-pale {
+  text-align: center; }
+  .timeline-pale span {
+    padding: 0.625rem 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 0.625rem;
+    text-transform: uppercase;
+    font-family: 'Poiret One', sans-serif;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: fixed;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0.0625rem;
+    background-color: black;
+    margin: 1.25rem 0; }
+  .timeline-pale:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    content: '';
+    z-index: -1; }
+
+.content {
+  background-color: black;
+  font-size: 1rem; }
+
+.video-container {
+  position: absolute;
+  z-index: -1;
+  top: 0; }
+
+/*# sourceMappingURL=style.css.map */

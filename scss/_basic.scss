@@ -1,0 +1,107 @@
+// basic
+
+*, *:before, *:after {
+	@include box-sizing;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  min-height: 100%;
+  width: 100%;
+	color: $text-color;
+	font-family: $body-font;
+	background-color: $bg-color;
+}
+
+nav, aside{
+	
+	ul{
+		list-style: none;
+	 	padding-left: 0;
+	}
+}
+
+/* LINK BASIC */
+
+a{
+	color: $link-color;
+	text-decoration: none;
+	&:hover:not(.button), &.active{
+		color: $link-color-active;
+	}
+
+}
+
+/* paragraphe and title basic */
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $title-font;
+	text-transform: uppercase;
+	font-weight: 800;
+	line-height: 1;
+}
+
+h1, .h1 {
+	font-size: $ft-size-hudge;
+}
+
+h2{
+	font-size: $ft-size-big;
+}
+
+hr{
+}
+
+.container{
+	display: block;
+}
+
+p{
+	font-size: $ft-size-large;
+	// &:first-of-type{ 
+	// 	@extend %dropcap;
+	// }
+}
+
+.content{
+
+	p{
+		line-height: 1.5;
+	}
+
+	hr{
+	}
+	
+	h4{
+	}
+
+	> *:first-child{
+		margin-top: 0;
+	}
+
+	> *:last-child{
+		margin-bottom: 0;
+	}
+}
+
+/* utilities class */
+
+%dropcap{
+	&:first-letter{
+		font-size: 3.5em;
+		margin-top: -.1em;
+		font-family: 'Georgia', serif;
+		font-style: italic;
+		line-height: .8;
+		float: left;
+		margin: 0 .1em 0 0;
+	}
+}
+
+.hide{
+	display: none;
+}
