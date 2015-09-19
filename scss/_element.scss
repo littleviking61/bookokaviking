@@ -1,0 +1,110 @@
+// element.scss
+// 
+
+.player{
+    //text-align: center;
+    //
+    p:first-child{
+        margin: 0;
+    }
+
+    .audioplayer{
+        display: inline-block;
+    	text-align: center;
+        padding: $gutter $gutter-large;
+        line-height: $gutter;
+        text-transform: uppercase;
+        color: white;
+        border-radius: $one;
+        font-family: $title-font;
+
+        > div{
+           display: inline-block;
+           vertical-align: middle;
+           margin: 0 $gutter-small;
+        }
+
+        .audioplayer-volume{
+            display: none;
+            margin: 0;
+        }
+        
+        .audioplayer-bar{
+            display: block;
+            width: 100%;
+            position: relative;
+            margin-top: $gutter-small;
+
+            .audioplayer-bar-loaded{
+                border-bottom: thin solid white;
+                opacity: 0.2;
+                position: absolute;
+                top: 0;
+            }
+
+            .audioplayer-bar-played{
+                border-bottom: thin solid white;
+                position: absolute;
+                opacity: 0.6;
+                top: 0;
+            }
+        }
+
+
+        .audioplayer-time-current{
+            opacity: 0.5;
+
+            &:not(.empty){
+                min-width: rem-calc(60);
+            }
+            // font-size: $ft-size-small;
+        }
+
+        i{
+            color: white;
+        }
+    }
+}
+
+.content{
+	font-size: $ft-size-large;
+    padding: $gutter-small $gutter;
+    @include column-width(300px);
+}
+
+.bg{
+    > div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(/media/img/bg-intro.jpg);
+        opacity: 0;
+        @include single-transition(opacity, .4s);
+
+        &.active{
+            opacity: 1;
+        }
+    }
+}
+
+.arrow {
+    &:before{
+        content: "";
+        display: block;
+        margin: auto;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: $gutter-medium;
+        height: $gutter-medium;
+        border-right: $one solid #fff;
+        border-bottom: $one solid #fff;
+        opacity: 0.8;
+        margin-left: -($gutter-medium/2);
+    }
+}

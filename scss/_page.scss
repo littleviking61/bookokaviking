@@ -1,0 +1,24 @@
+// page
+// 
+// 
+// remerciement
+// 
+.banner{
+	.arrow{
+		position: absolute;
+		bottom: $gutter-large;
+		left: 50%;
+	}
+}
+
+[data-anchor="remerciement"] {
+		font-family: $title-font;
+	img{
+	}
+}
+
+[data-anchor="prologue"]{
+	 .player{
+	 	margin-bottom: rem-calc(120);
+	 }
+}
