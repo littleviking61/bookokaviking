@@ -86,8 +86,13 @@ html.fp-enabled,
 
 .fp-section {
   position: relative;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
   justify-content: center;
   height: 100vh;
   width: 100vw; }
@@ -305,6 +310,11 @@ header {
   @media (min-width: 1200px) {
     .container {
       width: 71.875rem; } }
+
+.col-3 {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3; }
 
 .player p:first-child {
   margin: 0; }

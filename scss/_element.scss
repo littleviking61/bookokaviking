@@ -1,5 +1,9 @@
 // element.scss
-// 
+//
+
+.col-3{
+    @include column-count(3);
+} 
 
 .player{
     //text-align: center;
