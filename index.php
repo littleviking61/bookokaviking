@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>L'aventurier viking - En route pour la Mongolie</title>
+        <title>Récits de voyage par l'aventurier viking</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,7 +24,7 @@
             <div></div>
         </div>
 
-        <div class="fullPage">
+        <main>
              <header class="banner no-cover section" role="banner" data-anchor="" data-background="media/img/bg-intro.jpg">
 
                  <div class="viking">
@@ -43,7 +43,7 @@
                  <div class="arrow"></div>
 
              </header>
-             <section class="section" data-anchor="remerciement" data-background="media/img/bg-intro.jpg">
+             <section class="section" data-anchor="remerciement">
                     
                 <div class="text-center">
                     <img src="media/img/portrait.png" alt="Baptiste Régné">
@@ -56,29 +56,12 @@
 
              </section>
 
-             <section class="section" data-anchor="prologue" data-background="media/img/bg-prologue.jpg">
-                 <div class="container" role="document">
-                     <main class="main col-sm-12" role="main">
-                        <div class="player text-center">
-                             <audio class="audio" title="Prologue" preload="auto">
-                                 <source src="media/teaser-mongolia.mp3" type="audio/mp3">
-                             </audio>
-                        </div> 
-                     </main>
-                 </div>
-            </section>
-
-            <section class="section" data-anchor="explication">
-                <div><h1>Comment utiliser ce livre</h1></div>
-                <div class="col-3">
-                    <div>Je viens de vivre un voyage formidable et j'aimerai en partager un maximum avec vous. J'ai de nombreux écrits, photos, vidéo et des souvenirs pleins la tête. Ce livre expérimentale vous plongera dans mon aventure avec du contenu trés variés, allant du récit écrit à la photographie commentée, des vidéos thématiques au panoramas musical. J'espère que vous apprécierez la tentative et qu'un fois terminé ce livre donnera envie à d'autre de s'envoler explorer ce monde merveilleux qui nous entoure.</div>
-                    <div>Le contenu de sera mis à jour régulièrement et je vous invites à vous inscrire à cette newsletter pour être au courant de chaque nouveauté et glisser une petite histoire dans votre quotidien. Chaque contenu demande beaucoup de travail et j'aimerai prendre le temps qu'il faut et le recul nécessaire pour l'exprimer de la plus belle facon. Vos remarques m'aideront à continuer dans un sens ou dans l'autre et j'espère que vous n'hésiterez pas à me les faire parvenir.</div>
-                    <div>Vous pouvez utiliser les fleches de votre clavier pour naviguer sur les différentes pages. Un menu rapide vous permettra de retrouver le dernier récit ainsi que de chercher des contenus par thématiques. Ce livre est optimisé pour des tailles d'écrans standards et je tacherai de corriger les différents bugs dès que possible. Merci pour tout et bonne lecture à tous.</div>
-                </div>
-            </section>
+            <?php include "pages/instruction.php"; ?>
+            <?php include "pages/prologue.php"; ?>
+            <?php include "pages/acte-1.php"; ?>
 
 
-        </div>
+        </main>
         
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>

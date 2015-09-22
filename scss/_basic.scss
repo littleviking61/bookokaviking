@@ -70,7 +70,9 @@ p{
 .content{
 
 	p{
-		line-height: 1.5;
+		line-height: 1.4;
+		margin-bottom: 1.4em;
+		margin-top: 1.4em;
 	}
 
 	hr{
@@ -108,4 +110,7 @@ p{
 
 .hide{
 	display: none;
+}
+.hidden{
+	opacity: 0;
 }

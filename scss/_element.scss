@@ -1,9 +1,9 @@
 // element.scss
 //
 
-.col-3{
-    @include column-count(3);
-} 
+@for $i from 1 through $grid-columns {
+  .col-#{$i} { @include column-count($i);}
+}
 
 .player{
     //text-align: center;
@@ -21,6 +21,7 @@
         color: white;
         border-radius: $one;
         font-family: $title-font;
+        cursor: pointer;
 
         > div{
            display: inline-block;
@@ -55,25 +56,119 @@
         }
 
 
-        .audioplayer-time-current{
+        .audioplayer-time{
             opacity: 0.5;
-
-            &:not(.empty){
-                min-width: rem-calc(60);
-            }
+            min-width: rem-calc(100);
+            text-align: left;
             // font-size: $ft-size-small;
+        }
+
+        &.audioplayer-playing{
+            .icon-play:before{
+                content: "j";
+            }
         }
 
         i{
             color: white;
         }
     }
+
+    &.medium{
+        font-size: $ft-size-big;
+
+        .icon-play{
+            display: block;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding-top: 7px;
+            padding-left: 3px;
+            font-size: $ft-size-largest;
+            // margin-right: $gutter;
+        }
+
+        .audioplayer-playing .icon-play{
+            padding-left: 1px;
+        }
+
+        .audioplayer-bar{
+            display: none;
+        }
+    }
 }
 
-.content{
-	font-size: $ft-size-large;
-    padding: $gutter-small $gutter;
-    @include column-width(300px);
+section > .container{
+    margin: $gutter-large;
+    padding: $gutter-large;
+    overflow-y: auto;
+    max-height: 90vh;
+
+    header{
+        margin-bottom: $gutter-large;
+        @include display-flex;
+        @include align-items(center);
+
+        >:first-child{
+            margin: 0;
+        }
+
+        .stamp{
+            margin-left: $gutter-large;
+            font-style: italic;
+            font-size: $ft-size-normal;
+
+            span{
+                padding-right: $gutter;
+            }
+        }
+    }
+
+    &.withbg{
+        background-color: rgba(59,71,110,0.8);
+    }
+
+    > .column{
+        @include column-width(rem-calc(280));
+        @include column-break(inside, avoid);
+    	font-size: $ft-size-large;
+
+        > div{
+            display: inline-block;
+        }
+    }
+}
+
+[class*="flex-column"]{
+    @include display-flex;
+    @include flex-direction(row);
+ 
+    &[class*="-middle"]{
+        @include align-items(center);
+    }
+
+    &[class*="-center"]{
+        @include justify-content(center);
+    }
+    
+    &[class*="-bottom"]{
+        @include align-items(flex-end);
+    }
+}
+
+i[class^="icon-"]{
+
+    &.big{
+        font-size: $ft-size-hudge;
+    }
+
+    &.border{
+        border: thin white solid;
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .bg{
