@@ -25,6 +25,11 @@ $(document).ready(function() {
         var leavingSection = $(this);
 
 				var nextElmt = $('>.section:nth-child('+nextIndex+')', page);
+				// var audioPlay = $('.audioplayer', nextElmt);
+				// if(audioPlay !== -1 && audioPlay.length < 2) {
+				// 	audioPlay.trigger('click');
+				// }
+
 				if(nextElmt.data('background') !== undefined && nextElmt.data('background') !== "") {
 					changeBackground(nextElmt.data('background'));
 				}

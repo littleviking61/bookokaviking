@@ -1,4 +1,4 @@
- <section class="section" data-anchor="acte-1">
+ <section class="section" data-anchor="jirai-labas">
                 
     <div class="container withbg">
         <header>

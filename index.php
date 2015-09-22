@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="favicon.png" />
+
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -56,9 +58,10 @@
 
              </section>
 
-            <?php include "pages/instruction.php"; ?>
-            <?php include "pages/prologue.php"; ?>
-            <?php include "pages/acte-1.php"; ?>
+            <?php include "pages/0-instruction.php"; ?>
+            <?php include "pages/0-prologue.php"; ?>
+            <?php include "pages/1-1-jirai-labas.php"; ?>
+            <?php include "pages/1-2-crash.php"; ?>
 
 
         </main>
