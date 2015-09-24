@@ -95,7 +95,7 @@
         }
 
         .audioplayer-bar{
-           // display: none;
+           display: none;
         }
     }
 }
@@ -173,7 +173,7 @@ i[class^="icon-"]{
 
 .bg{
     > div{
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
@@ -182,6 +182,8 @@ i[class^="icon-"]{
         background-position: center center;
         background-image: url(/media/img/bg-intro.jpg);
         opacity: 0;
+        z-index: -1;
+
         @include single-transition(opacity, .4s);
 
         &.active{

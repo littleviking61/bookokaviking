@@ -430,6 +430,8 @@ body {
     font-size: 1.375rem; }
   .player.medium .audioplayer-playing .icon-play {
     padding-left: 1px; }
+  .player.medium .audioplayer-bar {
+    display: none; }
 
 section > .container {
   margin: 1.25rem;
@@ -486,7 +488,7 @@ i[class^="icon-"].border {
   height: 20px; }
 
 .bg > div {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -495,6 +497,7 @@ i[class^="icon-"].border {
   background-position: center center;
   background-image: url(/media/img/bg-intro.jpg);
   opacity: 0;
+  z-index: -1;
   -moz-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   -webkit-transition: opacity 0.4s;
