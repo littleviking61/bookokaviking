@@ -27,7 +27,7 @@
         </div>
 
         <main>
-             <header class="banner no-cover section" role="banner" data-anchor="" data-background="media/img/bg-intro.jpg">
+             <header class="banner no-cover section" role="banner" data-anchor="bienvenue" data-background="bg-intro.jpg">
 
                  <div class="viking">
                      <img src="img/viking-yak.svg">
@@ -61,7 +61,7 @@
             <?php include "pages/0-instruction.php"; ?>
             <?php include "pages/0-prologue.php"; ?>
             <?php include "pages/1-1-jirai-labas.php"; ?>
-            <?php include "pages/1-2-crash.php"; ?>
+            <?php include "pages/1-2-cematin-la.php"; ?>
 
 
         </main>
@@ -73,6 +73,7 @@
         <!-- <script src="js/plugins.js"></script> -->
         <script src="js/vendor/audioplayer.min.js"></script>
         <script src="js/vendor/jquery.fullPage.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

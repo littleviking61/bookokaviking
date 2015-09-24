@@ -41,14 +41,14 @@
             margin-top: $gutter-small;
 
             .audioplayer-bar-loaded{
-                border-bottom: thin solid white;
+                border-bottom: 5px solid white;
                 opacity: 0.2;
                 position: absolute;
                 top: 0;
             }
 
             .audioplayer-bar-played{
-                border-bottom: thin solid white;
+                border-bottom: 5px solid white;
                 position: absolute;
                 opacity: 0.6;
                 top: 0;
@@ -95,7 +95,7 @@
         }
 
         .audioplayer-bar{
-            display: none;
+           // display: none;
         }
     }
 }

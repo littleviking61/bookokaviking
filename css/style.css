@@ -399,12 +399,12 @@ body {
     position: relative;
     margin-top: 0.3125rem; }
     .player .audioplayer .audioplayer-bar .audioplayer-bar-loaded {
-      border-bottom: thin solid white;
+      border-bottom: 5px solid white;
       opacity: 0.2;
       position: absolute;
       top: 0; }
     .player .audioplayer .audioplayer-bar .audioplayer-bar-played {
-      border-bottom: thin solid white;
+      border-bottom: 5px solid white;
       position: absolute;
       opacity: 0.6;
       top: 0; }
@@ -430,8 +430,6 @@ body {
     font-size: 1.375rem; }
   .player.medium .audioplayer-playing .icon-play {
     padding-left: 1px; }
-  .player.medium .audioplayer-bar {
-    display: none; }
 
 section > .container {
   margin: 1.25rem;
