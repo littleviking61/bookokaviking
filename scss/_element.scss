@@ -124,10 +124,12 @@ section > .container{
                 padding-right: $gutter;
             }
         }
-    }
 
-    &.withbg{
-        background-color: rgba(59,71,110,0.8);
+        .icon-cancel{
+            margin-left: auto;
+            font-size: $ft-size-big;
+            cursor: pointer;
+        }
     }
 
     > .column{

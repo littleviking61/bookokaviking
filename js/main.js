@@ -10,28 +10,49 @@ $(document).ready(function() {
 
 	// check bg
 	sections.each(function(){
-		var background = $(this).data('background');
-		var anchor = $(this).data('anchor');
+		$this = $(this);
+		var background = $this.data('background');
+		var anchor = $this.data('anchor');
+
 		// to place data-background on all section
 		if(background === undefined || 	background === '') {
 			background = lastBackground;
-			$(this).attr("data-background", background);
+			$this.attr("data-background", background);
 		}
 		// to load all bg
 		if(background !== lastBackground) loadBackground(background, anchor);
 		// save last bg
 		lastBackground = background;
+
+		// to adapt all color
+		if($this.hasClass('adaptative')) {
+			$.adaptiveBackground.run({
+				image: racineImg+background,
+				selector: $('.adapter', $this),
+				exclude: [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
+				transparent: 0.7
+			});
+			$this.removeClass('adaptative');
+		}
+
+		// to activate minimize function
+		if($('.icon-cancel', $this).length !== -1) {
+			var cancel = $('.icon-cancel', $this);
+			cancel.click(function(e){
+				e.preventDefault();
+				$(this).closest('.container').toggleClass('closed');
+			});
+		}
 	});
 
 	page.fullpage({
 		verticalCentered: false,
 		onLeave: function(index, nextIndex, direction){
-        var leavingSection = $(this);
-				var nextElmt = $('>.section:nth-child('+nextIndex+')', page);
+        var leavingSection = $(this),
+					nextElmt = $('>.section:nth-child('+nextIndex+')', page),
+					nextElmtBg = nextElmt.attr('data-background');
 
-				if(nextElmt.attr('data-background') !== undefined && nextElmt.attr('data-background') !== "") {
-					changeBackground(nextElmt.attr('data-background'));
-				}
+				if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
     },
     afterLoad: function(anchorLink, index){
 			var loadedSection = $(this);

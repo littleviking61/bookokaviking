@@ -1,34 +1,35 @@
-<section class="section" data-anchor="cematinla" data-background="bg-cematinla.jpg">
-	<div id="p-cematinla" class="player text-center medium">
+<section class="section adaptative" data-anchor="cematinla" data-background="bg-cematinla.jpg">
+	<div id="p-cematinla" class="player text-center medium adapter">
 		<audio class="audio" title="Ce matin là" preload="auto">
 				<source src="media/audio/cematinla.mp3" type="audio/mp3">
 		</audio>
 	</div> 
-</section>
 
-<script>
-	
-function cematinla(section, anchorLink){
-	section = section || 'main';
-	var player = $('.audioplayer', section);
-
-	if(typeof tl === 'undefined') {
+	<script>
 		
-		tl = player[0].tl = new TimelineLite();
-		tl.pause()
-		.add(function() { changeBackground('bg-cematinla.jpg','bg-cematinla2.jpg',anchorLink) }, 0.1)
-		.add(function() { changeBackground('bg-cematinla2.jpg','bg-cematinla3.jpg',anchorLink) }, 8)
-		.add(function() { changeBackground('bg-cematinla3.jpg','bg-cematinla5.jpg',anchorLink) }, 12)
-		.add(function() { changeBackground('bg-cematinla5.jpg','bg-cematinla6.jpg',anchorLink) }, 18)
-		.add(function() { changeBackground('bg-cematinla6.jpg','bg-cematinla7.jpg',anchorLink) }, 31)
-		.add(function() { changeBackground('bg-cematinla7.jpg','bg-cematinla8.jpg',anchorLink) }, 38)
-		.add(function() { changeBackground('bg-cematinla8.jpg','bg-cematinla9.jpg',anchorLink) }, 47)
-		.add(function() { changeBackground('bg-cematinla9.jpg','bg-cematinla10.jpg',anchorLink) }, 54)
-		.add(function() { changeBackground('bg-cematinla10.jpg','bg-cematinla11.jpg',anchorLink) }, 62)
-		.add(function() { changeBackground('bg-cematinla11.jpg') }, 69);
+	function cematinla(section, anchorLink){
+		section = section || 'main';
+		var player = $('.audioplayer', section);
 
-	}
+		if(typeof tl === 'undefined') {
+			
+			tl = player[0].tl = new TimelineLite();
+			tl.pause()
+			.add(function() { changeBackground('bg-cematinla.jpg','bg-cematinla2.jpg',anchorLink) }, 0.1)
+			.add(function() { changeBackground('bg-cematinla2.jpg','bg-cematinla3.jpg',anchorLink) }, 8)
+			.add(function() { changeBackground('bg-cematinla3.jpg','bg-cematinla5.jpg',anchorLink) }, 12)
+			.add(function() { changeBackground('bg-cematinla5.jpg','bg-cematinla6.jpg',anchorLink) }, 18)
+			.add(function() { changeBackground('bg-cematinla6.jpg','bg-cematinla7.jpg',anchorLink) }, 31)
+			.add(function() { changeBackground('bg-cematinla7.jpg','bg-cematinla8.jpg',anchorLink) }, 39)
+			.add(function() { changeBackground('bg-cematinla8.jpg','bg-cematinla9.jpg',anchorLink) }, 47)
+			.add(function() { changeBackground('bg-cematinla9.jpg','bg-cematinla10.jpg',anchorLink) }, 54)
+			.add(function() { changeBackground('bg-cematinla10.jpg','bg-cematinla11.jpg',anchorLink) }, 61)
+			.add(function() { changeBackground('bg-cematinla11.jpg') }, 69);
 
-}
+		}
 
-</script>
+	};
+
+	</script>
+
+</section>

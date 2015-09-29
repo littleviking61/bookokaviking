@@ -1,6 +1,6 @@
- <section class="section" data-anchor="jirailabas">
+ <section class="section adaptative" data-anchor="jirailabas">
                 
-    <div class="container withbg">
+    <div class="container adapter">
         <header>
             <h2>Un jour j’irai là-bas !</h2>
             <div class="stamp">
@@ -10,14 +10,14 @@
             </div>
         </header>
         <div class="content column">
-            <p>J’ai cette certitude de vouloir voyager encore et encore, peut-être tout seul, peut-être à pied. Les voyages m’ont toujours donné une raison de vivre. J’aime le travail que je fais ici mais ma vie est trop confortable. Je me suis surpris à écouter une mère épris de voyage qui a été amener à éduquer ces enfants sans jamais assouvir ce désir. Elle est heureuse mais ça m’a fait prendre conscience qu’il est important de réaliser mes rêves maintenant. Il y a plein de chemin que j’aimerai parcourir, chacun d’entre eux comporte leur lot de difficultés et leur lot de plaisir.</p> 
-            <p>Le nord, avec ces paysages entre mer et montagne, des contrées riches et vierges où vive un tas de gens perdues entre les nuits et les jours interminables. Ce serai magnifique d’aller à leur rencontre, mais la vie est cher et les routes enneigé alors en moto… et ai-je envie de survivre comme au grand nord canadien ?</p> 
-            <p>Sinon il suffirait de partir à l’est, de traverser la Mongolie et tous ces pays de nomade pour atteindre les plus hautes routes du monde, dans l’espoir d’apercevoir un jour l’Himalaya, de prendre le chemin des buffles. Malheureusement il y a de nombreux pays qui sont peut-être difficile à franchir, plein d’incertitude.</p> 
-            <p>L’Amérique du sud j’en rêve depuis longtemps, je me rappelle les bons instants à rêver de ces pays quelque part entre le New Mexique et le Texas. C’est un bien gros projet auquel je ne cesse de penser, de rêver et de planifier. Mais n’est-il pas trop gros, trop loin, trop ambitieux ? En moto dans la boue ? Bien sûr on ne sait jamais à l’avance, on a nos inquiétudes et on doit les contrôler. Je n’ai aucune idée de ce que c’est de voyager tout seul... J’ai l’impression que c’est celui-là qu’il me faut. Pourtant il y a tellement de chose ici, moins loin, différente.</p> 
-            <p>Je suis partie une fois, je repartirai sans nul doute. Avec cette boule au ventre de quitter ses proches, sa vie, son confort et la peur de ce futur incertain mais tellement désiré. Un jour j’ai rencontré une personne qui m’a confirmé qu’il faut toujours garder ces rêves et ces espoirs. Je vais repartir, je reviendrai un jour, j’irai jusqu’au bout et je construirai une vie ici en temps voulu.</p> 
-            <p>La plus grande question qui n’a actuellement de réponse c’est le fait de partir seul. Est-ce réellement ce que j’ai envie. Est-ce que partir si loin pour trouver la réponse n’est pas inapproprié. Je continu à sonder mes rêves et mes envies.</p> 
-            <p></p>
-        </div>
+            <p>J’ai cette certitude : «  voyager encore et encore, peut-être seul, peut-être à pied !». Les voyages sont depuis longtemps ma raison de vivre. J’aime le travail que je fais ici mais ma vie est trop confortable. En écoutant une mère de famille heureuse éprise de voyages qui a privilégié l’éducation de ses enfants, j’ai découvert l’importance de réaliser mes rêves maintenant. Il y a plein de chemins que j’aimerais parcourir, chacun d’entre eux comportent leur lot de difficultés et leur lot de plaisirs. </p>
+            <p>Le nord, avec ses paysages entre mer et montagne, ses contrées riches et vierges où vivent un tas de gens perdus entre nuits et jours interminables, ce serait magnifique d’aller à leur rencontre, mais la vie est chère et les routes enneigées alors en moto… ai-je envie de survivre comme au grand nord canadien ? </p>
+            <p>Ou bien partir à l’est, traverser la Mongolie et tous ces pays de nomades pour atteindre les plus hautes routes du monde… Malheureusement, il y a plusieurs pays hasardeux sur le chemin. </p>
+            <p>Et pourquoi pas l’Amérique du sud, je me rappelle les bons instants à rêver de ces pays quelque part entre le New Mexique et le Texas. C’est un  gros projet auquel je ne cesse de penser et que je tente de planifier. Mais n’est-il pas trop ambitieux ? J’ai l’impression que c’est la destination que je cherche.</p>
+            <p>La plus grande question sans réponse c’est le fait de partir seul. Je n’ai aucune idée de ce que c’est... Est-ce réellement ce que j’ai envie ? Partir si loin pour trouver la réponse n’est-il pas inapproprié ?  </p>
+            <p>Je suis parti une fois, je repartirai, sans nul doute. Avec cette boule au ventre de quitter ses proches, sa vie, son confort et la peur d’un futur incertain mais désiré. Il faut toujours garder ses rêves et ses espoirs. Je vais repartir, je reviendrai un jour et, le moment venu je me poserai !</p>
+            <p>Un jour, j’irai là-bas !</p>
+       </div>
     </div>
 
 </section>

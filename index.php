@@ -22,8 +22,8 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="bg">
-            <div class="active"></div>
-            <div></div>
+            <div class="active data-adaptive-background data-ab-css-background"></div>
+            <div class="data-adaptive-background data-ab-css-background"></div>
         </div>
 
         <main>
@@ -51,7 +51,7 @@
                     <img src="media/img/portrait.png" alt="Baptiste Régné">
                     <p>À vous tous qui m'avez aidé</p>
                     
-                    <p>À mes parent<br>
+                    <p>À mes parents<br>
                     À mes amis<br>
                     et tous ceux que j'ai rencontré sur la route</p>
                 </div>
@@ -62,6 +62,7 @@
             <?php include "pages/0-prologue.php"; ?>
             <?php include "pages/1-1-jirai-labas.php"; ?>
             <?php include "pages/1-2-cematin-la.php"; ?>
+            <?php include "pages/1-3-hier.php"; ?>
 
 
         </main>
@@ -74,6 +75,7 @@
         <script src="js/vendor/audioplayer.min.js"></script>
         <script src="js/vendor/jquery.fullPage.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery.adaptive-backgrounds.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
