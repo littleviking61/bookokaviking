@@ -1,5 +1,5 @@
-<section class="section adaptative" data-anchor="1-4-bon" data-background="bg-bon.jpg">
-	<div class="player text-center medium adapter">
+<section class="section" data-anchor="1-4-bon" data-background="bg-bon.jpg">
+	<div class="player text-center medium" style="background-color: rgba(17, 12, 8, .7);">
 		<audio class="audio" title="Bon" preload="auto">
 				<source src="media/audio/bon.mp3" type="audio/mp3">
 		</audio>

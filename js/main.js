@@ -1,6 +1,7 @@
 var racine = "http://book.laventurierviking.fr/";
 var racineImg = racine+'media/img/';
 var sections;
+var loadedSection;
 
 $(document).ready(function() {
 	var page = $('main');
@@ -24,16 +25,16 @@ $(document).ready(function() {
 		// save last bg
 		lastBackground = background;
 
-		// to adapt all color
-		if($this.hasClass('adaptative')) {
-			$.adaptiveBackground.run({
-				image: racineImg+background,
-				selector: $('.adapter', $this),
-				exclude: [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
-				transparent: 0.7
-			});
-			$this.removeClass('adaptative');
-		}
+		// // to adapt all color
+		// if($this.hasClass('adaptative')) {
+		// 	$.adaptiveBackground.run({
+		// 		image: racineImg+background,
+		// 		selector: $('.adapter', $this),
+		// 		exclude: [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
+		// 		transparent: 0.7
+		// 	});
+		// 	$this.removeClass('adaptative');
+		// }
 
 		// to activate minimize function
 		if($('.icon-cancel', $this).length !== -1) {
@@ -64,25 +65,31 @@ $(document).ready(function() {
 	page.fullpage({
 		verticalCentered: false,
 		onLeave: function(index, nextIndex, direction){
-        var leavingSection = $(this),
+				var leavingSection = $(this),
 					nextElmt = $('>.section:nth-child('+nextIndex+')', page),
 					nextElmtBg = nextElmt.attr('data-background');
 
 				if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
-    },
-    afterLoad: function(anchorLink, index){
-			var loadedSection = $(this);
+		},
+		afterLoad: function(anchorLink, index){
+			loadedSection = $(this);
 			anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
 			// changeBackground($(this).data('background'));
 			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
 
-    }
+		}
 
 	});
 
 	$( 'audio' ).audioPlayer();
 
-
+	$(window).keypress(function(e) {
+		if (e.keyCode === 0 || e.keyCode === 32) {
+			console.log(loadedSection);
+			console.log($('.audioplayer', loadedSection));
+			$('.audioplayer', loadedSection).trigger('click');
+		}
+	});
 });
 
 var bg = $('.bg');
