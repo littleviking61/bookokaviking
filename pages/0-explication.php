@@ -1,4 +1,4 @@
-<section class="" data-anchor="explication">
+<section class="" data-anchor="explications">
     <div><h1>Comment utiliser ce livre</h1></div>
     <div class="col-3">
         <div>Je viens de vivre un voyage formidable et j'aimerai en partager un maximum avec vous. J'ai de nombreux écrits, photos, vidéo et des souvenirs pleins la tête. Ce livre expérimentale vous plongera dans mon aventure avec du contenu trés variés, allant du récit écrit à la photographie commentée, des vidéos thématiques au panoramas musical. J'espère que vous apprécierez la tentative et qu'un fois terminé ce livre donnera envie à d'autre de s'envoler explorer ce monde merveilleux qui nous entoure.</div>

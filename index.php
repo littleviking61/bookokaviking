@@ -63,6 +63,8 @@
             <?php include "pages/1-1-jirai-labas.php"; ?>
             <?php include "pages/1-2-cematin-la.php"; ?>
             <?php include "pages/1-3-hier.php"; ?>
+            <?php include "pages/1-4-bon.php"; ?>
+            <?php include "pages/1-5-pizza.php"; ?>
 
 
         </main>
@@ -76,6 +78,7 @@
         <script src="js/vendor/jquery.fullPage.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="js/vendor/jquery.adaptive-backgrounds.js"></script>
+        <script src="js/vendor/jquery.vide.min.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

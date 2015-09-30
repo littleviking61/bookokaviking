@@ -53,7 +53,7 @@
           // var img = opts.image || useCSSBackground() ? getCSSBackground() : $this[0];
 
           RGBaster.colors(opts.image, {
-            paletteSize: 20,
+            paletteSize: 0,
             exclude: opts.exclude,
             success: function(colors) {
               if(opts.transparent) {

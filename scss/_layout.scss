@@ -70,23 +70,23 @@ body{
   }
 
   &.closed{
-    width: rem-calc(70);
-    height: rem-calc(70);
-    overflow: hidden;
-    border-radius: 50%;
+    // width: rem-calc(70);
+    // height: rem-calc(70);
+    // overflow: hidden;
+    // border-radius: 50%;
 
     .icon-cancel{
-      position: absolute;
-      top: $gutter-large;
-      left: $gutter-large;
+      // position: absolute;
+      // top: $gutter-large;
+      // left: $gutter-large;
 
       &:before{
         content: "e";
       }
     } 
 
-    header{
-      margin-top: rem-calc(70);
-    }
+    // header{
+    //   margin-top: rem-calc(70);
+    // }
   }
 }

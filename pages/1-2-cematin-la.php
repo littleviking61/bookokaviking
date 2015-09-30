@@ -1,5 +1,5 @@
-<section class="section adaptative" data-anchor="cematinla" data-background="bg-cematinla.jpg">
-	<div id="p-cematinla" class="player text-center medium adapter">
+<section class="section" data-anchor="1-2-cematinla" data-background="bg-cematinla.jpg">
+	<div id="p-cematinla" class="player text-center medium" style="background-color: rgba(2, 2, 0, .7);">
 		<audio class="audio" title="Ce matin là" preload="auto">
 				<source src="media/audio/cematinla.mp3" type="audio/mp3">
 		</audio>
@@ -7,11 +7,11 @@
 
 	<script>
 		
-	function cematinla(section, anchorLink){
+	function f_1_2_cematinla(section, anchorLink){
 		section = section || 'main';
 		var player = $('.audioplayer', section);
 
-		if(typeof tl === 'undefined') {
+		if(typeof player[0].tl === 'undefined') {
 			
 			tl = player[0].tl = new TimelineLite();
 			tl.pause()

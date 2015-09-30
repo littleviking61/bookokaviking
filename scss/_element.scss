@@ -126,7 +126,9 @@ section > .container{
         }
 
         .icon-cancel{
-            margin-left: auto;
+            position: absolute;
+            right: $gutter-large;
+            top: $gutter-large;
             font-size: $ft-size-big;
             cursor: pointer;
         }

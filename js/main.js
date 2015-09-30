@@ -37,10 +37,26 @@ $(document).ready(function() {
 
 		// to activate minimize function
 		if($('.icon-cancel', $this).length !== -1) {
-			var cancel = $('.icon-cancel', $this);
-			cancel.click(function(e){
-				e.preventDefault();
-				$(this).closest('.container').toggleClass('closed');
+			$('.icon-cancel', $this).click(function(){
+				var container = $(this).closest('.container');
+
+				if(!container.hasClass('closed')) {
+					this.closeBtn = new TimelineLite();
+					this.closeBtn
+						.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
+						.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
+						.to( container, .2, { width: "70px"}, "-=.1")
+						.to( container, .1, { borderRadius: "50%"}, "-=.15")
+						.eventCallback('onReverseComplete', function() { 
+							container[0].style.removeProperty('width');
+							container[0].style.removeProperty('height');
+							console.log(container[0].style);
+						});
+				} else {
+					this.closeBtn.reverse();
+				}
+
+				container.toggleClass('closed');
 			});
 		}
 	});
@@ -56,8 +72,10 @@ $(document).ready(function() {
     },
     afterLoad: function(anchorLink, index){
 			var loadedSection = $(this);
+			anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
 			// changeBackground($(this).data('background'));
-			if (typeof window[anchorLink] == 'function') { window[anchorLink]($(this), anchorLink); }
+			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
+
     }
 
 	});

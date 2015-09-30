@@ -1,6 +1,6 @@
- <section class="section adaptative" data-anchor="jirailabas">
+ <section class="section" data-anchor="1-1-jirailabas">
                 
-    <div class="container adapter">
+    <div class="container" style="background-color: rgba(56, 87, 131, .7);">
         <header>
             <h2>Un jour j’irai là-bas !</h2>
             <div class="stamp">

@@ -313,19 +313,8 @@ body {
   @media (min-width: 1200px) {
     .container {
       width: 71.875rem; } }
-  .container.closed {
-    width: 4.375rem;
-    height: 4.375rem;
-    overflow: hidden;
-    border-radius: 50%; }
-    .container.closed .icon-cancel {
-      position: absolute;
-      top: 1.25rem;
-      left: 1.25rem; }
-      .container.closed .icon-cancel:before {
-        content: "e"; }
-    .container.closed header {
-      margin-top: 4.375rem; }
+  .container.closed .icon-cancel:before {
+    content: "e"; }
 
 .col-1 {
   -moz-column-count: 1;
@@ -466,7 +455,9 @@ section > .container {
       section > .container header .stamp span {
         padding-right: 0.625rem; }
     section > .container header .icon-cancel {
-      margin-left: auto;
+      position: absolute;
+      right: 1.25rem;
+      top: 1.25rem;
       font-size: 1.875rem;
       cursor: pointer; }
   section > .container > .column {

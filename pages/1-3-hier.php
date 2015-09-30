@@ -1,6 +1,6 @@
- <section class="section adaptative" data-anchor="hier" data-background="bg-hier.jpg">
+ <section class="section" data-anchor="1-3-hier" data-background="bg-hier.jpg">
                 
-    <div class="container adapter">
+    <div class="container" style="background-color: rgba(17, 12, 8, .7);">
         <header>
             <h2>Hier</h2>
             <div class="stamp">
