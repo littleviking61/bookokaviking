@@ -19,10 +19,12 @@ header.main{
     font-size: $ft-size-larger;
     width: 100vw;
     padding-right: $gutter-small;
+    padding-bottom: $gutter-large;
 
     ul{
       @include display-flex;
       @include justify-content(flex-end);
+      @include flex-wrap(wrap);
     }
 
     li a{
@@ -38,10 +40,19 @@ header.main{
         opacity: 1;
       }
     }
+    &.main{
+      a:hover{
+        color: white;
+        opacity: 1;
+      }
+    }
 
-    &.chapitres{
+    &.chapitres, &.player-soundcloud{
       display: none;
       opacity: 0;
+      position: absolute;
+      top: 50px;
+      padding-right: $gutter-medium;
 
       ul{
         margin: $gutter-small 0;
@@ -100,6 +111,8 @@ header.main{
     z-index: 1;
     position: relative;
 	}
+
+  
 }
 
 .container {

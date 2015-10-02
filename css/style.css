@@ -272,12 +272,15 @@ header.main {
   header.main nav {
     font-size: 1.125rem;
     width: 100vw;
-    padding-right: 0.3125rem; }
+    padding-right: 0.3125rem;
+    padding-bottom: 1.25rem; }
     header.main nav ul {
       display: -webkit-flex;
       display: flex;
       -webkit-justify-content: flex-end;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; }
     header.main nav li a {
       display: inline-block;
       padding: 0 1.25rem;
@@ -291,15 +294,21 @@ header.main {
       header.main nav li a:hover, header.main nav li a.active {
         color: white;
         opacity: 1; }
-    header.main nav.chapitres {
+    header.main nav.main a:hover {
+      color: white;
+      opacity: 1; }
+    header.main nav.chapitres, header.main nav.player-soundcloud {
       display: none;
-      opacity: 0; }
-      header.main nav.chapitres ul {
+      opacity: 0;
+      position: absolute;
+      top: 50px;
+      padding-right: 0.9375rem; }
+      header.main nav.chapitres ul, header.main nav.player-soundcloud ul {
         margin: 0.3125rem 0; }
-      header.main nav.chapitres li {
+      header.main nav.chapitres li, header.main nav.player-soundcloud li {
         max-width: 100%;
         overflow: hidden; }
-        header.main nav.chapitres li a {
+        header.main nav.chapitres li a, header.main nav.player-soundcloud li a {
           padding: 0 0.625rem; }
 
 .banner {

@@ -16,24 +16,24 @@
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
 	<body>
-	<?php 
-		$anchor;
-		$pages = [
-			[ 'title' => 'Intro', 'parts' => [
-					['Instruction','1-instruction'],
-					['Remerciement','2-remerciement'],
-					['Prologue','3-prologue'],
-				]
-			], [ 'title' => 'Avant Zagreb', 'parts' => [
-					['J\'irai là-bas','1-jirailabas'],
-					['Ce matin-là','2-cematinla'],
-					['Hier','3-hier'],
-					['Bon','4-bon'],
-					['Pizza','5-pizza']
+		<?php 
+			$anchor;
+			$pages = [
+				[ 'title' => 'Intro', 'parts' => [
+						['Instruction','1-instruction'],
+						['Remerciement','2-remerciement'],
+						['Prologue','3-prologue'],
+					]
+				], [ 'title' => 'Avant Zagreb', 'parts' => [
+						['J\'irai là-bas','1-jirailabas'],
+						['Ce matin-là','2-cematinla'],
+						['Hier','3-hier'],
+						['Bon','4-bon'],
+						['Pizza','5-pizza']
+					]
 				]
 			]
-		]
-	?>
+		?>
 		<!--[if lt IE 8]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -49,7 +49,8 @@
 			    <ul>
 			        <li><a href="#menu"><i class="icon-bookmark"></i></a></li><!--
 			     --><li><a href="#map"><i class="icon-map"></i></a></li><!--
-			     --><li><a href="#son"><i class="icon-mute"></i></a></li>
+			     --><li><a href="#love"><i class="icon-heart"></i></a></li><!--
+			     --><li><a href="#son" class="active"><i class="icon-volume-1"></i></a></li>
 			    </ul>
 			</nav>
 			<nav class="chapitres">
@@ -65,7 +66,16 @@
 			    	}
 			    ?>
 			</nav>
-
+			<nav class="player-soundcloud">
+				<ul class="controls">
+					<li><a href="#" id="prev"><i class="icon-to-start"></i></a></li>
+					<li><a href="#" id="play"><i class="icon-play"></i></a></li>
+					<li><a href="#" id="pause"><i class="icon-pause"></i></a></li>
+					<li><a href="#" id="next"><i class="icon-to-end"></i></a></li>
+				</ul>
+				<ul class="list-sounds"></ul>
+			</nav>
+			<iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=" width="100%" height="465" scrolling="no" frameborder="no" style="display: none;"></iframe>
 		</header>
 
 		<div class="bg">
@@ -103,15 +113,14 @@
 					$chap++;
 				}
 			?>
-
 		</main>
-		
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
 		<!-- <script src="js/plugins.js"></script> -->
 		<script src="js/vendor/audioplayer.min.js"></script>
+		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 		<script src="js/vendor/jquery.slimscroll.min.js"></script>
 		<script src="js/vendor/jquery.fullPage.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
