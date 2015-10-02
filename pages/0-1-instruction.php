@@ -1,4 +1,4 @@
-<section class="section" data-anchor="instructions">
+<section class="section" data-anchor="<?= $anchor ?>">
 	<div class="container">
 		<div class="content flex-column-bottom-center-small text-center">
 			<div><br> <i class="icon-volume-1 big"></i> <br> Pensez à activer le son pour profiter des parties audio</div>

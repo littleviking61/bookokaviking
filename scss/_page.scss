@@ -16,17 +16,17 @@
 	}
 }
 
-[data-anchor="remerciement"] {
+[data-anchor="0-2-remerciement"] {
 	font-family: $title-font;
 }
 
-[data-anchor="prologue"]{
+[data-anchor="0-3-prologue"]{
 	 .player{
 	 	margin-bottom: rem-calc(140);
 	 }
 }
 
-[data-anchor="instruction"]{
+[data-anchor="0-1-instruction"]{
 	.content > div{
 		margin: 0 $gutter-big $gutter-large;
 	}

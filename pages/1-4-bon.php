@@ -1,4 +1,4 @@
-<section class="section" data-anchor="1-4-bon" data-background="bg-bon.jpg">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-bon.jpg">
 	<div class="player text-center medium" style="background-color: rgba(17, 12, 8, .7);">
 		<audio class="audio" title="Bon" preload="auto">
 				<source src="media/audio/bon.mp3" type="audio/mp3">
@@ -6,18 +6,12 @@
 	</div> 
 
 	<script>
+
 		
 	function f_1_4_bon(section, anchorLink){
 		section = section || 'main';
 		var player = $('.audioplayer', section);
-
-		bg.vide({
-			mp4: 'media/video/bon.mp4'
-		}, {
-			posterType: 'none',
-			loop: false,
-			autoplay: false,
-		});
+		var videoBon = addBgVideo('media/video/bon.mp4', anchorLink);
 
 		if(typeof player[0].tl === 'undefined') {
 			
@@ -25,14 +19,13 @@
 			tl.pause()
 			.add(function() { changeBackground('bg-bon.jpg','bg-bon1.JPG',anchorLink) }, 0.1)
 			.add(function() { 
-				bg.data('vide').$wrapper.css({opacity: 1, zIndex: 0});
-				bg.data('vide').getVideoObject().play();
+				videoBon.addClass('active-video').data('vide').getVideoObject().play();
 			}, 4)
 			.add(function() {
 				changeBackground('bg-bon1.JPG','bg-bon2.JPG',anchorLink);
-				bg.data('vide').$wrapper.css({opacity: 0});
+				videoBon.data('vide').$wrapper.css({opacity: 0});
 			}, 27)
-			.add(function() { changeBackground('bg-bon2.JPG','bg-bon3.JPG',anchorLink);  bg.data('vide').destroy(); }, 34)
+			.add(function() { changeBackground('bg-bon2.JPG','bg-bon3.JPG',anchorLink);  videoBon.removeClass('active-video').data('vide').destroy(); }, 34)
 			.add(function() { changeBackground('bg-bon3.JPG','bg-bon4.JPG',anchorLink) }, 38)
 			.add(function() { changeBackground('bg-bon4.JPG','bg-bon5.JPG',anchorLink) }, 43)
 			.add(function() { changeBackground('bg-bon5.JPG','bg-bon6.JPG',anchorLink) }, 47)

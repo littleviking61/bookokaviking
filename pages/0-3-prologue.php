@@ -1,4 +1,4 @@
- <section class="section" data-anchor="prologue" data-background="bg-prologue.jpg">
+ <section class="section" data-anchor="<?= $anchor ?>" data-background="bg-prologue.jpg">
      <div class="container">
         <div class="player text-center medium">
              <audio class="audio" title="Prologue" preload="auto">

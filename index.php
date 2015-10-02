@@ -8,8 +8,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="favicon.png" />
-
-
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -18,16 +16,65 @@
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
 	<body>
+	<?php 
+		$anchor;
+		$pages = [
+			[ 'title' => 'Intro', 'parts' => [
+					['Instruction','1-instruction'],
+					['Remerciement','2-remerciement'],
+					['Prologue','3-prologue'],
+				]
+			], [ 'title' => 'Avant Zagreb', 'parts' => [
+					['J\'irai là-bas','1-jirailabas'],
+					['Ce matin-là','2-cematinla'],
+					['Hier','3-hier'],
+					['Bon','4-bon'],
+					['Pizza','5-pizza']
+				]
+			]
+		]
+	?>
 		<!--[if lt IE 8]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+		<header class="main">
+
+			<hgroup>
+				<div class="container">
+					<h2 class="page-description">Récits de voyages par</h2>
+					<h1 class="page-title">L'aventurier viking</h1>
+				</div>
+			</hgroup>
+			<nav class="main">
+			    <ul>
+			        <li><a href="#menu"><i class="icon-bookmark"></i></a></li><!--
+			     --><li><a href="#map"><i class="icon-map"></i></a></li><!--
+			     --><li><a href="#son"><i class="icon-mute"></i></a></li>
+			    </ul>
+			</nav>
+			<nav class="chapitres">
+			    <?php 
+			    	$chap = 0;
+			    	foreach ($pages as $chapitre) {
+			    		echo '<ul class="chap-'.$chap.'">';
+			    		foreach ($chapitre['parts'] as $page){
+			    			echo '<li><a href="#'.$chap.'-'.$page[1].'" title="'.$page[0].'">'.$page[0].'</a></li>';
+			    		}
+			    		echo '</ul>';
+			    		$chap++;
+			    	}
+			    ?>
+			</nav>
+
+		</header>
+
 		<div class="bg">
-			<div class="active data-adaptive-background data-ab-css-background"></div>
-			<div class="data-adaptive-background data-ab-css-background"></div>
+			<div class="image active data-adaptive-background data-ab-css-background"></div>
+			<div class="image data-adaptive-background data-ab-css-background"></div>
 		</div>
 
 		<main>
-			<header class="banner no-cover section" role="banner" data-anchor="bienvenue" data-background="bg-intro.jpg">
+			<section class="banner no-cover section" role="banner" data-anchor="bienvenue" data-background="bg-intro.jpg">
 
 				<div class="viking">
 					<img src="img/viking-yak.svg">
@@ -44,16 +91,18 @@
 				</div>
 				<div class="arrow" data-fp-action="moveSectionDown"></div>
 
-			</header>
-
-			<?php include "pages/0-instruction.php"; ?>
-			<?php include "pages/0-remerciement.php"; ?>
-			<?php include "pages/0-prologue.php"; ?>
-			<?php include "pages/1-1-jirai-labas.php"; ?>
-			<?php include "pages/1-2-cematin-la.php"; ?>
-			<?php include "pages/1-3-hier.php"; ?>
-			<?php include "pages/1-4-bon.php"; ?>
-			<?php include "pages/1-5-pizza.php"; ?>
+			</section>
+			<?php 
+				$chap = 0;
+				foreach ($pages as $chapitre) {
+					foreach ($chapitre['parts'] as $page){
+						$open = "pages/".$chap."-".$page[1].".php";
+						$anchor = $chap."-".$page[1];
+						include $open;
+					}
+					$chap++;
+				}
+			?>
 
 		</main>
 		

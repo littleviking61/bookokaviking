@@ -1,4 +1,4 @@
- <section class="section" data-anchor="1-3-pizza" data-background="bg-pizza.jpg">
+ <section class="section" data-anchor="<?= $anchor ?>" data-background="bg-pizza.jpg">
                 
     <div class="container" style="background-color: rgba(17, 12, 8, .7);">
         <header>

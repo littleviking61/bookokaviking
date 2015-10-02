@@ -1,15 +1,18 @@
-var racine = "http://book.laventurierviking.fr/";
-var racineImg = racine+'media/img/';
-var sections;
-var loadedSection;
+var 
+	racine = "http://book.laventurierviking.fr/",
+	racineImg = racine+'media/img/',
+	lastBackground = '', keepChapitre = false,
+	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink;
 
 $(document).ready(function() {
-	var page = $('main');
-	var lastBackground = '';
+	bg = $('.bg'),
+	page = $('main');
+	header = $('header.main'),
+	nav = $('nav.main', header),
+	chap = $('.chapitres', header);
 	
+	// sections init
 	sections = $('>.section', page);
-
-	// check bg
 	sections.each(function(){
 		$this = $(this);
 		var background = $this.data('background');
@@ -35,72 +38,142 @@ $(document).ready(function() {
 		// 	});
 		// 	$this.removeClass('adaptative');
 		// }
-
-		// to activate minimize function
-		if($('.icon-cancel', $this).length !== -1) {
-			$('.icon-cancel', $this).click(function(){
-				var container = $(this).closest('.container');
-
-				if(!container.hasClass('closed')) {
-					this.closeBtn = new TimelineLite();
-					this.closeBtn
-					.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
-					.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
-					.to( container, .2, { width: "70px"}, "-=.1")
-					.to( container, .1, { borderRadius: "50%"}, "-=.15")
-					.eventCallback('onReverseComplete', function() { 
-						container[0].style.removeProperty('width');
-						container[0].style.removeProperty('height');
-						console.log(container[0].style);
-					});
-				} else {
-					this.closeBtn.reverse();
-				}
-
-				container.toggleClass('closed');
-			});
-		}
 	});
 
-page.fullpage({
-	verticalCentered: false,
-		// scrollBar: true,
-		scrollOverflow: true,
-		navigation: true,
-		navigationPosition: 'left',
-		// animateAnchor: false,
-		onLeave: function(index, nextIndex, direction){
-			var leavingSection = $(this),
-			nextElmt = $('>.section:nth-child('+nextIndex+')', page),
-			nextElmtBg = nextElmt.attr('data-background');
+	// full pages init
+	page.fullpage({
+		verticalCentered: false,
+			// scrollBar: true,
+			scrollOverflow: true,
+			css3: true,
+			onLeave: function(index, nextIndex, direction){
+				var leavingSection = $(this),
+				nextElmt = $('>.section:nth-child('+nextIndex+')', page),
+				nextElmtBg = nextElmt.attr('data-background');
 
-			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
-		},
-		afterLoad: function(anchorLink, index){
-			loadedSection = $(this);
-			anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
-			// changeBackground($(this).data('background'));
-			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
+				if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
+				// hide video for other section
+				$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
+			},
+			afterLoad: function(anchorLink, index){
+				loadedSection = $(this);
+				loadedAnchorLink = anchorLink;
+				anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
+				//
+				if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
+				// show video hidden before
+				$('[data-video-anchor="'+anchorLink+'"]', bg).removeClass('hidden');
+			},
+		});
 
-		},
-	});
+	$('[data-fp-action]').click(function(e){
+		var action = $(this).data('fp-action');
+		if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
+		e.preventDefault();
+	})
 
-$('[data-fp-action]').click(function(e){
-	var action = $(this).data('fp-action');
-	if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
-	e.preventDefault();
-})
+	// other inits
+	$( 'audio' ).audioPlayer();
+	initCancelContainerButton(sections);
+	initMenu();
 
-$( 'audio' ).audioPlayer();
+});
 
+// for audio player play on space up
 $(window).keypress(function(e) {
 	if (e.keyCode === 0 || e.keyCode === 32) {
 		$('.audioplayer', loadedSection).trigger('click');
 	}
 });
-});
 
-var bg = $('.bg');
+/* function active event */
+
+function initCancelContainerButton(sections) {
+	// to activate minimize function
+	$('.icon-cancel', sections).click(function(){
+		var container = $(this).closest('.container');
+
+		if(!container.hasClass('closed')) {
+			this.closeBtn = new TimelineLite();
+			this.closeBtn
+			.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
+			.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
+			.to( container, .2, { width: "70px"}, "-=.1")
+			.to( container, .1, { borderRadius: "50%"}, "-=.15")
+			.eventCallback('onReverseComplete', function() { 
+				container[0].style.removeProperty('width');
+				container[0].style.removeProperty('height');
+			});
+		} else this.closeBtn.reverse();
+		
+		container.toggleClass('closed');
+	});
+}
+
+function initMenu(){
+
+		// active menu button
+		nav[0].tl = new TimelineLite();
+		nav[0].tl
+		.pause()
+		.to(chap, .1, {opacity:1, display: 'block'})
+		.staggerFrom($('ul > li', chap), .15, { marginRight:'10px', opacity: 0}, .1)
+		.totalDuration(.4);
+
+		// menu chapitre
+		$('[href^="#menu"]', nav)
+			.mouseenter( function () {
+				if(!$(this).hasClass('active')) nav[0].tl.play();
+				// $(this).addClass('active');
+			})
+			.click(function(e){
+				if(!$(this).hasClass('active')) {
+					keepChapitre = true;
+					nav[0].tl.play();
+				}else{
+					keepChapitre = false;
+					nav[0].tl.reverse();
+				}
+				
+				$(this).toggleClass('active');
+				e.preventDefault();
+			});
+
+		// on leave header quit nav if open
+		header
+			.mouseleave(function(){
+				if(!keepChapitre) {
+					$('a[href^="#menu"].active', nav).removeClass('active');
+					nav[0].tl.reverse();
+				}
+			})
+
+		// musique button	
+		$('[href^="#son"]', nav).click( function (e) {
+			e.preventDefault();
+		// 	if(!$(this).hasClass('active')) {
+				
+		// 		$('audio,video').each(function(){
+	 //          this.muted=true;
+	 //          this.pause(); 
+	 //      });
+
+		// 	}else{
+		// 		$('audio,video').each(function(){
+	 //          this.muted=false; 
+	 //      });
+		// 	}
+			$(this).toggleClass('active');
+		});
+
+}
+
+/* functions utiles */
+
+function getActiveBgVideo() {
+	return $('[data-video-anchor="'+loadedAnchorLink+'"].active-video video', bg);
+}
+
 function loadBackground(bg, anchor) {
 	var	id = anchor !== undefined  && anchor !== '' ? 'id="bg-'+anchor+'"' : ""; 
 	bg = racineImg+bg;
@@ -114,9 +187,25 @@ function changeBackground(newBg, nextBg, anchor) {
 
 	if($('.active',bg).css('background-image') !== 'url('+newBg+')') {
 		$(':not(.active)',bg).css('background-image', 'url('+newBg+')');
-		$('div', bg).toggleClass('active');
+		$('.image', bg).toggleClass('active');
 		// to prevent change bg on page scrolling
 		if(anchor !== undefined) $('[data-anchor="'+anchor+'"]').attr('data-background', newBg);
 	}
+}
 
+function addBgVideo(videoLink, anchorLink) {
+	if( $('[data-video-anchor="'+anchorLink+'"]', bg).length === 0 ) {
+		newVideo = $('<div class="video" data-video-anchor="'+anchorLink+'"></div>').appendTo(bg);
+		
+		if(newVideo.data('vide') === undefined) {
+			newVideo.vide({
+				mp4: videoLink
+			}, {
+				posterType: 'none',
+				loop: false,
+				autoplay: false,
+			});
+		}
+		return newVideo;
+	}
 }

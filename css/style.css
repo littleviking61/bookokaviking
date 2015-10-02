@@ -263,6 +263,45 @@ body {
   overflow-x: hidden !important; }
 
 /* HEADER */
+header.main {
+  position: fixed;
+  top: 0;
+  z-index: 100; }
+  header.main hgroup {
+    display: none; }
+  header.main nav {
+    font-size: 1.125rem;
+    width: 100vw;
+    padding-right: 0.3125rem; }
+    header.main nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: flex-end;
+      justify-content: flex-end; }
+    header.main nav li a {
+      display: inline-block;
+      padding: 0 1.25rem;
+      color: white;
+      opacity: 0.6;
+      white-space: nowrap;
+      -moz-transition: opacity 0.4s;
+      -o-transition: opacity 0.4s;
+      -webkit-transition: opacity 0.4s;
+      transition: opacity 0.4s; }
+      header.main nav li a:hover, header.main nav li a.active {
+        color: white;
+        opacity: 1; }
+    header.main nav.chapitres {
+      display: none;
+      opacity: 0; }
+      header.main nav.chapitres ul {
+        margin: 0.3125rem 0; }
+      header.main nav.chapitres li {
+        max-width: 100%;
+        overflow: hidden; }
+        header.main nav.chapitres li a {
+          padding: 0 0.625rem; }
+
 .banner {
   height: 100vh;
   width: 100vw;
@@ -505,12 +544,11 @@ i[class^="icon-"].border {
   background-position: center center;
   background-image: url(/media/img/bg-intro.jpg);
   opacity: 0;
-  z-index: -1;
   -moz-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s; }
-  .bg > div.active {
+  .bg > div.active, .bg > div.active-video {
     opacity: 1; }
 
 .arrow:before {
@@ -539,13 +577,13 @@ i[class^="icon-"].border {
   .banner .arrow:before {
     margin-left: 5.78125rem; }
 
-[data-anchor="remerciement"] {
+[data-anchor="0-2-remerciement"] {
   font-family: "Poiret One", serif; }
 
-[data-anchor="prologue"] .player {
+[data-anchor="0-3-prologue"] .player {
   margin-bottom: 8.75rem; }
 
-[data-anchor="instruction"] .content > div {
+[data-anchor="0-1-instruction"] .content > div {
   margin: 0 1.875rem 1.25rem; }
 
 .video-container {

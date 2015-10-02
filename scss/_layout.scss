@@ -6,6 +6,57 @@ body{
 
 /* HEADER */
 
+header.main{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  hgroup{
+    display: none;
+  }
+
+  nav{
+    font-size: $ft-size-larger;
+    width: 100vw;
+    padding-right: $gutter-small;
+
+    ul{
+      @include display-flex;
+      @include justify-content(flex-end);
+    }
+
+    li a{
+      display: inline-block;
+      padding: 0 $gutter-large;
+      color: white;
+      opacity: 0.6;
+      white-space: nowrap;
+      @include single-transition(opacity, .4s);
+
+      &:hover,&.active{
+        color: white;
+        opacity: 1;
+      }
+    }
+
+    &.chapitres{
+      display: none;
+      opacity: 0;
+
+      ul{
+        margin: $gutter-small 0;
+      }
+      li{
+        max-width: 100%;
+        overflow: hidden;
+
+        a{
+          padding: 0 $gutter;
+        }
+      }
+    }
+  }
+}
 
 .banner {
   height: 100vh;

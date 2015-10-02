@@ -1,4 +1,4 @@
-<section class="section" data-anchor="remerciement">
+<section class="section" data-anchor="<?= $anchor ?>">
        
    <div class="text-center">
        <img src="media/img/portrait.png" alt="Baptiste Régné">

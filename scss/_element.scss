@@ -190,11 +190,10 @@ i[class^="icon-"]{
 		background-position: center center;
 		background-image: url(/media/img/bg-intro.jpg);
 		opacity: 0;
-		z-index: -1;
 
 		@include single-transition(opacity, .4s);
-
-		&.active{
+		
+		&.active, &.active-video{
 			opacity: 1;
 		}
 	}

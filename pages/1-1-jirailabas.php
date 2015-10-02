@@ -1,4 +1,4 @@
- <section class="section" data-anchor="1-1-jirailabas">
+ <section class="section" data-anchor="<?= $anchor ?>">
                 
     <div class="container" style="background-color: rgba(56, 87, 131, .7);">
         <header>
