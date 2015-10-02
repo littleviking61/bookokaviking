@@ -2,7 +2,8 @@ var
 	racine = "http://book.laventurierviking.fr/",
 	racineImg = racine+'media/img/',
 	lastBackground = '', keepChapitre = false,
-	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink;
+	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
+	widgetIframe, widget, playlist, active;
 
 $(document).ready(function() {
 	bg = $('.bg'),
@@ -10,6 +11,7 @@ $(document).ready(function() {
 	header = $('header.main'),
 	nav = $('nav.main', header),
 	chap = $('.chapitres', header);
+	soundcloudPlayer = $('.player-soundcloud', header);
 	
 	// sections init
 	sections = $('>.section', page);
@@ -77,6 +79,9 @@ $(document).ready(function() {
 	initCancelContainerButton(sections);
 	initMenu();
 
+	initSoundCloudPlayer();
+
+
 });
 
 // for audio player play on space up
@@ -110,6 +115,89 @@ function initCancelContainerButton(sections) {
 	});
 }
 
+function initSoundCloudPlayer() {
+	widgetIframe	= document.getElementById('sc-widget');
+	widget				= SC.Widget(widgetIframe);
+	playlist			= 'https://soundcloud.com/nils_frahm/sets/piano-day-playlist-march-29th';
+	active;
+
+	widget.load(playlist);
+	widget.bind(SC.Widget.Events.READY, function() {
+
+		// widget.play();
+
+		widget.bind(SC.Widget.Events.PLAY, function() {
+			// get information about currently playing sound
+			widget.getCurrentSoundIndex(function(currentIndex) {
+				// change background on svg
+				active = currentIndex;
+				// change active on link
+				$('.list-sounds a[data-key]', soundcloudPlayer).removeClass('active');
+				$('.list-sounds a[data-key="'+currentIndex+'"]', soundcloudPlayer).addClass('active');
+
+				$('#play').addClass('active');
+				$('#pause, #stop').removeClass('active');
+			});
+		});
+
+		widget.bind(SC.Widget.Events.PAUSE, function() {
+			$('#play').removeClass('active');
+			$('#pause').addClass('active');
+		});
+
+		widget.bind(SC.Widget.Events.FINISH, function() {
+			$('#play, #pause').removeClass('active');
+		});
+
+		$('#next').click(function(event) {
+			widget.next().seekTo(0);;
+			event.preventDefault();
+		});
+
+		$('#prev').click(function(event) {
+			widget.prev().seekTo(0);;
+			event.preventDefault();
+		});
+
+		$('#play').click(function(event) {
+			widget.play();
+			event.preventDefault();
+		});
+
+		$('#pause').click(function(event) {
+			widget.pause();
+			event.preventDefault();
+		});
+		
+		// create list of sound
+		addAllSound(widget);
+
+	});
+
+}
+
+function addAllSound(widget) {
+	widget.getSounds(function(allsounds) {
+		var sounds = [];
+		$.each(allsounds, function(index, value) {
+			if(index > 15) return false;
+			sounds.push('<li><a href="#" data-key="'+index+'" data-id="'+value.id+'">'+ value.title + '</a></li>');
+		});
+		$('.list-sounds', soundcloudPlayer).html(sounds);
+		
+		nav[0].tl2 = new TimelineLite();
+		nav[0].tl2
+		.pause()
+		.to(soundcloudPlayer, .1, {opacity:1, display: 'block'})
+		.staggerFrom($('li', soundcloudPlayer), .09, { marginRight:'10px', opacity: 0}, .03);
+
+		$('.list-sounds a', soundcloudPlayer).click(function(event) {
+			widget.skip($(this).attr('data-key')).seekTo(0);;
+			event.preventDefault();
+		});
+	});
+}
+
 function initMenu(){
 
 		// active menu button
@@ -117,26 +205,40 @@ function initMenu(){
 		nav[0].tl
 		.pause()
 		.to(chap, .1, {opacity:1, display: 'block'})
-		.staggerFrom($('ul > li', chap), .15, { marginRight:'10px', opacity: 0}, .1)
-		.totalDuration(.4);
+		.staggerFrom($('li', chap), .09, { marginRight:'10px', opacity: 0}, .03);
 
 		// menu chapitre
 		$('[href^="#menu"]', nav)
 			.mouseenter( function () {
-				if(!$(this).hasClass('active')) nav[0].tl.play();
-				// $(this).addClass('active');
+				nav[0].tl2.totalDuration(.2).reverse();
+				nav[0].tl.totalDuration(.6).play();
 			})
 			.click(function(e){
 				if(!$(this).hasClass('active')) {
 					keepChapitre = true;
-					nav[0].tl.play();
+					nav[0].tl.totalDuration(.6).play();
 				}else{
 					keepChapitre = false;
-					nav[0].tl.reverse();
+					nav[0].tl.totalDuration(.4).reverse();
 				}
 				
 				$(this).toggleClass('active');
 				e.preventDefault();
+			});
+
+		$('[href^="#son"]', nav)
+			.mouseenter( function () {
+				nav[0].tl.totalDuration(.2).reverse();
+				nav[0].tl2.totalDuration(.6).play();
+			})
+			.click(function(e) {
+				if(!$(this).hasClass('active')) {
+					widget.play();
+				}else{
+					widget.pause();
+				}
+				$(this).toggleClass('active');
+				e.preventDefault;
 			});
 
 		// on leave header quit nav if open
@@ -145,27 +247,12 @@ function initMenu(){
 				if(!keepChapitre) {
 					$('a[href^="#menu"].active', nav).removeClass('active');
 					nav[0].tl.reverse();
+					nav[0].tl2.reverse();
+				}else{
+					nav[0].tl2.totalDuration(.2).reverse();
+					nav[0].tl.totalDuration(.6).play();
 				}
 			})
-
-		// musique button	
-		$('[href^="#son"]', nav).click( function (e) {
-			e.preventDefault();
-		// 	if(!$(this).hasClass('active')) {
-				
-		// 		$('audio,video').each(function(){
-	 //          this.muted=true;
-	 //          this.pause(); 
-	 //      });
-
-		// 	}else{
-		// 		$('audio,video').each(function(){
-	 //          this.muted=false; 
-	 //      });
-		// 	}
-			$(this).toggleClass('active');
-		});
-
 }
 
 /* functions utiles */
