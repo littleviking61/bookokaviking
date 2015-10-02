@@ -44,15 +44,15 @@ $(document).ready(function() {
 				if(!container.hasClass('closed')) {
 					this.closeBtn = new TimelineLite();
 					this.closeBtn
-						.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
-						.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
-						.to( container, .2, { width: "70px"}, "-=.1")
-						.to( container, .1, { borderRadius: "50%"}, "-=.15")
-						.eventCallback('onReverseComplete', function() { 
-							container[0].style.removeProperty('width');
-							container[0].style.removeProperty('height');
-							console.log(container[0].style);
-						});
+					.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
+					.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
+					.to( container, .2, { width: "70px"}, "-=.1")
+					.to( container, .1, { borderRadius: "50%"}, "-=.15")
+					.eventCallback('onReverseComplete', function() { 
+						container[0].style.removeProperty('width');
+						container[0].style.removeProperty('height');
+						console.log(container[0].style);
+					});
 				} else {
 					this.closeBtn.reverse();
 				}
@@ -62,14 +62,19 @@ $(document).ready(function() {
 		}
 	});
 
-	page.fullpage({
-		verticalCentered: false,
+page.fullpage({
+	verticalCentered: false,
+		// scrollBar: true,
+		scrollOverflow: true,
+		navigation: true,
+		navigationPosition: 'left',
+		// animateAnchor: false,
 		onLeave: function(index, nextIndex, direction){
-				var leavingSection = $(this),
-					nextElmt = $('>.section:nth-child('+nextIndex+')', page),
-					nextElmtBg = nextElmt.attr('data-background');
+			var leavingSection = $(this),
+			nextElmt = $('>.section:nth-child('+nextIndex+')', page),
+			nextElmtBg = nextElmt.attr('data-background');
 
-				if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
+			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
 		},
 		afterLoad: function(anchorLink, index){
 			loadedSection = $(this);
@@ -77,19 +82,22 @@ $(document).ready(function() {
 			// changeBackground($(this).data('background'));
 			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
 
-		}
-
+		},
 	});
 
-	$( 'audio' ).audioPlayer();
+$('[data-fp-action]').click(function(e){
+	var action = $(this).data('fp-action');
+	if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
+	e.preventDefault();
+})
 
-	$(window).keypress(function(e) {
-		if (e.keyCode === 0 || e.keyCode === 32) {
-			console.log(loadedSection);
-			console.log($('.audioplayer', loadedSection));
-			$('.audioplayer', loadedSection).trigger('click');
-		}
-	});
+$( 'audio' ).audioPlayer();
+
+$(window).keypress(function(e) {
+	if (e.keyCode === 0 || e.keyCode === 32) {
+		$('.audioplayer', loadedSection).trigger('click');
+	}
+});
 });
 
 var bg = $('.bg');

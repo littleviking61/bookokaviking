@@ -5,6 +5,14 @@
 		position: absolute;
 		bottom: $gutter-large;
 		left: 50%;
+		width: rem-calc(200);
+		height: rem-calc(60);
+		margin-left: -(rem-calc(100));
+		cursor: pointer;
+
+		&:before{
+			margin-left: rem-calc(100) - ($gutter-medium/2);
+		}
 	}
 }
 
