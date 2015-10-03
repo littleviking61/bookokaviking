@@ -67,7 +67,9 @@ header.main{
       }
     }
   }
+
 }
+
 
 .banner {
   height: 100vh;
@@ -113,6 +115,10 @@ header.main{
 	}
 
   
+}
+
+main{
+  overflow: hidden;
 }
 
 .container {

@@ -345,6 +345,9 @@ header.main {
     z-index: 1;
     position: relative; }
 
+main {
+  overflow: hidden; }
+
 .container {
   position: relative;
   margin-right: auto;
@@ -423,6 +426,21 @@ header.main {
   -moz-column-count: 12;
   -webkit-column-count: 12;
   column-count: 12; }
+
+.map {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  -webkit-transition: max-height 0.4s;
+  transition: max-height 0.4s; }
+  .map.loading, .map:not(.active) {
+    max-height: 0vh; }
+  .map .acf-map {
+    width: 100vw;
+    height: 100vh; }
 
 .player p:first-child {
   margin: 0; }
@@ -543,22 +561,24 @@ i[class^="icon-"].border {
   width: 20px;
   height: 20px; }
 
-.bg > div {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-position: center center;
-  background-image: url(/media/img/bg-intro.jpg);
-  opacity: 0;
-  -moz-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s; }
-  .bg > div.active, .bg > div.active-video {
-    opacity: 1; }
+.bg {
+  position: relative; }
+  .bg > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(/media/img/bg-intro.jpg);
+    opacity: 0;
+    -moz-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s; }
+    .bg > div.active, .bg > div.active-video {
+      opacity: 1; }
 
 .arrow:before {
   content: "";

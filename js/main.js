@@ -3,11 +3,11 @@ var
 	racineImg = racine+'media/img/',
 	lastBackground = '', keepChapitre = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
-	widgetIframe, widget, playlist, active;
+	widgetIframe, widget, playlist, active, carte;
 
 $(document).ready(function() {
 	bg = $('.bg'),
-	page = $('main');
+	page = $('main > .sections');
 	header = $('header.main'),
 	nav = $('nav.main', header),
 	chap = $('.chapitres', header);
@@ -124,6 +124,8 @@ function initSoundCloudPlayer() {
 	widget.load(playlist);
 	widget.bind(SC.Widget.Events.READY, function() {
 
+		$('[href^="#son"]', nav).removeClass('loading');
+
 		widget.bind(SC.Widget.Events.PLAY, function() {
 			// get information about currently playing sound
 			widget.getCurrentSoundIndex(function(currentIndex) {
@@ -170,7 +172,7 @@ function initSoundCloudPlayer() {
 		// create list of sound
 		addAllSound(widget);
 		// to do optimize volume
-		widget.setVolume(0.04).next().seekTo(0);
+		widget.setVolume(0.1);
 	});
 
 }
@@ -252,6 +254,34 @@ function initMenu(){
 					nav[0].tl.totalDuration(.6).play();
 				}
 			})
+
+		carte = $('<div class="map loading"></div>').insertAfter(header);
+		$('[href^="#map"]', nav).click(function(e) {
+			if(!$(this).hasClass('active')){			
+				if(carte.hasClass('loading')) {
+					$(this).addClass('loading');
+					$.ajax({
+					  url: "/pages/map.php",
+					  context: carte
+					}).done(function(data) {
+						//render_map( $('.acp-map', carte), function() {
+							//$(this).removeClass('loading');
+							carte.html(data).removeClass('loading');//.removeClass('loading').addClass('active');
+						//});
+					});
+				}else{
+					carte.addClass('active');
+					$.fn.fullpage.setAllowScrolling(false);
+					$.fn.fullpage.setKeyboardScrolling(false);
+				}
+			}else{
+				carte.removeClass('active');
+				$.fn.fullpage.setAllowScrolling(true);
+				$.fn.fullpage.setKeyboardScrolling(true);
+			}
+			$(this).toggleClass('active');
+			e.preventDefault;
+		});
 }
 
 /* functions utiles */

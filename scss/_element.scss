@@ -5,6 +5,23 @@
   .col-#{$i} { @include column-count($i);}
 }
 
+.map{
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  @include single-transition(max-height, .4s);
+
+  &.loading, &:not(.active){
+    max-height: 0vh;
+  }
+
+  .acf-map{
+  	width: 100vw;
+  	height: 100vh;
+  }
+}
+
 .player{
 	//text-align: center;
 	//
@@ -180,8 +197,9 @@ i[class^="icon-"]{
 }
 
 .bg{
+	position: relative;
 	> div{
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100vh;

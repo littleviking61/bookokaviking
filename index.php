@@ -50,7 +50,7 @@
 			        <li><a href="#menu"><i class="icon-bookmark"></i></a></li><!--
 			     --><li><a href="#map"><i class="icon-map"></i></a></li><!--
 			     --><li><a href="#love"><i class="icon-heart"></i></a></li><!--
-			     --><li><a href="#son" class="active"><i class="icon-volume-1"></i></a></li>
+			     --><li><a href="#son" class="loading"><i class="icon-volume-1"></i></a></li>
 			    </ul>
 			</nav>
 			<nav class="chapitres">
@@ -84,35 +84,37 @@
 		</div>
 
 		<main>
-			<section class="banner no-cover section" role="banner" data-anchor="bienvenue" data-background="bg-intro.jpg">
+			<div class="sections">
+				<section class="banner no-cover section" role="banner" data-anchor="bienvenue" data-background="bg-intro.jpg">
 
-				<div class="viking">
-					<img src="img/viking-yak.svg">
-				</div>
-				<div class="header-inner">
-					<hgroup>
-						<div class="container">
-							<h2 class="page-description">Récits de voyages par</h2>
-							<h1 class="page-title">
-								L'aventurier viking            
-							</h1>
-						</div>
-					</hgroup>
-				</div>
-				<div class="arrow" data-fp-action="moveSectionDown"></div>
+					<div class="viking">
+						<img src="img/viking-yak.svg">
+					</div>
+					<div class="header-inner">
+						<hgroup>
+							<div class="container">
+								<h2 class="page-description">Récits de voyages par</h2>
+								<h1 class="page-title">
+									L'aventurier viking            
+								</h1>
+							</div>
+						</hgroup>
+					</div>
+					<div class="arrow" data-fp-action="moveSectionDown"></div>
 
-			</section>
-			<?php 
-				$chap = 0;
-				foreach ($pages as $chapitre) {
-					foreach ($chapitre['parts'] as $page){
-						$open = "pages/".$chap."-".$page[1].".php";
-						$anchor = $chap."-".$page[1];
-						include $open;
+				</section>
+				<?php 
+					$chap = 0;
+					foreach ($pages as $chapitre) {
+						foreach ($chapitre['parts'] as $page){
+							$open = "pages/".$chap."-".$page[1].".php";
+							$anchor = $chap."-".$page[1];
+							include $open;
+						}
+						$chap++;
 					}
-					$chap++;
-				}
-			?>
+				?>
+			</div>
 		</main>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
@@ -126,6 +128,7 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		<script src="js/vendor/jquery.adaptive-backgrounds.js"></script>
 		<script src="js/vendor/jquery.vide.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="js/main.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
