@@ -239,7 +239,7 @@ function initMenu(){
 					widget.pause();
 				}
 				$(this).toggleClass('active');
-				e.preventDefault;
+				e.preventDefault();
 			});
 
 		// on leave header quit nav if open
@@ -280,7 +280,7 @@ function initMenu(){
 				$.fn.fullpage.setKeyboardScrolling(true);
 			}
 			$(this).toggleClass('active');
-			e.preventDefault;
+			e.preventDefault();
 		});
 }
 
