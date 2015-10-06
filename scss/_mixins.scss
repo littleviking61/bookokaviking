@@ -13,3 +13,21 @@
       font-style: $style;
   }
 }
+
+@mixin loading($width: $gutter-medium, $border: 2.5, $first-color: white, $second-color: transparent, $duration: .6s){
+  content: "";
+  width: $width;
+  height: $width;
+  border-bottom: rem-calc($border) solid $second-color;
+  border-left: rem-calc($border) solid $first-color;
+  border-right: rem-calc($border) solid $first-color;
+  border-top: rem-calc($border) solid $first-color;
+  border-radius: 100%;
+
+  @include animation(spin $duration infinite linear);
+}
+
+@include keyframes('spin') {
+  from { @include transform(rotate(0deg)); }
+  to { @include transform(rotate(359deg)); }
+}

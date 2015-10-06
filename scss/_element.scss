@@ -164,6 +164,10 @@ section > .container{
 			@include column-width(rem-calc(180));
 		}
 	}
+
+	blockquote{
+	    // text-shadow: 2px 2px #000000;
+	}
 }
 
 [class*="flex-column"]{
@@ -211,16 +215,20 @@ i[class^="icon-"]{
 
 		@include single-transition(opacity, .4s);
 		
-		&.active, &.active-video{
+		&.active{
 			opacity: 1;
+		}
+		&.active-video{
+			opacity: 1;
+			z-index: 0;
 		}
 	}
 }
 
 .arrow {
-	&:before{
+	&:after{
 		content: "";
-		display: block;
+		display: inline-block;
 		margin: auto;
 		-webkit-transform: rotate(45deg);
 		-moz-transform: rotate(45deg);

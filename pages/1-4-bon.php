@@ -15,8 +15,8 @@
 
 		if(typeof player[0].tl === 'undefined') {
 			
-			tl = player[0].tl = new TimelineLite();
-			tl.pause()
+			player[0].tl = new TimelineLite();
+			player[0].tl.pause()
 			.add(function() { changeBackground('bg-bon.jpg','bg-bon1.JPG',anchorLink) }, 0.1)
 			.add(function() { 
 				videoBon.addClass('active-video').data('vide').getVideoObject().play();

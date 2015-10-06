@@ -1,6 +1,7 @@
 var 
 	racine = "http://book.laventurierviking.fr/",
 	racineImg = racine+'media/img/',
+	historyPage = Cookies.get('activePage'),
 	lastBackground = '', keepChapitre = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte;
@@ -12,7 +13,7 @@ $(document).ready(function() {
 	nav = $('nav.main', header),
 	chap = $('.chapitres', header);
 	soundcloudPlayer = $('.player-soundcloud', header);
-	
+
 	// sections init
 	sections = $('>.section', page);
 	sections.each(function(){
@@ -29,17 +30,6 @@ $(document).ready(function() {
 		if(background !== lastBackground) loadBackground(background, anchor);
 		// save last bg
 		lastBackground = background;
-
-		// // to adapt all color
-		// if($this.hasClass('adaptative')) {
-		// 	$.adaptiveBackground.run({
-		// 		image: racineImg+background,
-		// 		selector: $('.adapter', $this),
-		// 		exclude: [ 'rgb(0,0,0)', 'rgba(255,255,255)' ],
-		// 		transparent: 0.7
-		// 	});
-		// 	$this.removeClass('adaptative');
-		// }
 	});
 
 	// full pages init
@@ -58,6 +48,8 @@ $(document).ready(function() {
 				$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
 			},
 			afterLoad: function(anchorLink, index){
+				Cookies.set('activePage', anchorLink);
+
 				loadedSection = $(this);
 				loadedAnchorLink = anchorLink;
 				anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
@@ -79,8 +71,8 @@ $(document).ready(function() {
 	initCancelContainerButton(sections);
 	initMenu();
 
-	initSoundCloudPlayer();
-
+	checkCookie();
+	// initSoundCloudPlayer();
 
 });
 
@@ -92,6 +84,17 @@ $(window).keypress(function(e) {
 });
 
 /* function active event */
+
+function checkCookie() {
+	hashtag = window.location.hash;
+	console.log(historyPage);
+	if( historyPage !== undefined && historyPage !== 'bienvenue' && (hashtag === '' || hashtag === '#') ) {
+		var r = confirm('Would you like to go to the last page you read ?');
+		if (r == true) {
+		    window.location.hash = historyPage;
+		}
+	}
+}
 
 function initCancelContainerButton(sections) {
 	// to activate minimize function
@@ -186,7 +189,7 @@ function addAllSound(widget) {
 		});
 		$('.list-sounds', soundcloudPlayer).html(sounds);
 		
-		nav[0].tl2 = new TimelineLite();
+		// nav[0].tl2 = new TimelineLite();
 		nav[0].tl2
 		.pause()
 		.to(soundcloudPlayer, .1, {opacity:1, display: 'block'})
@@ -203,6 +206,8 @@ function initMenu(){
 
 		// active menu button
 		nav[0].tl = new TimelineLite();
+		nav[0].tl2 = new TimelineLite();
+
 		nav[0].tl
 		.pause()
 		.to(chap, .1, {opacity:1, display: 'block'})
@@ -256,30 +261,58 @@ function initMenu(){
 			})
 
 		carte = $('<div class="map loading"></div>').insertAfter(header);
-		$('[href^="#map"]', nav).click(function(e) {
-			if(!$(this).hasClass('active')){			
-				if(carte.hasClass('loading')) {
-					$(this).addClass('loading');
-					$.ajax({
-					  url: "/pages/map.php",
-					  context: carte
-					}).done(function(data) {
-						//render_map( $('.acp-map', carte), function() {
-							//$(this).removeClass('loading');
-							carte.html(data).removeClass('loading');//.removeClass('loading').addClass('active');
-						//});
-					});
+		$('[href^="#map"]', nav)
+			.mouseenter( function () {
+				nav[0].tl.totalDuration(.2).reverse();
+				nav[0].tl2.totalDuration(.2).reverse();
+			})
+			.click(function(e) {
+				if(!$(this).hasClass('active')){			
+					if(carte.hasClass('loading')) {
+						var linkClick = $(this)
+						linkClick.addClass('loading');
+						$.ajax({
+						  url: "/pages/map.php",
+						  context: carte
+						}).done(function(data) {
+								linkClick.removeClass('loading');
+								carte.html(data).addClass('active').removeClass('loading');
+								header.addClass('closed');
+								$.fn.fullpage.setAllowScrolling(false);
+								$.fn.fullpage.setKeyboardScrolling(false);
+						});
+					}else{
+						carte.addClass('active');
+						header.addClass('closed');
+						$.fn.fullpage.setAllowScrolling(false);
+						$.fn.fullpage.setKeyboardScrolling(false);
+					}
 				}else{
-					carte.addClass('active');
-					$.fn.fullpage.setAllowScrolling(false);
-					$.fn.fullpage.setKeyboardScrolling(false);
+					carte.removeClass('active');
+					header.removeClass('closed');
+					$.fn.fullpage.setAllowScrolling(true);
+					$.fn.fullpage.setKeyboardScrolling(true);
 				}
-			}else{
-				carte.removeClass('active');
-				$.fn.fullpage.setAllowScrolling(true);
-				$.fn.fullpage.setKeyboardScrolling(true);
-			}
-			$(this).toggleClass('active');
+				$(this).toggleClass('active');
+				e.preventDefault();
+			});
+
+		$('[href^="#love"]', nav)
+			.mouseenter( function () {
+				nav[0].tl.totalDuration(.2).reverse();
+				nav[0].tl2.totalDuration(.2).reverse();
+			})
+			.click(function(e) {
+				$(this).toggleClass('active');
+				e.preventDefault();
+			});
+
+		$('[href^="#close"]', nav).click(function(e) {
+			carte.removeClass('active');
+			header.removeClass('closed');
+			$('a[href^="#map"]', nav).removeClass('active')
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
 			e.preventDefault();
 		});
 }

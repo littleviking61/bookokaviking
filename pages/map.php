@@ -175,7 +175,7 @@ function render_map( $el ) {
 		center		: new google.maps.LatLng(0, 0),
 		scrollwheel: false,
 		mapTypeId	: google.maps.MapTypeId.HYBRID,
-	  // mapTypeControl: false,
+	  mapTypeControl: false,
     panControl: true,
     panControlOptions: {
         position: google.maps.ControlPosition.LEFT_CENTER

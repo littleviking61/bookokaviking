@@ -29,7 +29,8 @@
 						['Ce matin-là','2-cematinla'],
 						['Hier','3-hier'],
 						['Bon','4-bon'],
-						['Pizza','5-pizza']
+						['Pizza','5-pizza'],
+						['Plitvice','6-plitvice']
 					]
 				]
 			]
@@ -45,14 +46,17 @@
 					<h1 class="page-title">L'aventurier viking</h1>
 				</div>
 			</hgroup>
+
 			<nav class="main">
 			    <ul>
-			        <li><a href="#menu"><i class="icon-bookmark"></i></a></li><!--
-			     --><li><a href="#map"><i class="icon-map"></i></a></li><!--
-			     --><li><a href="#love"><i class="icon-heart"></i></a></li><!--
-			     --><li><a href="#son" class="loading"><i class="icon-volume-1"></i></a></li>
+			        <li><a href="#close" title="Réouvrir au livre" ><i class="icon-cancel"></i></a></li><!--
+	         --><li><a href="#menu" title="Afficher les chapitres" ><i class="icon-bookmark"></i></a></li><!--
+			     --><li><a href="#map" title="Voir la carte" ><i class="icon-map"></i></a></li><!--
+			     --><li><a href="#love" title="S'abonner ou laisser un commentaire" ><i class="icon-heart"></i></a></li><!--
+			     --><li><a href="#son" title="Gérer la musique" class=""><i class="icon-volume-1"></i></a></li>
 			    </ul>
 			</nav>
+			
 			<nav class="chapitres">
 			    <?php 
 			    	$chap = 0;
@@ -75,7 +79,7 @@
 				</ul>
 				<ul class="list-sounds"></ul>
 			</nav>
-			<iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=" width="100%" height="465" scrolling="no" frameborder="no" style="display: none;"></iframe>
+			<!-- <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=" width="100%" height="465" scrolling="no" frameborder="no" style="display: none;"></iframe> -->
 		</header>
 
 		<div class="bg">
@@ -97,10 +101,13 @@
 								<h1 class="page-title">
 									L'aventurier viking            
 								</h1>
+								<!-- <p><input type="checkbox" name="instructions" id=""> <small>Passer les instructions</small></p> -->
 							</div>
 						</hgroup>
 					</div>
-					<div class="arrow" data-fp-action="moveSectionDown"></div>
+					<div class="arrow" data-fp-action="moveSectionDown">
+						<!-- <p>Commencer la lecture</p> -->
+					</div>
 
 				</section>
 				<?php 
@@ -122,12 +129,13 @@
 
 		<!-- <script src="js/plugins.js"></script> -->
 		<script src="js/vendor/audioplayer.min.js"></script>
-		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+		<!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
 		<script src="js/vendor/jquery.slimscroll.min.js"></script>
 		<script src="js/vendor/jquery.fullPage.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="js/vendor/jquery.adaptive-backgrounds.js"></script>
 		<script src="js/vendor/jquery.vide.min.js"></script>
+		<script src="js/vendor/vex.combined.min.js"></script>
+		<script src="js/vendor/jquery.cookie.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="js/main.js"></script>
 
