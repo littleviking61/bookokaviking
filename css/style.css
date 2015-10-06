@@ -420,6 +420,10 @@ main {
   .container.closed .icon-cancel:before {
     content: "e"; }
 
+footer.main {
+  height: 400px !important;
+  background-color: black; }
+
 .col-1 {
   -moz-column-count: 1;
   -webkit-column-count: 1;

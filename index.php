@@ -121,6 +121,18 @@
 						$chap++;
 					}
 				?>
+				<footer class="main section fp-auto-height" data-anchor="inscription">
+					<div>
+						<h3>Vous avez aimez ?</h3>
+						<p>Ce livre n'est pas fini et j'y ajouterai du contenu de facon hebdomadaire. En vous inscrivant à cette newsletter vous recevrais un mail à chaque fois que j'ajouterai un nouvelle page. Vous pouvez aussi me suivre sur Facebook ou Twitter. Merci !</p>
+						<button>S'inscrire à la newsletter</button>
+					</div>
+					<div>
+						<h3>Vous avez un commentaire à faire</h3>
+						<p>N'hésitez pas, ce contenu est complétement amateur et expirimentale. L'idée principale est simplement de partager mon aventure et mon expérience. Noté simplement que je ne suis pas un professionnel du son, de la vidéo ou du cinéma, je suis juste un webdesigner un brin aventurier et j'essaye de faire au mieux !</p>
+						<button>Laisser un commentaire</button>
+					</div>
+				</footer>
 			</div>
 		</main>
 
