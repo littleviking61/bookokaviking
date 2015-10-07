@@ -117,7 +117,7 @@
 	}
 }
 
-section > .container{
+section > .container, .slide-content > .container{
 	margin: $gutter-large;
 	padding: $gutter-large;
 	// overflow-y: auto;
@@ -225,14 +225,12 @@ i[class^="icon-"]{
 	}
 }
 
-.arrow {
+.arrow, %arrow{
 	&:after{
 		content: "";
 		display: inline-block;
 		margin: auto;
-		-webkit-transform: rotate(45deg);
-		-moz-transform: rotate(45deg);
-		-ms-transform: rotate(45deg);
+		@include transform(rotate(45deg));
 		transform: rotate(45deg);
 		width: $gutter-medium;
 		height: $gutter-medium;
@@ -240,5 +238,20 @@ i[class^="icon-"]{
 		border-bottom: $one solid #fff;
 		opacity: 0.8;
 		margin-left: -($gutter-medium/2);
+	}
+
+	&.big:after{
+		
+	}
+
+	&.loading{
+		&:after{
+			opacity: 0;
+		}
+		&:before{
+			content: "";
+			display: inline-block;
+			@include loading();
+		}
 	}
 }

@@ -5,6 +5,10 @@ var
 	lastBackground = '', keepChapitre = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte;
+$( window ).load(function(){
+	$('.arrow.loading', page).removeClass('loading');
+
+});
 
 $(document).ready(function() {
 	bg = $('.bg'),
@@ -35,35 +39,37 @@ $(document).ready(function() {
 	// full pages init
 	page.fullpage({
 		verticalCentered: false,
-			// scrollBar: true,
-			scrollOverflow: true,
-			css3: true,
-			onLeave: function(index, nextIndex, direction){
-				var leavingSection = $(this),
-				nextElmt = $('>.section:nth-child('+nextIndex+')', page),
-				nextElmtBg = nextElmt.attr('data-background');
+		// scrollBar: true,
+		scrollOverflow: true,
+		css3: true,
+		onLeave: function(index, nextIndex, direction){
+			var leavingSection = $(this),
+			nextElmt = $('>.section:nth-child('+nextIndex+')', page),
+			nextElmtBg = nextElmt.attr('data-background');
 
-				if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
-				// hide video for other section
-				$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
-			},
-			afterLoad: function(anchorLink, index){
-				Cookies.set('activePage', anchorLink);
+			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
+			// hide video for other section
+			$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
+		},
+		afterLoad: function(anchorLink, index){
+			Cookies.set('activePage', anchorLink);
 
-				loadedSection = $(this);
-				loadedAnchorLink = anchorLink;
-				anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
-				//
-				if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
-				// show video hidden before
-				$('[data-video-anchor="'+anchorLink+'"]', bg).removeClass('hidden');
-			},
-		});
+			loadedSection = $(this);
+			loadedAnchorLink = anchorLink;
+			anchorLinkOk = 'f_'+anchorLink.replace(/-/g, '_');
+			//
+			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
+			// show video hidden before
+			$('[data-video-anchor="'+anchorLink+'"]', bg).removeClass('hidden');
+		},
+	});
 
 	$('[data-fp-action]').click(function(e){
-		var action = $(this).data('fp-action');
-		if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
-		e.preventDefault();
+		if(!$(this).hasClass('loading')){
+			var action = $(this).data('fp-action');
+			if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
+			e.preventDefault();
+		}
 	})
 
 	// other inits

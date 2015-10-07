@@ -30,7 +30,8 @@
 						['Hier','3-hier'],
 						['Bon','4-bon'],
 						['Pizza','5-pizza'],
-						['Plitvice','6-plitvice']
+						['Plitvice','6-plitvice'],
+						['Reparti','7-reparti']
 					]
 				]
 			]
@@ -105,11 +106,12 @@
 							</div>
 						</hgroup>
 					</div>
-					<div class="arrow" data-fp-action="moveSectionDown">
+					<div class="arrow loading" data-fp-action="moveSectionDown">
 						<!-- <p>Commencer la lecture</p> -->
 					</div>
 
 				</section>
+
 				<?php 
 					$chap = 0;
 					foreach ($pages as $chapitre) {
@@ -121,6 +123,7 @@
 						$chap++;
 					}
 				?>
+
 				<footer class="main section fp-auto-height" data-anchor="inscription">
 					<div>
 						<h3>Vous avez aimez ?</h3>

@@ -41,6 +41,15 @@ html.fp-enabled,
     height: 100%;
     display: block;
 }
+.fp-slide .slide-content{
+    position: relative;
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    height: 100vh;
+    width: 100vw;
+}
 .fp-slides {
     z-index:1;
     height: 100%;
@@ -66,28 +75,37 @@ html.fp-enabled,
 }
 .fp-controlArrow {
     position: absolute;
+    @include display-flex;
     z-index: 4;
-    top: 50%;
+    top: 0;
     cursor: pointer;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    margin-top: -38px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    height: 100vh;
+    
+    &:after{
+        content: "";
+        display: inline-block;
+        margin: auto;
+        opacity: 0.8;
+        width: $gutter-hudge;
+        height: $gutter-hudge;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
 
     &.fp-prev {
-        left: 15px;
-        width: 0;
-        border-width: 38.5px 34px 38.5px 0;
-        border-color: transparent #fff transparent transparent;
+        left: 0;
+        margin-left: $gutter-large;
+        &:after{
+            @include transform(rotate(135deg));
+        }
     }
 
     &.fp-next {
-        right: 15px;
-        border-width: 38.5px 0 38.5px 34px;
-        border-color: transparent transparent transparent #fff;
+        right: 0;
+        margin-right:  $gutter-large;
+         &:after{
+            @include transform(rotate(-45deg));
+        }
     }
 }
 .fp-scrollable {
