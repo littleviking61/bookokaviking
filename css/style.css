@@ -435,13 +435,31 @@ main {
   padding-top: 1.25rem; }
   @media (min-width: 768px) {
     .container {
-      width: 45.625rem; } }
+      width: 45rem; } }
   @media (min-width: 992px) {
     .container {
-      width: 59.375rem; } }
+      width: 58.75rem; } }
   @media (min-width: 1200px) {
     .container {
-      width: 71.875rem; } }
+      width: 71.25rem; } }
+  @media (min-width: 768px) {
+    .container.medium {
+      width: 42.5rem; } }
+  @media (min-width: 992px) {
+    .container.medium {
+      width: 39.16667rem; } }
+  @media (min-width: 1200px) {
+    .container.medium {
+      width: 47.5rem; } }
+  @media (min-width: 768px) {
+    .container.small {
+      width: 42.5rem; } }
+  @media (min-width: 992px) {
+    .container.small {
+      width: 29.375rem; } }
+  @media (min-width: 1200px) {
+    .container.small {
+      width: 35.625rem; } }
   .container.closed .icon-cancel:before {
     content: "e"; }
 

@@ -155,6 +155,7 @@ section > .container, .slide-content > .container{
 		@include column-width(rem-calc(280));
 		@include column-break(inside, avoid);
 		font-size: $ft-size-large;
+		-moz-column-fill: auto;
 
 		> div{
 			display: inline-block;

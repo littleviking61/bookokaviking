@@ -169,6 +169,30 @@ main{
     width: $container-lg;
   }
 
+  &.medium{
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm - $gutter-hudge;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md/1.5;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg/1.5;
+    }
+  }
+    
+  &.small{
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm - $gutter-hudge;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md/2;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg/2;
+    }
+  }
+
   &.closed{
     .icon-cancel:before{
       content: "e";

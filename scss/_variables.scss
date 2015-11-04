@@ -80,16 +80,16 @@ $screen-lg-min:              $screen-lg;
 $screen-lg-desktop:          $screen-lg-min;
 
 // Small screen / tablet
-$container-tablet:             ((rem-calc(720) + $gutter));
+$container-tablet:             ((rem-calc(720)));
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet;
 
 // Medium screen / desktop
-$container-desktop:            ((rem-calc(940) + $gutter));
+$container-desktop:            ((rem-calc(940)));
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop;
 
 // Large screen / wide desktop
-$container-large-desktop:      ((rem-calc(1140) + $gutter));
+$container-large-desktop:      ((rem-calc(1140)));
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop;
