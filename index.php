@@ -40,13 +40,16 @@
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		<header class="main">
-
 			<hgroup>
 				<div class="container">
 					<h2 class="page-description">Récits de voyages par</h2>
 					<h1 class="page-title">L'aventurier viking</h1>
 				</div>
 			</hgroup>
+
+			<div class="soundcloud-player">
+				<iframe id="soundcloud-player-iframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/162339580&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+			</div>
 
 			<nav class="main">
 			    <ul>
@@ -73,7 +76,8 @@
 			</nav>
 			<nav class="player-soundcloud">
 				<ul class="controls">
-					<li><a href="#" id="prev"><i class="icon-to-start"></i></a></li>
+					<li><a href="https://soundcloud.com/littleviking/sets/bande-son-livre-num-rique" target="new" id="soundcloud" title="Voir la playlist sur SoundCloud"><i class="icon-soundcloud"></i></a></li>
+					<!-- <li><a href="#" id="prev"><i class="icon-to-start"></i></a></li> -->
 					<li><a href="#" id="play"><i class="icon-play"></i></a></li>
 					<li><a href="#" id="pause"><i class="icon-pause"></i></a></li>
 					<li><a href="#" id="next"><i class="icon-to-end"></i></a></li>
@@ -144,8 +148,8 @@
 		<script src="js/vendor/jquery.fullPage.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		<script src="js/vendor/jquery.vide.min.js"></script>
-		<script src="js/vendor/vex.combined.min.js"></script>
 		<script src="js/vendor/jquery.cookie.js"></script>
+		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="js/main.js"></script>
 

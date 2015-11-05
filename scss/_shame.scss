@@ -5,3 +5,9 @@
 	z-index: -1;
 	top: 0;
 }
+
+.soundcloud-player iframe{
+	opacity: 0;
+	position: absolute;
+	top: -100vh;
+}

@@ -46,11 +46,22 @@ $(document).ready(function() {
 		onLeave: function(index, nextIndex, direction){
 			var leavingSection = $(this),
 			nextElmt = $('>.section:nth-child('+nextIndex+')', page),
-			nextElmtBg = nextElmt.attr('data-background');
+			nextElmtBg = nextElmt.attr('data-background'),
+			audioEvent = parseInt(nextElmt.data('play'),10);
 
 			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
 			// hide video for other section
 			$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
+
+			if(!isNaN(audioEvent)) {
+				widget.getCurrentSoundIndex(function(currentIndex) { 
+					console.log(currentIndex);
+					if(audioEvent !== currentIndex) {
+						widget.seekTo(0).skip(parseInt(audioEvent,10));
+						console.log('lire ce son' + audioEvent);
+					}
+				});
+			}
 		},
 		afterLoad: function(anchorLink, index){
 			Cookies.set('activePage', anchorLink);
@@ -75,18 +86,54 @@ $(document).ready(function() {
 
 	// other inits
 	$( 'audio' ).audioPlayer();
-	initCancelContainerButton(sections);
 	initMenu();
+	initSoundCloudPlayer();
 
 	checkCookie();
-	// initSoundCloudPlayer();
-
 });
 
 // for audio player play on space up
+
 $(window).keypress(function(e) {
 	if (e.keyCode === 0 || e.keyCode === 32) {
 		$('.audioplayer', loadedSection).trigger('click');
+	}
+});
+
+// for map hashchange and other (repond to hash not click)
+$(window).on('hashchange', function() {
+
+	if(window.location.hash == "#map" || mapActive) {
+
+		if(!mapActive){			
+			if(carte.hasClass('loading')) {
+				var linkClick = $('[href^="#map"]', nav)
+				linkClick.addClass('loading');
+				$.ajax({
+					url: "/pages/map.php",
+					context: carte
+				}).done(function(data) {
+						linkClick.removeClass('loading');
+						carte.html(data).addClass('active').removeClass('loading');
+						header.addClass('closed');
+						$.fn.fullpage.setAllowScrolling(false);
+						$.fn.fullpage.setKeyboardScrolling(false);
+				});
+			}else{
+				carte.addClass('active');
+				header.addClass('closed');
+				$.fn.fullpage.setAllowScrolling(false);
+				$.fn.fullpage.setKeyboardScrolling(false);
+			}
+		}else{
+			carte.removeClass('active');
+			header.removeClass('closed');
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
+		}
+		$('[href^="#map"]', nav).toggleClass('active');
+
+		mapActive = !mapActive;
 	}
 });
 
@@ -98,7 +145,7 @@ function checkCookie() {
 	if( historyPage !== undefined && historyPage !== 'bienvenue' && (hashtag === '' || hashtag === '#') ) {
 		var r = confirm('Would you like to go to the last page you read ?');
 		if (r == true) {
-		    window.location.hash = historyPage;
+				window.location.hash = historyPage;
 		}
 	}
 }
@@ -122,90 +169,6 @@ function initCancelContainerButton(sections) {
 		} else this.closeBtn.reverse();
 		
 		container.toggleClass('closed');
-	});
-}
-
-function initSoundCloudPlayer() {
-	widgetIframe	= document.getElementById('sc-widget');
-	widget				= SC.Widget(widgetIframe);
-	playlist			= 'https://soundcloud.com/nils_frahm/sets/piano-day-playlist-march-29th';
-	active;
-
-	widget.load(playlist);
-	widget.bind(SC.Widget.Events.READY, function() {
-
-		$('[href^="#son"]', nav).removeClass('loading');
-
-		widget.bind(SC.Widget.Events.PLAY, function() {
-			// get information about currently playing sound
-			widget.getCurrentSoundIndex(function(currentIndex) {
-				// change background on svg
-				active = currentIndex;
-				// change active on link
-				$('.list-sounds a[data-key]', soundcloudPlayer).removeClass('active');
-				$('.list-sounds a[data-key="'+currentIndex+'"]', soundcloudPlayer).addClass('active');
-
-				$('#play').addClass('active');
-				$('#pause, #stop').removeClass('active');
-			});
-		});
-
-		widget.bind(SC.Widget.Events.PAUSE, function() {
-			$('#play').removeClass('active');
-			$('#pause').addClass('active');
-		});
-
-		widget.bind(SC.Widget.Events.FINISH, function() {
-			$('#play, #pause').removeClass('active');
-		});
-
-		$('#next').click(function(event) {
-			widget.next().seekTo(0);;
-			event.preventDefault();
-		});
-
-		$('#prev').click(function(event) {
-			widget.prev().seekTo(0);;
-			event.preventDefault();
-		});
-
-		$('#play').click(function(event) {
-			widget.play();
-			event.preventDefault();
-		});
-
-		$('#pause').click(function(event) {
-			widget.pause();
-			event.preventDefault();
-		});
-		
-		// create list of sound
-		addAllSound(widget);
-		// to do optimize volume
-		widget.setVolume(0.1);
-	});
-
-}
-
-function addAllSound(widget) {
-	widget.getSounds(function(allsounds) {
-		var sounds = [];
-		$.each(allsounds, function(index, value) {
-			if(index > 15) return false;
-			sounds.push('<li><a href="#" data-key="'+index+'" data-id="'+value.id+'">'+ value.title + '</a></li>');
-		});
-		$('.list-sounds', soundcloudPlayer).html(sounds);
-		
-		// nav[0].tl2 = new TimelineLite();
-		nav[0].tl2
-		.pause()
-		.to(soundcloudPlayer, .1, {opacity:1, display: 'block'})
-		.staggerFrom($('li', soundcloudPlayer), .09, { marginRight:'10px', opacity: 0}, .03);
-
-		$('.list-sounds a', soundcloudPlayer).click(function(event) {
-			widget.skip($(this).attr('data-key')).seekTo(0);;
-			event.preventDefault();
-		});
 	});
 }
 
@@ -286,45 +249,94 @@ function initMenu(){
 
 		$('[href^="#close"]', nav).click(function(e) {
 			e.preventDefault();
-			 window.history.back();
+			window.history.back();
 		});
 }
 
-$(window).on('hashchange', function() {
+function initSoundCloudPlayer() {
 
-	if(window.location.hash == "#map" || mapActive) {
+	var widgetIframe = document.getElementById('soundcloud-player-iframe');
+	widget = SC.Widget(widgetIframe);
 
-		if(!mapActive){			
-			if(carte.hasClass('loading')) {
-				var linkClick = $('[href^="#map"]', nav)
-				linkClick.addClass('loading');
-				$.ajax({
-				  url: "/pages/map.php",
-				  context: carte
-				}).done(function(data) {
-						linkClick.removeClass('loading');
-						carte.html(data).addClass('active').removeClass('loading');
-						header.addClass('closed');
-						$.fn.fullpage.setAllowScrolling(false);
-						$.fn.fullpage.setKeyboardScrolling(false);
-				});
-			}else{
-				carte.addClass('active');
-				header.addClass('closed');
-				$.fn.fullpage.setAllowScrolling(false);
-				$.fn.fullpage.setKeyboardScrolling(false);
-			}
-		}else{
-			carte.removeClass('active');
-			header.removeClass('closed');
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
-		}
-		$('[href^="#map"]', nav).toggleClass('active');
+	widget.bind(SC.Widget.Events.READY, function() {
+		$('[href^="#son"]', nav).removeClass('loading');
 
-		mapActive = !mapActive;
-	}
-});
+		widget.bind(SC.Widget.Events.PLAY, function() {
+			// get information about currently playing sound
+			widget.getCurrentSoundIndex(function(currentIndex) {
+				// change background on svg
+				active = currentIndex;
+				// change active on link
+				$('.list-sounds a[data-key]', soundcloudPlayer).removeClass('active');
+				$('.list-sounds a[data-key="'+currentIndex+'"]', soundcloudPlayer).addClass('active');
+
+				$('#play').addClass('active');
+				$('#pause, #stop').removeClass('active');
+			});
+		});
+
+		widget.bind(SC.Widget.Events.PAUSE, function() {
+			$('#play').removeClass('active');
+			$('#pause').addClass('active');
+		});
+
+		widget.bind(SC.Widget.Events.FINISH, function() {
+			$('#play, #pause').removeClass('active');
+		});
+
+		$('#next').click(function(event) {
+			widget.next().seekTo(0);;
+			event.preventDefault();
+		});
+
+		$('#prev').click(function(event) {
+			widget.prev().seekTo(0);;
+			event.preventDefault();
+		});
+
+		$('#play').click(function(event) {
+			widget.play();
+			$('[href^="#son"]', nav).addClass('active');
+			event.preventDefault();
+		});
+
+		$('#pause').click(function(event) {
+			widget.pause();
+			$('[href^="#son"]', nav).removeClass('active');
+			event.preventDefault();
+		});
+		
+		// create list of sound
+		addAllSound(widget);
+
+		// $('#play').trigger('click');
+	});
+
+}
+
+function addAllSound(widget) {
+	widget.getSounds(function(allsounds) {
+		var sounds = [];
+		$.each(allsounds, function(index, value) {
+			if(index > 15) return false;
+			// console.log(value);
+			sounds.push('<li><a href="#' + value.title + '" data-key="'+index+'" data-id="'+value.id+'">'+ value.title + '</a></li>');
+		});
+		$('.list-sounds', soundcloudPlayer).html(sounds);
+		
+		// nav[0].tl2 = new TimelineLite();
+		nav[0].tl2
+		.pause()
+		.to(soundcloudPlayer, .1, {opacity:1, display: 'block'})
+		.staggerFrom($('li', soundcloudPlayer), .09, { marginRight:'10px', opacity: 0}, .03);
+
+		$('.list-sounds a', soundcloudPlayer).click(function(event) {
+			widget.seekTo(0).skip($(this).attr('data-key'));
+			event.preventDefault();
+		});
+	});
+}
+
 /* functions utiles */
 
 function getActiveBgVideo() {
@@ -366,3 +378,5 @@ function addBgVideo(videoLink, anchorLink) {
 		return newVideo;
 	}
 }
+
+
