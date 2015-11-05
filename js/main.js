@@ -2,9 +2,10 @@ var
 	racine = "http://book.laventurierviking.fr/",
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
-	lastBackground = '', keepChapitre = false,
+	lastBackground = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte;
+
 $( window ).load(function(){
 	$('.arrow.loading', page).removeClass('loading');
 
@@ -93,7 +94,7 @@ $(window).keypress(function(e) {
 
 function checkCookie() {
 	hashtag = window.location.hash;
-	console.log(historyPage);
+	// console.log(historyPage);
 	if( historyPage !== undefined && historyPage !== 'bienvenue' && (hashtag === '' || hashtag === '#') ) {
 		var r = confirm('Would you like to go to the last page you read ?');
 		if (r == true) {
@@ -271,36 +272,6 @@ function initMenu(){
 			.mouseenter( function () {
 				nav[0].tl.totalDuration(.2).reverse();
 				nav[0].tl2.totalDuration(.2).reverse();
-			})
-			.click(function(e) {
-				if(!$(this).hasClass('active')){			
-					if(carte.hasClass('loading')) {
-						var linkClick = $(this)
-						linkClick.addClass('loading');
-						$.ajax({
-						  url: "/pages/map.php",
-						  context: carte
-						}).done(function(data) {
-								linkClick.removeClass('loading');
-								carte.html(data).addClass('active').removeClass('loading');
-								header.addClass('closed');
-								$.fn.fullpage.setAllowScrolling(false);
-								$.fn.fullpage.setKeyboardScrolling(false);
-						});
-					}else{
-						carte.addClass('active');
-						header.addClass('closed');
-						$.fn.fullpage.setAllowScrolling(false);
-						$.fn.fullpage.setKeyboardScrolling(false);
-					}
-				}else{
-					carte.removeClass('active');
-					header.removeClass('closed');
-					$.fn.fullpage.setAllowScrolling(true);
-					$.fn.fullpage.setKeyboardScrolling(true);
-				}
-				$(this).toggleClass('active');
-				e.preventDefault();
 			});
 
 		$('[href^="#love"]', nav)
@@ -309,20 +280,51 @@ function initMenu(){
 				nav[0].tl2.totalDuration(.2).reverse();
 			})
 			.click(function(e) {
-				$(this).toggleClass('active');
-				e.preventDefault();
+				// $(this).toggleClass('active');
+				// e.preventDefault();
 			});
 
 		$('[href^="#close"]', nav).click(function(e) {
-			carte.removeClass('active');
-			header.removeClass('closed');
-			$('a[href^="#map"]', nav).removeClass('active')
-			$.fn.fullpage.setAllowScrolling(true);
-			$.fn.fullpage.setKeyboardScrolling(true);
 			e.preventDefault();
+			 window.history.back();
 		});
 }
 
+$(window).on('hashchange', function() {
+
+	if(window.location.hash == "#map" || mapActive) {
+
+		if(!mapActive){			
+			if(carte.hasClass('loading')) {
+				var linkClick = $('[href^="#map"]', nav)
+				linkClick.addClass('loading');
+				$.ajax({
+				  url: "/pages/map.php",
+				  context: carte
+				}).done(function(data) {
+						linkClick.removeClass('loading');
+						carte.html(data).addClass('active').removeClass('loading');
+						header.addClass('closed');
+						$.fn.fullpage.setAllowScrolling(false);
+						$.fn.fullpage.setKeyboardScrolling(false);
+				});
+			}else{
+				carte.addClass('active');
+				header.addClass('closed');
+				$.fn.fullpage.setAllowScrolling(false);
+				$.fn.fullpage.setKeyboardScrolling(false);
+			}
+		}else{
+			carte.removeClass('active');
+			header.removeClass('closed');
+			$.fn.fullpage.setAllowScrolling(true);
+			$.fn.fullpage.setKeyboardScrolling(true);
+		}
+		$('[href^="#map"]', nav).toggleClass('active');
+
+		mapActive = !mapActive;
+	}
+});
 /* functions utiles */
 
 function getActiveBgVideo() {

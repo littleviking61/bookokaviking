@@ -25,3 +25,13 @@
 		margin: 0 $gutter-big $gutter-large;
 	}
 }
+
+.social{
+	.container img{
+		padding: $gutter-large;
+	}
+
+	.content:first-child{
+		margin-top: 0;
+	}
+}

@@ -47,10 +47,24 @@ nav ul, aside ul {
 
 /* LINK BASIC */
 a {
-  color: #555555;
-  text-decoration: none; }
+  color: white;
+  text-decoration: none;
+  font-weight: bold; }
   a:hover:not(.button), a.active {
-    color: #ea7559; }
+    text-decoration: underline; }
+
+button, .button {
+  border: thin solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  padding: 0.3125rem 0.625rem;
+  font-weight: normal;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  button:hover, .button:hover {
+    background-color: rgba(17, 12, 8, 0.7);
+    border-color: white; }
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
@@ -83,6 +97,9 @@ p {
 /* utilities class */
 .text-center {
   text-align: center; }
+
+.text-right {
+  text-align: right; }
 
 .hide {
   display: none; }
@@ -308,6 +325,9 @@ html.fp-enabled,
 .fp-slidesNav ul li {
   display: inline-block; }
 
+.fp-auto-height {
+  height: auto; }
+
 /* GENERAL BODY */
 body {
   overflow-x: hidden !important; }
@@ -337,13 +357,15 @@ header.main {
       color: white;
       opacity: 0.6;
       white-space: nowrap;
+      font-weight: normal;
       -moz-transition: opacity 0.4s;
       -o-transition: opacity 0.4s;
       -webkit-transition: opacity 0.4s;
       transition: opacity 0.4s; }
       header.main nav li a:hover, header.main nav li a.active {
         color: white;
-        opacity: 1; }
+        opacity: 1;
+        text-decoration: none; }
       header.main nav li a.loading {
         padding-top: 2px; }
         header.main nav li a.loading i {
@@ -464,7 +486,7 @@ main {
     content: "e"; }
 
 footer.main {
-  height: 400px !important;
+  min-height: 9.375rem;
   background-color: black; }
 
 .col-1 {
@@ -631,7 +653,8 @@ section > .container, .slide-content > .container {
     -moz-page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
-    font-size: 1rem; }
+    font-size: 1rem;
+    -moz-column-fill: auto; }
     section > .container > [class*="column"] > div, .slide-content > .container > [class*="column"] > div {
       display: inline-block; }
     section > .container > [class*="column"][class*="-small"], .slide-content > .container > [class*="column"][class*="-small"] {
@@ -730,6 +753,11 @@ i[class^="icon-"].border {
 
 [data-anchor="0-1-instruction"] .content > div {
   margin: 0 1.875rem 1.25rem; }
+
+.social .container img {
+  padding: 1.25rem; }
+.social .content:first-child {
+  margin-top: 0; }
 
 .video-container {
   position: absolute;

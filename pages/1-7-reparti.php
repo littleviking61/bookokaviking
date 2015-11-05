@@ -1,6 +1,6 @@
 <section class="section" data-anchor="<?= $anchor ?>" data-background="bg-krkra.jpg">
 
-	<div class="slide" data-anchor="souslorage">
+	<div class="slide">
 		<div class="slide-content">
 			<section>
 				<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
@@ -21,9 +21,9 @@
 		</div>
 	</div>
 	
-  <div class="slide" data-anchor="antoniogrill">
+  <div class="slide">
 		<div class="slide-content">
-			<div class="container small" style="background-color: rgba(17, 12, 8, .7);">
+			<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
 	        <header>
 	            <h2>Antonio Terasse Grill</h2>
 	            <div class="stamp">
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 
-	<div class="slide" data-anchor="motard">
+	<div class="slide">
 		<div class="slide-content">
 			<div class="container small" style="background-color: rgba(17, 12, 8, .7);">
 	        <header>

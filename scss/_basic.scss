@@ -30,10 +30,26 @@ nav, aside{
 a{
 	color: $link-color;
 	text-decoration: none;
+	font-weight: bold;
+	
 	&:hover:not(.button), &.active{
-		color: $link-color-active;
+		text-decoration: underline;
+		// color: $link-color-active;
 	}
 
+}
+
+button, .button{
+	border: thin solid rgba(255,255,255,0.6);
+	background-color: transparent;
+	padding: $gutter-small $gutter;
+	font-weight: normal;
+	@include single-transition( all, .2s);
+	
+	&:hover{
+		background-color: rgba(17, 12, 8, .7);
+		border-color: rgba(255,255,255,1);
+	}
 }
 
 /* paragraphe and title basic */
@@ -58,6 +74,7 @@ hr{
 
 .container{
 	display: block;
+	// background-color: rgba(17, 12, 8, .7);
 }
 
 p{
@@ -94,6 +111,10 @@ p{
 
 .text-center{
 	text-align: center;
+}
+
+.text-right{
+	text-align: right;
 }
 
 %dropcap{

@@ -33,11 +33,13 @@ header.main{
       color: white;
       opacity: 0.6;
       white-space: nowrap;
+      font-weight: normal;
       @include single-transition(opacity, .4s);
 
       &:hover,&.active{
         color: white;
         opacity: 1;
+        text-decoration: none;
       }
 
       &.loading{
@@ -201,6 +203,6 @@ main{
 }
 
 footer.main{
-  height: 400px !important;
+  min-height: rem-calc(150);
   background-color: black;
 }
