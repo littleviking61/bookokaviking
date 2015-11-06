@@ -624,6 +624,31 @@ footer.main {
   .player.medium .audioplayer-bar {
     display: none; }
 
+.video-control {
+  border: none;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.625rem 0.9375rem;
+  text-transform: uppercase;
+  font-family: "Poiret One", serif; }
+  .video-control:before {
+    text-transform: initial;
+    font-family: 'book';
+    content: 'i';
+    display: block;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 3px;
+    padding-left: 3px;
+    font-size: 1.375rem;
+    margin-right: 0.625rem; }
+  .video-control.active:before {
+    content: 'j';
+    padding-left: 0; }
+
 section > .container, .slide-content > .container {
   margin: 1.25rem;
   padding: 1.25rem; }

@@ -31,7 +31,8 @@
 						['Bon','4-bon'],
 						['Pizza','5-pizza'],
 						['Plitvice','6-plitvice'],
-						['Reparti','7-reparti']
+						['Reparti','7-reparti'],
+						['Monténégro','8-montenegro']
 					]
 				]
 			]

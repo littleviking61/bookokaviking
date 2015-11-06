@@ -72,6 +72,9 @@ $(document).ready(function() {
 					}
 				});
 			}
+
+			// to stop video if is playing
+			if($('.video-control', leavingSection).hasClass('active')) $('.video-control', leavingSection).trigger('click');
 		},
 		afterLoad: function(anchorLink, index){
 			Cookies.set('activePage', anchorLink);
@@ -145,6 +148,21 @@ $(window).on('hashchange', function() {
 
 		mapActive = !mapActive;
 	}
+});
+
+$('.video-control').click(function(){
+	if($(this).hasClass('active')) {
+		if($('.active-video', bg).length > 0) $('.active-video', bg).data('vide').getVideoObject().pause();
+		this.tl.pause();
+		this.paused = true;
+		widget.setVolume(0.3);
+	}else{
+		if(this.paused && $('.active-video', bg).length > 0) $('.active-video', bg).data('vide').getVideoObject().play();
+		this.tl.play();
+		widget.setVolume(0.1);
+	}
+
+	$(this).toggleClass('active');
 });
 
 /* function active event */
@@ -390,6 +408,7 @@ function addBgVideo(videoLink, anchorLink) {
 				mp4: videoLink
 			}, {
 				posterType: 'none',
+				muted: false,
 				loop: false,
 				autoplay: false,
 			});

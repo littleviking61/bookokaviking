@@ -121,6 +121,35 @@
 	}
 }
 
+.video-control{
+	border: none;
+	@include display-flex;
+	padding: $gutter $gutter-medium;
+	text-transform: uppercase;
+	font-family: $title-font;
+
+	&:before{
+		text-transform: initial;
+		font-family: 'book';
+		content: 'i';
+		display: block;
+		color: white;
+		border: 2px solid white;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		padding-top: 3px;
+		padding-left: 3px;
+		font-size: $ft-size-largest;
+		margin-right: $gutter;
+	}
+
+	&.active:before{
+		content: 'j';
+		padding-left: 0;
+	}
+}
+
 section > .container, .slide-content > .container{
 	margin: $gutter-large;
 	padding: $gutter-large;
