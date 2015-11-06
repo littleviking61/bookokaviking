@@ -1,4 +1,4 @@
-<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-cematinla.jpg">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-cematinla.jpg" data-play="1">
 	<div id="p-cematinla" class="player text-center medium" style="background-color: rgba(2, 2, 0, .7);">
 		<audio class="audio" title="Ce matin là" preload="auto">
 				<source src="media/audio/cematinla.mp3" type="audio/mp3">

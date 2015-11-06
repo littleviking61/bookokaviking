@@ -486,8 +486,7 @@ main {
     content: "e"; }
 
 footer.main {
-  min-height: 9.375rem;
-  background-color: black; }
+  min-height: 9.375rem; }
 
 .col-1 {
   -moz-column-count: 1;

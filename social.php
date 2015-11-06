@@ -4,7 +4,7 @@
 	</div>
 	<div class="content">
 		<h2>Vous avez aimez ?</h2>
-		<p>Ce livre est en cours d'écriture et j'ajouterai du contenu régulièrement.<br>En vous inscrivant à cette newsletter vous recevrais un mail à chaque fois que j'ajouterai un nouvelle page.<br>Vous pouvez aussi me suivre sur <a href="https://www.facebook.com/Laventurier-viking-1515860495334554/?ref=book" target="new">Facebook</a> ou <a href="http://twitter.com/VikingDiaries" target="new">Twitter</a>. Merci !</p>
+		<p>Ce livre est en cours d'écriture et j'ajouterai du contenu régulièrement.<br>En vous inscrivant à cette newsletter vous recevrais un mail quand j'ajouterai un nouvelle page.<br>Vous pouvez aussi me suivre sur <a href="https://www.facebook.com/Laventurier-viking-1515860495334554/?ref=book" target="new">Facebook</a> ou <a href="http://twitter.com/VikingDiaries" target="new">Twitter</a>. Merci !</p>
 		<a href="http://eepurl.com/bE3tar" target="new" class="button">Incrivez-vous à la newsletter</a>
 	</div>
 </div>

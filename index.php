@@ -77,6 +77,7 @@
 			<nav class="player-soundcloud">
 				<ul class="controls">
 					<li><a href="https://soundcloud.com/littleviking/sets/bande-son-livre-num-rique" target="new" id="soundcloud" title="Voir la playlist sur SoundCloud"><i class="icon-soundcloud"></i></a></li>
+					<li><a href="#" class="active" id="auto" title="Désactiver le changement de musique au chargement d'une page"><i class="icon-bolt"></i></a></li>
 					<!-- <li><a href="#" id="prev"><i class="icon-to-start"></i></a></li> -->
 					<li><a href="#" id="play"><i class="icon-play"></i></a></li>
 					<li><a href="#" id="pause"><i class="icon-pause"></i></a></li>
@@ -133,7 +134,7 @@
 				</section>
 				
 				<footer class="main section fp-auto-height"  data-anchor="merci">
-					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 Baptiste Régné</div>
+					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 - Baptiste Régné - Tous droits réservés</div>
 				</footer>
 			</div>
 		</main>

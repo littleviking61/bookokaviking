@@ -2,13 +2,13 @@ var
 	racine = "http://book.laventurierviking.fr/",
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
-	lastBackground = '', keepChapitre = false, mapActive = false,
+	autoplay = true, autoMusique = true,
+	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte;
 
 $( window ).load(function(){
 	$('.arrow.loading', page).removeClass('loading');
-
 });
 
 $(document).ready(function() {
@@ -23,18 +23,27 @@ $(document).ready(function() {
 	sections = $('>.section', page);
 	sections.each(function(){
 		$this = $(this);
-		var background = $this.data('background');
-		var anchor = $this.data('anchor');
+
+		var 
+			background = $this.data('background'),
+			musique = $this.data('play'),
+			anchor = $this.data('anchor');
 
 		// to place data-background on all section
 		if(background === undefined || 	background === '') {
 			background = lastBackground;
 			$this.attr("data-background", background);
 		}
+		// to place data-play on all section
+		if(musique === undefined || 	musique === '') {
+			musique = lastPlay;
+			$this.attr("data-play", musique);
+		}
 		// to load all bg
 		if(background !== lastBackground) loadBackground(background, anchor);
 		// save last bg
 		lastBackground = background;
+		lastPlay = musique;
 	});
 
 	// full pages init
@@ -53,12 +62,13 @@ $(document).ready(function() {
 			// hide video for other section
 			$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
 
-			if(!isNaN(audioEvent)) {
+			if(!isNaN(audioEvent) && autoMusique && $('[href^="#son"]', nav).hasClass('active') ) {
+				// console.log(audioEvent);
 				widget.getCurrentSoundIndex(function(currentIndex) { 
-					console.log(currentIndex);
+					// console.log(currentIndex);
 					if(audioEvent !== currentIndex) {
 						widget.seekTo(0).skip(parseInt(audioEvent,10));
-						console.log('lire ce son' + audioEvent);
+						// console.log('lire ce son' + audioEvent);
 					}
 				});
 			}
@@ -217,6 +227,7 @@ function initMenu(){
 				e.preventDefault();
 			});
 
+
 		// on leave header quit nav if open
 		header
 			.mouseleave(function(){
@@ -294,6 +305,12 @@ function initSoundCloudPlayer() {
 			event.preventDefault();
 		});
 
+		$('#auto').click(function(event) {
+			autoMusique = !autoMusique;
+			$(this).toggleClass('active');
+			event.preventDefault();
+		});
+
 		$('#play').click(function(event) {
 			widget.play();
 			$('[href^="#son"]', nav).addClass('active');
@@ -309,7 +326,9 @@ function initSoundCloudPlayer() {
 		// create list of sound
 		addAllSound(widget);
 
-		// $('#play').trigger('click');
+		widget.setVolume(0.3);
+
+		if(autoplay) $('#play').trigger('click');
 	});
 
 }
