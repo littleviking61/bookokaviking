@@ -130,7 +130,7 @@
 					}
 				?>
 
-				<section class="section social" data-anchor="love" data-background="bg-intro.jpg">
+				<section class="section social" data-anchor="love" data-background="bg-intro.jpg" data-play="12">
 					<?php include('social.php') ?>
 				</section>
 				

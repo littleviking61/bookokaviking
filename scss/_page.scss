@@ -10,6 +10,20 @@
 	}
 }
 
+[data-anchor="0-1-instruction"] {
+	.container{
+		padding-bottom: rem-calc(60);
+	}
+	
+	.instruction{
+		> div{
+			min-width: rem-calc(300);
+			margin: $gutter 1%;
+		}
+		@include flex-wrap(wrap);
+	}
+}
+
 [data-anchor="0-2-remerciement"] {
 	font-family: $title-font;
 }

@@ -2,7 +2,7 @@ var
 	racine = "http://book.laventurierviking.fr/",
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
-	autoplay = true, autoMusique = true,
+	autoplay = false, autoMusique = true,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte;
@@ -164,6 +164,13 @@ $('.video-control').click(function(){
 
 	$(this).toggleClass('active');
 });
+
+function restartVideo() {
+	console.log('restart');
+	this.seek(0).pause();
+	widget.setVolume(0.3);
+	$('.video-control').removeClass('active');
+}
 
 /* function active event */
 

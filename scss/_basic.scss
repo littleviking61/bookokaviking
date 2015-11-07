@@ -75,6 +75,9 @@ hr{
 .container{
 	display: block;
 	// background-color: rgba(17, 12, 8, .7);
+	&.full{
+		width: 100%;
+	}
 }
 
 p{

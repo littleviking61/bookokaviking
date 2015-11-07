@@ -127,6 +127,7 @@
 	padding: $gutter $gutter-medium;
 	text-transform: uppercase;
 	font-family: $title-font;
+	cursor: pointer;
 
 	&:before{
 		text-transform: initial;

@@ -11,3 +11,9 @@
 	position: absolute;
 	top: -100vh;
 }
+
+a[href="#son"]:not(.active){
+	i:before{
+		content:'q'
+	}
+}
