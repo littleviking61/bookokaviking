@@ -47,10 +47,7 @@
 					<h1 class="page-title">L'aventurier viking</h1>
 				</div>
 			</hgroup>
-
-			<div class="soundcloud-player">
-				<iframe id="soundcloud-player-iframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/162339580&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
-			</div>
+			<div class="arrow up unactive" data-fp-action="moveSectionUp"></div>
 
 			<nav class="main">
 			    <ul>
@@ -75,6 +72,7 @@
 			    	}
 			    ?>
 			</nav>
+
 			<nav class="player-soundcloud">
 				<ul class="controls">
 					<li><a href="https://soundcloud.com/littleviking/sets/bande-son-livre-num-rique" target="new" id="soundcloud" title="Voir la playlist sur SoundCloud"><i class="icon-soundcloud"></i></a></li>
@@ -86,7 +84,11 @@
 				</ul>
 				<ul class="list-sounds"></ul>
 			</nav>
-			<!-- <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=" width="100%" height="465" scrolling="no" frameborder="no" style="display: none;"></iframe> -->
+
+			<div class="soundcloud-player">
+				<iframe id="soundcloud-player-iframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/162339580&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+			</div>
+
 		</header>
 
 		<div class="bg">
@@ -108,13 +110,10 @@
 								<h1 class="page-title">
 									L'aventurier viking            
 								</h1>
-								<!-- <p><input type="checkbox" name="instructions" id=""> <small>Passer les instructions</small></p> -->
 							</div>
 						</hgroup>
 					</div>
-					<div class="arrow loading" data-fp-action="moveSectionDown">
-						<!-- <p>Commencer la lecture</p> -->
-					</div>
+					<div class="clear-intro"></div>
 
 				</section>
 
@@ -138,6 +137,7 @@
 					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 - Baptiste Régné - Tous droits réservés</div>
 				</footer>
 			</div>
+			<div class="arrow down loading active" data-fp-action="moveSectionDown"></div>
 		</main>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>

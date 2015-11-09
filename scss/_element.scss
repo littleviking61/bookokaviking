@@ -261,6 +261,24 @@ i[class^="icon-"]{
 }
 
 .arrow, %arrow{
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	height: rem-calc(60);
+	cursor: pointer;
+	text-align: center;
+	opacity: 0;
+	@include single-transition(opacity, 0.4s);
+	
+	&:hover, &.active, &.loading{
+		opacity: 1;
+	}
+
+	&.unactive{
+		opacity: 0;
+		cursor: auto;
+	}
+
 	&:after{
 		content: "";
 		display: inline-block;
@@ -275,8 +293,13 @@ i[class^="icon-"]{
 		margin-left: -($gutter-medium/2);
 	}
 
-	&.big:after{
-		
+	&.up{
+		top: 0;
+		padding-top: rem-calc(25);
+
+		&:after{
+			transform: rotate(-135deg);
+		}
 	}
 
 	&.loading{

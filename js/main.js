@@ -5,11 +5,7 @@ var
 	autoplay = false, autoMusique = true,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
-	widgetIframe, widget, playlist, active, carte;
-
-$( window ).load(function(){
-	$('.arrow.loading', page).removeClass('loading');
-});
+	widgetIframe, widget, playlist, active, carte, loader, arrowDown, arrowUp;
 
 $(document).ready(function() {
 	bg = $('.bg'),
@@ -18,6 +14,8 @@ $(document).ready(function() {
 	nav = $('nav.main', header),
 	chap = $('.chapitres', header);
 	soundcloudPlayer = $('.player-soundcloud', header);
+	arrowDown = $('main > .arrow.loading');
+	arrowUp = $('.arrow.unactive', header);
 
 	// sections init
 	sections = $('>.section', page);
@@ -57,6 +55,14 @@ $(document).ready(function() {
 			nextElmt = $('>.section:nth-child('+nextIndex+')', page),
 			nextElmtBg = nextElmt.attr('data-background'),
 			audioEvent = parseInt(nextElmt.data('play'),10);
+
+			if(leavingSection.hasClass('banner') ) {
+				arrowDown.removeClass('active'); 
+				arrowUp.removeClass('unactive'); 
+			}else if(nextElmt.hasClass('banner') ) {
+				arrowDown.addClass('active');
+				arrowUp.addClass('unactive');
+			}  
 
 			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg);
 			// hide video for other section
@@ -103,6 +109,10 @@ $(document).ready(function() {
 	initSoundCloudPlayer();
 
 	checkCookie();
+});
+
+$( window ).load(function(){
+	arrowDown.removeClass('loading');
 });
 
 // for audio player play on space up
