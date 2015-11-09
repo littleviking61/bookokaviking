@@ -143,17 +143,17 @@
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 		
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 
 		<?php if ($_SERVER['SERVER_NAME'] === "livre.laventurierviking.fr"): ?>
 			<script src="js/vendor/plugins.min.js"></script>
 			<script src="js/main.min.js"></script>
 		<?php else: ?>
-			<script src="js/vendor/soundcloud.api.min.js"></script>
-			<script src="js/vendor/TweenMax.min.js"></script>
-			<script src="js/vendor/audioplayer.min.js"></script>
-			<script src="js/vendor/jquery.slimscroll.min.js"></script>
-			<script src="js/vendor/jquery.fullPage.min.js"></script>
-			<script src="js/vendor/jquery.vide.min.js"></script>
+			<script src="js/vendor/TweenMax.js"></script>
+			<script src="js/vendor/audioplayer.js"></script>
+			<script src="js/vendor/jquery.slimscroll.js"></script>
+			<script src="js/vendor/jquery.fullPage.js"></script>
+			<script src="js/vendor/jquery.vide.js"></script>
 			<script src="js/vendor/jquery.cookie.js"></script>		
 			<script src="js/main.js"></script>
 		<?php endif ?>
