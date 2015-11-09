@@ -2,7 +2,7 @@ var
 	racine = window.location.origin + '/',
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
-	autoplay = true, autoMusique = true,
+	autoplay = true, autoMusique = true, musiqueActive = 0,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte, loader, arrowDown, arrowUp;
@@ -70,12 +70,10 @@ $(document).ready(function() {
 			$('[data-video-anchor="'+$(loadedSection).data('anchor')+'"]', bg).addClass('hidden');
 
 			if(!isNaN(audioEvent) && autoMusique && $('[href^="#son"]', nav).hasClass('active') ) {
-				// console.log(audioEvent);
 				widget.getCurrentSoundIndex(function(currentIndex) { 
-					// console.log(currentIndex);
-					if(audioEvent !== currentIndex) {
-						widget.seekTo(0).skip(parseInt(audioEvent,10));
-						// console.log('lire ce son' + audioEvent);
+					if(audioEvent !== currentIndex && audioEvent !== musiqueActive) {
+						musiqueActive = audioEvent;
+						widget.seekTo(0).skip(audioEvent);
 					}
 				});
 			}
