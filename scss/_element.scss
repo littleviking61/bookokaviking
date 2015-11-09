@@ -294,6 +294,9 @@ i[class^="icon-"]{
 	}
 
 	&.up{
+		position: absolute;
+		z-index: 5;
+		left: 0;
 		top: 0;
 		padding-top: rem-calc(25);
 

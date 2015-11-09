@@ -53,7 +53,12 @@ header.main{
         }
       }
     }
+
     &.main{
+      li:not(.arrow) {
+        position: relative;
+        z-index: 10;
+      }
       a:hover{
         color: white;
         opacity: 1;

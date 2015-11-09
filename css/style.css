@@ -385,6 +385,9 @@ header.main {
           -moz-animation: spin 0.6s infinite linear;
           -webkit-animation: spin 0.6s infinite linear;
           animation: spin 0.6s infinite linear; }
+    header.main nav.main li:not(.arrow) {
+      position: relative;
+      z-index: 10; }
     header.main nav.main a:hover {
       color: white;
       opacity: 1; }
@@ -767,6 +770,9 @@ i[class^="icon-"].border {
     opacity: 0.8;
     margin-left: -0.46875rem; }
   .arrow.up {
+    position: absolute;
+    z-index: 5;
+    left: 0;
     top: 0;
     padding-top: 1.5625rem; }
     .arrow.up:after {

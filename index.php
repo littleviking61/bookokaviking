@@ -47,15 +47,15 @@
 					<h1 class="page-title">L'aventurier viking</h1>
 				</div>
 			</hgroup>
-			<div class="arrow up unactive" data-fp-action="moveSectionUp"></div>
 
 			<nav class="main">
 			    <ul>
-			        <li><a href="#close" title="Réouvrir au livre" ><i class="icon-cancel"></i></a></li><!--
-	         --><li><a href="#menu" title="Afficher les chapitres" ><i class="icon-bookmark"></i></a></li><!--
-			     --><li><a href="#map" title="Voir la carte" ><i class="icon-map"></i></a></li><!--
-			     --><li><a href="#love" title="S'abonner ou laisser un commentaire" ><i class="icon-heart"></i></a></li><!--
-			     --><li><a href="#son" title="Gérer la musique" class=""><i class="icon-volume-1"></i></a></li>
+						<li class="arrow up unactive" data-fp-action="moveSectionUp"></li><!--
+         --><li><a href="#close" title="Réouvrir au livre" ><i class="icon-cancel"></i></a></li><!--
+         --><li><a href="#menu" title="Afficher les chapitres" ><i class="icon-bookmark"></i></a></li><!--
+		     --><li><a href="#map" title="Voir la carte" ><i class="icon-map"></i></a></li><!--
+		     --><li><a href="#love" title="S'abonner ou laisser un commentaire" ><i class="icon-heart"></i></a></li><!--
+		     --><li><a href="#son" title="Gérer la musique" class=""><i class="icon-volume-1"></i></a></li>
 			    </ul>
 			</nav>
 			
