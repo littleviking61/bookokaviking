@@ -1,17 +1,17 @@
 var 
-	racine = "http://book.laventurierviking.fr/",
+	racine = window.location.origin + '/',
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
-	autoplay = false, autoMusique = true,
+	autoplay = true, autoMusique = true,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte, loader, arrowDown, arrowUp;
 
 $(document).ready(function() {
-	bg = $('.bg'),
+	bg = $('.bg');
 	page = $('main > .sections');
-	header = $('header.main'),
-	nav = $('nav.main', header),
+	header = $('header.main');
+	nav = $('nav.main', header);
 	chap = $('.chapitres', header);
 	soundcloudPlayer = $('.player-soundcloud', header);
 	arrowDown = $('main > .arrow.loading');
@@ -19,6 +19,7 @@ $(document).ready(function() {
 
 	// sections init
 	sections = $('>.section', page);
+
 	sections.each(function(){
 		$this = $(this);
 
@@ -101,7 +102,7 @@ $(document).ready(function() {
 			if(typeof page.fullpage[action] == 'function') page.fullpage[action]();
 			e.preventDefault();
 		}
-	})
+	});
 
 	// other inits
 	$( 'audio' ).audioPlayer();
@@ -130,7 +131,7 @@ $(window).on('hashchange', function() {
 
 		if(!mapActive){			
 			if(carte.hasClass('loading')) {
-				var linkClick = $('[href^="#map"]', nav)
+				var linkClick = $('[href^="#map"]', nav);
 				linkClick.addClass('loading');
 				$.ajax({
 					url: "/pages/map.php",
@@ -176,7 +177,7 @@ $('.video-control').click(function(){
 });
 
 function restartVideo() {
-	console.log('restart');
+	// console.log('restart');
 	this.seek(0).pause();
 	widget.setVolume(0.3);
 	$('.video-control').removeClass('active');
@@ -189,7 +190,7 @@ function checkCookie() {
 	// console.log(historyPage);
 	if( historyPage !== undefined && historyPage !== 'bienvenue' && (hashtag === '' || hashtag === '#') ) {
 		var r = confirm('Would you like to go to the last page you read ?');
-		if (r == true) {
+		if (r === true) {
 				window.location.hash = historyPage;
 		}
 	}
@@ -203,10 +204,10 @@ function initCancelContainerButton(sections) {
 		if(!container.hasClass('closed')) {
 			this.closeBtn = new TimelineLite();
 			this.closeBtn
-			.to( container, .3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
-			.to( $('header', container), .2, { marginTop: "70px"}, "-=.2" )			
-			.to( container, .2, { width: "70px"}, "-=.1")
-			.to( container, .1, { borderRadius: "50%"}, "-=.15")
+			.to( container, 0.3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
+			.to( $('header', container), 0.2, { marginTop: "70px"}, "-=.2" )			
+			.to( container, 0.2, { width: "70px"}, "-=.1")
+			.to( container, 0.1, { borderRadius: "50%"}, "-=.15")
 			.eventCallback('onReverseComplete', function() { 
 				container[0].style.removeProperty('width');
 				container[0].style.removeProperty('height');
@@ -225,22 +226,22 @@ function initMenu(){
 
 		nav[0].tl
 		.pause()
-		.to(chap, .1, {opacity:1, display: 'block'})
-		.staggerFrom($('li', chap), .09, { marginRight:'10px', opacity: 0}, .03);
+		.to(chap, 0.1, {opacity:1, display: 'block'})
+		.staggerFrom($('li', chap), 0.09, { marginRight:'10px', opacity: 0}, 0.03);
 
 		// menu chapitre
 		$('[href^="#menu"]', nav)
 			.mouseenter( function () {
-				nav[0].tl2.totalDuration(.2).reverse();
-				nav[0].tl.totalDuration(.6).play();
+				nav[0].tl2.totalDuration(0.2).reverse();
+				nav[0].tl.totalDuration(0.6).play();
 			})
 			.click(function(e){
 				if(!$(this).hasClass('active')) {
 					keepChapitre = true;
-					nav[0].tl.totalDuration(.6).play();
+					nav[0].tl.totalDuration(0.6).play();
 				}else{
 					keepChapitre = false;
-					nav[0].tl.totalDuration(.4).reverse();
+					nav[0].tl.totalDuration(0.4).reverse();
 				}
 				
 				$(this).toggleClass('active');
@@ -249,8 +250,8 @@ function initMenu(){
 
 		$('[href^="#son"]', nav)
 			.mouseenter( function () {
-				nav[0].tl.totalDuration(.2).reverse();
-				nav[0].tl2.totalDuration(.6).play();
+				nav[0].tl.totalDuration(0.2).reverse();
+				nav[0].tl2.totalDuration(0.6).play();
 			})
 			.click(function(e) {
 				if(!$(this).hasClass('active')) {
@@ -271,22 +272,22 @@ function initMenu(){
 					nav[0].tl.reverse();
 					nav[0].tl2.reverse();
 				}else{
-					nav[0].tl2.totalDuration(.2).reverse();
-					nav[0].tl.totalDuration(.6).play();
+					nav[0].tl2.totalDuration(0.2).reverse();
+					nav[0].tl.totalDuration(0.6).play();
 				}
-			})
+			});
 
 		carte = $('<div class="map loading"></div>').insertAfter(header);
 		$('[href^="#map"]', nav)
 			.mouseenter( function () {
-				nav[0].tl.totalDuration(.2).reverse();
-				nav[0].tl2.totalDuration(.2).reverse();
+				nav[0].tl.totalDuration(0.2).reverse();
+				nav[0].tl2.totalDuration(0.2).reverse();
 			});
 
 		$('[href^="#love"]', nav)
 			.mouseenter( function () {
-				nav[0].tl.totalDuration(.2).reverse();
-				nav[0].tl2.totalDuration(.2).reverse();
+				nav[0].tl.totalDuration(0.2).reverse();
+				nav[0].tl2.totalDuration(0.2).reverse();
 			})
 			.click(function(e) {
 				// $(this).toggleClass('active');
@@ -331,12 +332,12 @@ function initSoundCloudPlayer() {
 		});
 
 		$('#next').click(function(event) {
-			widget.next().seekTo(0);;
+			widget.next().seekTo(0);
 			event.preventDefault();
 		});
 
 		$('#prev').click(function(event) {
-			widget.prev().seekTo(0);;
+			widget.prev().seekTo(0);
 			event.preventDefault();
 		});
 
@@ -381,8 +382,8 @@ function addAllSound(widget) {
 		// nav[0].tl2 = new TimelineLite();
 		nav[0].tl2
 		.pause()
-		.to(soundcloudPlayer, .1, {opacity:1, display: 'block'})
-		.staggerFrom($('li', soundcloudPlayer), .09, { marginRight:'10px', opacity: 0}, .03);
+		.to(soundcloudPlayer, 0.1, {opacity:1, display: 'block'})
+		.staggerFrom($('li', soundcloudPlayer), 0.09, { marginRight:'10px', opacity: 0}, 0.03);
 
 		$('.list-sounds a', soundcloudPlayer).click(function(event) {
 			widget.seekTo(0).skip($(this).attr('data-key'));

@@ -3,10 +3,13 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        // appComponents : [
-        //     'webroot/js/vendor/skrollr.min.js',
-        //     'webroot/js/elements/loading.js'
-        // ],
+        appComponents : [
+            'js/vendor/audioplayer.min.js',
+            'js/vendor/jquery.slimscroll.min.js',
+            'js/vendor/jquery.fullPage.min.js',
+            'js/vendor/jquery.vide.min.js',
+            'js/vendor/jquery.cookie.js'
+        ],
 
         watch: {
 
@@ -25,16 +28,6 @@ module.exports = function(grunt) {
                 }
             },
 
-            // appjs : {
-            //     files: '<%= appComponents %>',
-            //     tasks: [ 'jshint', 'uglify'],
-            //     ptions: {
-            //         livereload: true,
-            //         livereloadOnError: false,
-            //         spawn: false
-            //     }
-            // },
-
             other: {
                 files: ['**/*.php', 'css/*.css', '!css/style.css'],
                 options: {
@@ -45,17 +38,14 @@ module.exports = function(grunt) {
             }
         },
 
-        // uglify: {
-        //     options: {
-        //         sourceMap: true,
-        //     },
-        //     app: {
-        //         sourceMapName: 'webroot/js/app.min.map',
-        //         files: {
-        //             'webroot/js/app.min.js': '<%= appComponents %>'
-        //         }
-        //     }
-        // },
+        uglify: {
+            app: {
+                files: {
+                    'js/vendor/plugins.min.js': '<%= appComponents %>',
+                    'js/main.min.js': 'js/main.js'
+                }
+            }
+        },
 
         jshint: {
             all: ['js/**/*.js', '!js/foundation/**/*.js', '!js/vendor/**/*.js']

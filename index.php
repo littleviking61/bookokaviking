@@ -142,27 +142,36 @@
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
-
-		<!-- <script src="js/plugins.js"></script> -->
-		<script src="js/vendor/audioplayer.min.js"></script>
-		<!-- <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script> -->
-		<script src="js/vendor/jquery.slimscroll.min.js"></script>
-		<script src="js/vendor/jquery.fullPage.min.js"></script>
+		
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="js/vendor/jquery.vide.min.js"></script>
-		<script src="js/vendor/jquery.cookie.js"></script>
 		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-		<script src="js/main.js"></script>
+
+		<?php if ($_SERVER['SERVER_NAME'] === "livre.laventurierviking.fr"): ?>
+			<script src="js/vendor/plugins.min.js"></script>
+			<script src="js/main.min.js"></script>
+		<?php else: ?>
+			<script src="js/vendor/audioplayer.min.js"></script>
+			<script src="js/vendor/jquery.slimscroll.min.js"></script>
+			<script src="js/vendor/jquery.fullPage.min.js"></script>
+			<script src="js/vendor/jquery.vide.min.js"></script>
+			<script src="js/vendor/jquery.cookie.js"></script>		
+			<script src="js/main.js"></script>
+		<?php endif ?>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='//www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+
+			if(window.location.origin === "http://livre.laventurierviking.fr") {
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-69882311-1', 'auto');
+			  ga('send', 'pageview');
+			}
+
 		</script>
 	</body>
 </html>
