@@ -12,7 +12,6 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style.css">
 
-		<link href="https://fontastic.s3.amazonaws.com/M53bjwByAnWQumjz3YuaEf/icons.css" rel="stylesheet">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
 	<body>
@@ -143,14 +142,14 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 		
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-		<script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
 		<?php if ($_SERVER['SERVER_NAME'] === "livre.laventurierviking.fr"): ?>
 			<script src="js/vendor/plugins.min.js"></script>
 			<script src="js/main.min.js"></script>
 		<?php else: ?>
+			<script src="js/vendor/soundcloud.api.min.js"></script>
+			<script src="js/vendor/TweenMax.min.js"></script>
 			<script src="js/vendor/audioplayer.min.js"></script>
 			<script src="js/vendor/jquery.slimscroll.min.js"></script>
 			<script src="js/vendor/jquery.fullPage.min.js"></script>

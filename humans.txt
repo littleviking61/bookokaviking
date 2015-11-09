@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Baptiste Régné -- Webdsigner et écrivain -- twitter.com/VikingDiaries
 
 # THANKS
 
-    <name>
+    L’aventurier viking
 
 # TECHNOLOGY COLOPHON
 

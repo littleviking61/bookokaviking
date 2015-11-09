@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         appComponents : [
+            'js/vendor/soundcloud.api.min.js',
+            'js/vendor/TweenMax.min.js',
             'js/vendor/audioplayer.min.js',
             'js/vendor/jquery.slimscroll.min.js',
             'js/vendor/jquery.fullPage.min.js',
