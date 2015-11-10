@@ -169,6 +169,8 @@
 
 			  ga('create', 'UA-69882311-1', 'auto');
 			  ga('send', 'pageview');
+
+			  var analytics = true;
 			}
 
 		</script>

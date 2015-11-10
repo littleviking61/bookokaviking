@@ -82,7 +82,9 @@ $(document).ready(function() {
 			if($('.video-control', leavingSection).hasClass('active')) $('.video-control', leavingSection).trigger('click');
 		},
 		afterLoad: function(anchorLink, index){
+			// save cookies and active analytics event
 			Cookies.set('activePage', anchorLink);
+			if(analytics && anchorLink !== "bienvenue") ga('send', { hitType: 'pageview', page: window.location.pathname + window.location.hash });
 
 			loadedSection = $(this);
 			loadedAnchorLink = anchorLink;
@@ -126,6 +128,7 @@ $(window).keypress(function(e) {
 $(window).on('hashchange', function() {
 
 	if(window.location.hash == "#map" || mapActive) {
+		if(analytics) ga('send', { hitType: 'pageview', page: '/#map' });
 
 		if(!mapActive){			
 			if(carte.hasClass('loading')) {
