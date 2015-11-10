@@ -9,7 +9,8 @@ module.exports = function(grunt) {
             'js/vendor/jquery.slimscroll.js',
             'js/vendor/jquery.fullPage.js',
             'js/vendor/jquery.vide.js',
-            'js/vendor/jquery.cookie.js'
+            'js/vendor/jquery.cookie.js',
+            'js/vendor/sweetalert.js'
         ],
 
         watch: {

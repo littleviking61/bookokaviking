@@ -154,7 +154,8 @@
 			<script src="js/vendor/jquery.slimscroll.js"></script>
 			<script src="js/vendor/jquery.fullPage.js"></script>
 			<script src="js/vendor/jquery.vide.js"></script>
-			<script src="js/vendor/jquery.cookie.js"></script>		
+			<script src="js/vendor/jquery.cookie.js"></script>			
+			<script src="js/vendor/sweetalert.js"></script>			
 			<script src="js/main.js"></script>
 		<?php endif ?>
 

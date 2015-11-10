@@ -8,6 +8,7 @@ var
 	widgetIframe, widget, playlist, active, carte, loader, arrowDown, arrowUp;
 
 $(document).ready(function() {
+
 	bg = $('.bg');
 	page = $('main > .sections');
 	header = $('header.main');
@@ -190,10 +191,23 @@ function checkCookie() {
 	hashtag = window.location.hash;
 	// console.log(historyPage);
 	if( historyPage !== undefined && historyPage !== 'bienvenue' && (hashtag === '' || hashtag === '#') ) {
-		var r = confirm('Would you like to go to the last page you read ?');
-		if (r === true) {
-				window.location.hash = historyPage;
-		}
+		
+		$.fn.fullpage.setAllowScrolling(false);
+		$.fn.fullpage.setKeyboardScrolling(false);
+
+		swal({
+			title: "Voulez-vous accéder directement à la dernière page visionnée ?",
+			// text: "You will not be able to recover this imaginary file!",
+			type: "info",
+			showCancelButton: true,
+			confirmButtonColor: "#DD6B55",
+			confirmButtonText: "Oui, merci !",
+			cancelButtonText: "Non",
+			closeOnConfirm: true 
+		}, function(){  
+			window.location.hash = historyPage;
+		});
+
 	}
 }
 
@@ -435,5 +449,4 @@ function addBgVideo(videoLink, anchorLink) {
 		return newVideo;
 	}
 }
-
 
