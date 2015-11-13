@@ -12,7 +12,7 @@
 	<div class="text-right content">
 		<h2>Vous avez un commentaire à faire</h2>
 		<p>N'hésitez pas, ce contenu est complétement expirimental.<br>L'idée principale est de partager mon aventure et mon expérience.<br>Noté simplement que je ne suis pas un professionnel du son, de la vidéo ou du cinéma, je suis juste un webdesigner un brin aventurier qui essaye d'innover un petit peu !</p>
-		<a href="http://www.laventurierviking.fr/?p=3801" target="new" class="button" title="Laisser un commentaire sur mon blog">Laisser un commentaire</a>
+		<a href="http://www.laventurierviking.fr/2015/10/un-livre-numerique-pour-vous-partager-toute-mon-aventure/#comments" target="new" class="button" title="Laisser un commentaire sur mon blog">Laisser un commentaire</a>
 	</div>
 	<div class="thumb">
 		<img src="media/img/comment.png" alt="">

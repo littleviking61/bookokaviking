@@ -94,6 +94,8 @@ $(document).ready(function() {
 			if (typeof window[anchorLinkOk] == 'function') { window[anchorLinkOk]($(this), anchorLink); }
 			// show video hidden before
 			$('[data-video-anchor="'+anchorLink+'"]', bg).removeClass('hidden');
+
+			initCancelContainerButton(loadedSection);
 		},
 	});
 
@@ -213,7 +215,7 @@ function checkCookie() {
 
 function initCancelContainerButton(sections) {
 	// to activate minimize function
-	$('.icon-cancel', sections).click(function(){
+	$('.icon-cancel', sections).unbind('click').click(function(){
 		var container = $(this).closest('.container');
 
 		if(!container.hasClass('closed')) {
