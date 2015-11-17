@@ -17,14 +17,14 @@
 			tl.pause()
 			.add(function() { changeBackground('bg-cematinla.jpg','bg-cematinla2.jpg',anchorLink) }, 0.1)
 			.add(function() { changeBackground('bg-cematinla2.jpg','bg-cematinla3.jpg',anchorLink) }, 8)
-			.add(function() { changeBackground('bg-cematinla3.jpg','bg-cematinla5.jpg',anchorLink) }, 12)
-			.add(function() { changeBackground('bg-cematinla5.jpg','bg-cematinla6.jpg',anchorLink) }, 18)
-			.add(function() { changeBackground('bg-cematinla6.jpg','bg-cematinla7.jpg',anchorLink) }, 31)
-			.add(function() { changeBackground('bg-cematinla7.jpg','bg-cematinla8.jpg',anchorLink) }, 39)
-			.add(function() { changeBackground('bg-cematinla8.jpg','bg-cematinla9.jpg',anchorLink) }, 47)
+			.add(function() { changeBackground('bg-cematinla3.jpg','bg-cematinla5.jpg',anchorLink) }, 11)
+			.add(function() { changeBackground('bg-cematinla5.jpg','bg-cematinla6.jpg',anchorLink) }, 17)
+			.add(function() { changeBackground('bg-cematinla6.jpg','bg-cematinla7.jpg',anchorLink) }, 28)
+			.add(function() { changeBackground('bg-cematinla7.jpg','bg-cematinla8.jpg',anchorLink) }, 35)
+			.add(function() { changeBackground('bg-cematinla8.jpg','bg-cematinla9.jpg',anchorLink) }, 46)
 			.add(function() { changeBackground('bg-cematinla9.jpg','bg-cematinla10.jpg',anchorLink) }, 54)
-			.add(function() { changeBackground('bg-cematinla10.jpg','bg-cematinla11.jpg',anchorLink) }, 61)
-			.add(function() { changeBackground('bg-cematinla11.jpg') }, 69);
+			.add(function() { changeBackground('bg-cematinla10.jpg','bg-cematinla11.jpg',anchorLink) }, 62)
+			.add(function() { changeBackground('bg-cematinla11.jpg') }, 68);
 
 		}
 
