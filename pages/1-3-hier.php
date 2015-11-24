@@ -4,7 +4,7 @@
         <header>
             <h2>Hier</h2>
             <div class="stamp">
-                <span><i class="icon-pencil"></i> Instantanné</span>
+                <span rel="tooltip"></i> Instantanné</span>
                 <span><i class="icon-marker"></i> Zagreb, Croatie</span>
                 <span><i class="icon-clock"></i> mai 2015</span>
             </div>

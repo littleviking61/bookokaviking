@@ -1462,11 +1462,19 @@ section > .container, .slide-content > .container {
       -webkit-column-width: 11.25rem;
       column-width: 11.25rem; }
 
+.talks .talk {
+  opacity: 0; }
+  .talks .talk small {
+    opacity: 0.5; }
+  .talks .talk p {
+    margin-top: 0; }
+
 [class*="flex-column"] {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  max-width: 100%; }
   [class*="flex-column"][class*="-middle"] {
     -webkit-align-items: center;
     align-items: center; }

@@ -205,10 +205,28 @@ section > .container, .slide-content > .container{
 	}
 }
 
+.talks{
+	.talk{
+		opacity: 0;
+		small{
+			opacity: 0.5;
+		}
+		p{
+			margin-top: 0;
+		}
+		// @include single-transition(opacity, .4s);
+
+		// &.visible{
+			// opacity: 1;
+		// }
+	}
+}
+
 [class*="flex-column"]{
 	@include display-flex;
 	@include flex-direction(row);
- 
+	max-width: 100%;
+
 	&[class*="-middle"]{
 		@include align-items(center);
 	}
