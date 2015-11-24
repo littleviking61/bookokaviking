@@ -237,6 +237,7 @@ i[class^="icon-"]{
 
 .bg{
 	position: relative;
+
 	> div{
 		position: absolute;
 		top: 0;
@@ -248,7 +249,7 @@ i[class^="icon-"]{
 		background-image: url(/media/img/bg-intro.jpg);
 		opacity: 0;
 
-		@include single-transition(opacity, .4s);
+		@include single-transition(opacity, .6s);
 		
 		&.active{
 			opacity: 1;
@@ -315,4 +316,48 @@ i[class^="icon-"]{
 			@include loading();
 		}
 	}
+}
+
+.tooltip{
+  text-align: center;
+  color: #fff;
+  background: #111;
+  position: absolute;
+  z-index: 100;
+  padding: 15px;
+ 
+	&:after{
+		/* triangle decoration */
+    width: 0;
+    height: 0;
+    border-left: $gutter solid transparent;
+    border-right: $gutter solid transparent;
+    border-top: $gutter solid #111;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -($gutter);
+    margin-left: -($gutter);
+	}
+
+  &.top:after
+  {
+      border-top-color: transparent;
+      border-bottom: $gutter solid #111;
+      top: -($gutter-large);
+      bottom: auto;
+  }
+
+  &.left:after
+  {
+      left: $gutter;
+      margin: 0;
+  }
+
+  &.right:after
+  {
+      right: 10px;
+      left: auto;
+      margin: 0;
+  }
 }

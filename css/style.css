@@ -1496,10 +1496,10 @@ i[class^="icon-"].border {
     background-position: center center;
     background-image: url(/media/img/bg-intro.jpg);
     opacity: 0;
-    -moz-transition: opacity 0.4s;
-    -o-transition: opacity 0.4s;
-    -webkit-transition: opacity 0.4s;
-    transition: opacity 0.4s; }
+    -moz-transition: opacity 0.6s;
+    -o-transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s; }
     .bg > div.active {
       opacity: 1; }
     .bg > div.active-video {
@@ -1561,6 +1561,38 @@ i[class^="icon-"].border {
     border-radius: 100%;
     -webkit-animation: spin 0.6s infinite linear;
     animation: spin 0.6s infinite linear; }
+
+.tooltip {
+  text-align: center;
+  color: #fff;
+  background: #111;
+  position: absolute;
+  z-index: 100;
+  padding: 15px; }
+  .tooltip:after {
+    /* triangle decoration */
+    width: 0;
+    height: 0;
+    border-left: 0.625rem solid transparent;
+    border-right: 0.625rem solid transparent;
+    border-top: 0.625rem solid #111;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -0.625rem;
+    margin-left: -0.625rem; }
+  .tooltip.top:after {
+    border-top-color: transparent;
+    border-bottom: 0.625rem solid #111;
+    top: -1.25rem;
+    bottom: auto; }
+  .tooltip.left:after {
+    left: 0.625rem;
+    margin: 0; }
+  .tooltip.right:after {
+    right: 10px;
+    left: auto;
+    margin: 0; }
 
 .banner .clear-intro {
   margin-top: auto;
