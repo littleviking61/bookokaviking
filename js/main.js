@@ -3,7 +3,7 @@ var
 	racineImg = racine+'media/img/',
 	historyPage = Cookies.get('activePage'),
 	autoplay = window.location.host.indexOf('book') !== -1 ? false : true, 
-	autoMusique = true, musiqueActive = 0,
+	autoMusique = true, musiqueActive = 0, playerYT = [],
 	$allVideos = $("iframe[src^='//www.youtube.com']"), ratio = 720/1280,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
@@ -84,6 +84,11 @@ $(document).ready(function() {
 					}
 				});
 			}
+
+			//pause every youtube video
+			if(playerYT.length > 0) $.each(playerYT,function(index,value) {
+				if(this.getPlayerState() === 1) this.pauseVideo();
+			});
 
 			// to stop video if is playing
 			if($('.video-control', leavingSection).hasClass('active')) $('.video-control', leavingSection).trigger('click');
@@ -175,7 +180,10 @@ $(window).on('hashchange', function() {
 
 $(window).resize(function() {
   $allVideos.each(function() {
-    if($(this).width() <= 1280) $(this).height($(this).width() * ratio);
+    if($(this).width() <= 1280) {
+    	$(this).closest('.player-youtube').height($(this).width() * ratio);
+    }
+
   });
 
 // Kick off one resize to fix all videos on page load
