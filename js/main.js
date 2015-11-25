@@ -4,6 +4,7 @@ var
 	historyPage = Cookies.get('activePage'),
 	autoplay = window.location.host.indexOf('book') !== -1 ? false : true, 
 	autoMusique = true, musiqueActive = 0,
+	$allVideos = $("iframe[src^='//www.youtube.com']"), ratio = 720/1280,
 	lastBackground = '', lastPlay = '', keepChapitre = false, mapActive = false,
 	sections, bg, page, header, nav, chap, loadedSection, loadedAnchorLink,
 	widgetIframe, widget, playlist, active, carte, loader, arrowDown, arrowUp;
@@ -170,6 +171,15 @@ $(window).on('hashchange', function() {
 		mapActive = !mapActive;
 	}
 });
+
+
+$(window).resize(function() {
+  $allVideos.each(function() {
+    if($(this).width() <= 1280) $(this).height($(this).width() * ratio);
+  });
+
+// Kick off one resize to fix all videos on page load
+}).resize();
 
 $('.video-control').click(function(){
 	if($(this).hasClass('active')) {

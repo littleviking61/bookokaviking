@@ -151,6 +151,63 @@
 	}
 }
 
+.player-youtube{
+	max-width: 100vw;
+	max-height: 100vh;
+	padding:  0 $gutter-large;
+	
+	.player-container{
+		@include flex(1);
+		position: relative;
+		min-width: rem-calc(300);
+
+		iframe{
+			max-width: 100%;
+			// height: auto;
+		}
+	}
+
+	&.loading .player-container:before{
+		content: "Chargement de la vidéo";
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		top: 49%;
+	}
+
+	.talks{
+		max-width: 0;
+		overflow: hidden;
+
+		> div{
+			width: rem-calc(300);
+			margin-left: $gutter;
+		}
+
+		.title{
+			h4{
+				margin-bottom: 0;
+			}
+			margin-bottom: $gutter;
+		}
+
+		.talk{
+			max-height: 0;
+			overflow: hidden;
+			margin-bottom: $gutter;
+
+			small{
+				opacity: 0.5;
+			}
+			p{
+				padding-left: $gutter;
+				border-left: thin solid white;
+				margin: 0;
+			}
+		}
+	}
+}
+
 section > .container, .slide-content > .container{
 	margin: $gutter-large;
 	padding: $gutter-large;
@@ -202,23 +259,6 @@ section > .container, .slide-content > .container{
 
 	blockquote{
 	    // text-shadow: 2px 2px #000000;
-	}
-}
-
-.talks{
-	.talk{
-		opacity: 0;
-		small{
-			opacity: 0.5;
-		}
-		p{
-			margin-top: 0;
-		}
-		// @include single-transition(opacity, .4s);
-
-		// &.visible{
-			// opacity: 1;
-		// }
 	}
 }
 
