@@ -100,9 +100,13 @@
 
                 if (event.data == YT.PlayerState.PLAYING) {
                     container[0].tl.play();
+                    widget.pause();
                 }
                 else if (event.data == YT.PlayerState.PAUSED) {
                     container[0].tl.pause();
+                    if($('[href^="#son"]', nav).hasClass('active')) {
+                        widget.play();
+                    }
                 }
             }
         }
