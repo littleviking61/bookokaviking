@@ -7,7 +7,7 @@
                     <div class="talk"><small>L'aventurier viking : </small><p>Bonjour c'est l'aventurier viking. Je vais vous commenter cette vidéo en live</p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>Vous avez juste à cliquer sur lecture !</p></div>
                     <div class="talk"><small>Cigalou : </small><p>C'est quoi ce truc de fou ?</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>C'est un outils fait maison alors si ça vous plait dites le moi.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>C'est un outil fait maison alors si ça vous plait dites le moi.</p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>Et soyez sympa, c'est ma première vidéo du voyage :p</p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>Les premières images c'est la Croatie, juste après mon accident.</p></div>
                     <div class="talk"><small>Elsa : </small><p>C'est ou cette cascade ?</p></div>
@@ -19,7 +19,7 @@
                     <div class="talk"><small>Cigalou : </small><p>Oula, fallait pas avoir le vertige :) </p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>C'est sur et c'est pas fini, on a eu le droit à un belle orage pour redescendre !</p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>Après ça va très vite, j'ai perdu des vidéos mais en gros j'ai traversé l'Albanie, la Macédoine, la Grêce pour arriver en Turquie à Ankara</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Si vous avez des questions envoyez-moi un mail ici <a href="mailto:baptiste.regne@gmail.com">baptiste.regne@gmail.com</a> avec la position et je l'ajouterai peut-être !</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Si vous avez des questions envoyez-moi un mail ici <a href="mailto:baptiste.regne@gmail.com">baptiste.regne@gmail.com</a> avec la question, la position et le nom de la vidéo.</p></div>
                 </div>
             </div>
         </div>

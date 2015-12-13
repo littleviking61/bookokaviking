@@ -34,7 +34,7 @@
 	            <div class="icon-cancel"></div>
 	        </header>
 	        <div class="content column">
-	        	<p>J’avais pas remarqué l’enseigne du restaurant au départ mais je me suis senti obligé de rester sachant qu’il porte le nom de mon sauveur croate. J’ai le pressentiment que quoi que je prenne, ce sera bon ! Aujourd’hui j’ai pris une claque entre les chutes Krkra, qui étaient magnifiques, le premier bain dans l’adriatique, et les nombreuses routes sinueuses. Une journée qui me réconforte et qui s’est terminé par une bière avec un groupe de français au camping. Demain je fixe quelques petites choses sur la belle et quand le linge sera sec je partirai pour le sud. Je pense atteindre Ankara dans une semaine.</p> 
+	        	<p>J’avais pas remarqué l’enseigne du restaurant au départ mais je me suis senti obligé de rester sachant qu’il porte le nom de mon sauveur croate. J’ai le pressentiment que quoi que je prenne, ce sera bon ! Aujourd’hui j’ai pris une claque entre les chutes Krka, qui étaient magnifiques, le premier bain dans l’adriatique, et les nombreuses routes sinueuses. Une journée qui me réconforte et qui s’est terminé par une bière avec un groupe de français au camping. Demain je fixe quelques petites choses sur la belle et quand le linge sera sec je partirai pour le sud. Je pense atteindre Ankara dans une semaine.</p> 
 						<p>Le calamar était parfait !</p>
 	        </div>
 	    </div>

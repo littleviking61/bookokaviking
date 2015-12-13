@@ -135,7 +135,7 @@
 				</section>
 				
 				<footer class="main section fp-auto-height"  data-anchor="merci">
-					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 - Baptiste Régné - Tous droits réservés</div>
+					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 - Baptiste Régné - Contact :&nbsp;<a href="mailto:baptiste.regne@gmail.com">baptiste.regne@gmail.com</a>&nbsp;- Tous droits réservés</div>
 				</footer>
 			</div>
 			<div class="arrow down loading active" data-fp-action="moveSectionDown"></div>
