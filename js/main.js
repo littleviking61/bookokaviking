@@ -116,7 +116,7 @@ $(document).ready(function() {
 
 			sectionActive.attr('data-background', nextElmtBg);
       //leaving the first slide of the 2nd Section to the right
-      console.log(nextElmtBg);
+      // console.log(nextElmtBg);
 
 			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg,undefined,undefined,nextElmt);
 	  }
@@ -468,7 +468,7 @@ function changeBackground(newBg, nextBg, anchor, section) {
 		if(newBg.indexOf(racineImg) === -1)	newBg = racineImg+newBg;
 		if(nextBg !== undefined) loadBackground(nextBg, anchor);
 
-		if($('.active',bg).css('background-image') !== 'url('+newBg+')') {
+		if($('.active',bg).css('background-image') !== 'url("'+newBg+'")') {
 			nextActive = $(':not(.active)',bg).first();
 			$('.active', bg).removeClass('active');
 			nextActive.css('background-image', 'url('+newBg+')');
