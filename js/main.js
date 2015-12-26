@@ -85,6 +85,15 @@ $(document).ready(function() {
 				});
 			}
 
+			// check slide bg 
+			var slides = $( '.slide[data-background]',nextElmt);
+			if(slides.length > 0 ) {
+				slides.each(function(){
+					// console.log($(this).data('background'));
+					loadBackground($(this).data('background'));
+				});
+			}
+
 			//pause every youtube video
 			if(playerYT.length > 0) $.each(playerYT,function(index,value) {
 				if(this.getPlayerState() === 1) this.pauseVideo();
@@ -116,7 +125,6 @@ $(document).ready(function() {
 
 			sectionActive.attr('data-background', nextElmtBg);
       //leaving the first slide of the 2nd Section to the right
-      // console.log(nextElmtBg);
 
 			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg,undefined,undefined,nextElmt);
 	  }
