@@ -33,7 +33,10 @@
 						['Reparti','7-reparti'],
 						['Monténégro','8-montenegro'],
 						['Albanie','9-albanie'],
-						['De Rennes à Ankara','10-toankara'],
+						['Moussaka','10-grece'],
+						['Les bretons','11-campingcar'],
+						['Turquie','12-turquie'],
+						['De Rennes à Ankara','13-toankara'],
 					]
 				]
 			]

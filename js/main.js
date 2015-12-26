@@ -108,6 +108,18 @@ $(document).ready(function() {
 
 			initCancelContainerButton(loadedSection);
 		},
+		onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+      var leavingSlide = $(this),
+      sectionActive = leavingSlide.closest('section.section'),
+      nextElmt = $('.fp-slidesContainer > .slide:nth-child('+(nextSlideIndex+1)+')', sectionActive),
+			nextElmtBg = nextElmt.data('background');
+
+			sectionActive.attr('data-background', nextElmtBg);
+      //leaving the first slide of the 2nd Section to the right
+      console.log(nextElmtBg);
+
+			if(nextElmtBg !== undefined && nextElmtBg !== "") changeBackground(nextElmtBg,undefined,undefined,nextElmt);
+	  }
 	});
 
 	$('[data-fp-action]').click(function(e){

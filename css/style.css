@@ -134,76 +134,94 @@ p {
   content: "\e0be"; }
 
 .icon-to-start:before {
-  content: "a"; }
+  content: "\61"; }
 
 .icon-to-end:before {
-  content: "b"; }
+  content: "\62"; }
 
 .icon-right-dir:before {
-  content: "d"; }
+  content: "\64"; }
 
 .icon-book-open:before {
-  content: "e"; }
+  content: "\65"; }
 
 .icon-play:before {
-  content: "i"; }
+  content: "\69"; }
 
 .icon-pause:before {
-  content: "j"; }
+  content: "\6a"; }
 
 .icon-marker:before {
-  content: "k"; }
+  content: "\6b"; }
 
 .icon-clock:before {
-  content: "l"; }
+  content: "\6c"; }
 
 .icon-pencil:before {
-  content: "m"; }
+  content: "\6d"; }
 
 .icon-volume-1:before {
-  content: "r"; }
+  content: "\72"; }
 
 .icon-arrow-down:before {
-  content: "s"; }
+  content: "\73"; }
 
 .icon-arrow-left:before {
-  content: "t"; }
+  content: "\74"; }
 
 .icon-arrow-right:before {
-  content: "u"; }
+  content: "\75"; }
 
 .icon-arrow-up:before {
-  content: "v"; }
+  content: "\76"; }
 
 .icon-bookmark:before {
-  content: "z"; }
+  content: "\7a"; }
 
 .icon-map:before {
-  content: "B"; }
+  content: "\42"; }
 
 .icon-sun:before {
-  content: "C"; }
+  content: "\43"; }
 
 .icon-cancel:before {
-  content: "F"; }
+  content: "\46"; }
 
 .icon-mute:before {
-  content: "q"; }
+  content: "\71"; }
 
 .icon-heart:before {
-  content: "n"; }
+  content: "\6e"; }
 
 .icon-keyboard:before {
-  content: "o"; }
+  content: "\6f"; }
 
 .icon-soundcloud:before {
-  content: "p"; }
+  content: "\70"; }
 
 .icon-bolt:before {
-  content: "A"; }
+  content: "\41"; }
 
 .icon-cloud:before {
-  content: "K"; }
+  content: "\4b"; }
+
+.icon-arrows-v:before {
+  content: "\63"; }
+
+.icon-sort:before {
+  content: "\66"; }
+
+.icon-map-marker:before {
+  content: "\67"; }
+
+.icon-calendar:before {
+  content: "\68"; }
+
+.icon-map-signs:before {
+  content: "\77"; }
+
+.icon-camera:before {
+  content: "\79"; }
 
 /**
  * fullPage 2.6.6

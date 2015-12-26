@@ -26,7 +26,7 @@
 
     <script>
         var playerYTtoankara = undefined;
-        function f_1_10_toankara(section, anchorLink){
+        function f_1_13_toankara(section, anchorLink){
             var 
                 container = $('.player-youtube', section),
                 talk = $('.talks-container', container),
