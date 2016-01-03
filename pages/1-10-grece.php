@@ -10,7 +10,7 @@
 		            <div class="icon-cancel"></div>
 		        </header>
 		        <p>Juste le temps d'une moussaka et d'une petite projection dans l'avenir. Planifier les jours à venir est essentiel au bon déroulement de mon aventure.</p>
-		        <p>Nous sommes le 22 mai 2015 et je suis à Stavros en Grèce</p>
+		        <p>Nous sommes le 22 mai 2015 et je suis à Stavros en Grèce.</p>
 		        <p>J'ai trois visas en poche pour mener à bien mon voyage :</p>
 						<ul>
 							<li>Uzbekistan du 5 juin au 4 juillet</li>
@@ -19,11 +19,11 @@
 						</ul>
 						<p>Du fait de mon expérience je m'arrête souvent et je ne fais pas plus de deux jours consécutifs de grosse route (max 500km). Voici les différents plans envisageables :</p>
 						<ol>
-						    <li>Prendre le bateau a Baku et redescendre en Uzbekistan. Visiblement pas le meilleur plan, à cause de l'Azerbaïdjan du bateau et des douanes Kazakh (soit très aléatoire)
-						    <li>Le plan initial par l'Iran, inconvenant, je dois prévoir mon visa Turkmen à Ankara plus mon visa Iranien soit 3/4 jours ou plus à Trabzon, ensuite Georgie, Arménie, Iran (400e pour la moto), etc.</li>
-						    <li>Passer par la Russie, requis faire une demande de visa (transit) à Ankara avec l'espoir de le récupérer à Tbilissi en Georgie, ensuite redescendre en Uzbekistan</li>
-						    <li>Faire transporter la belle jusqu'au Tadjikistan, mais je vais bien voir selon le prix</li>
+						    <li>Prendre le bateau a Baku et redescendre en Uzbekistan. Visiblement pas le meilleur plan, à cause de l'Azerbaïdjan du bateau et des douanes Kazakh (très aléatoire)</li>
+						    <li>Le plan initial par l'Iran, je dois prévoir mon visa Turkmen à Ankara puis mon visa Iranien soit 3/4 jours à Trabzon, ensuite Georgie, Arménie, Iran (400€ pour la moto)</li>
+						    <li>Passer par la Russie mais je devrai faire une demande de visa (transit) à Ankara avec l'espoir de le récupérer à Tbilissi en Georgie, ensuite redescendre en Uzbekistan</li>
+						    <li>Faire transporter la belle jusqu'au Tadjikistan, mais la note est salé</li>
 						</ol>
-						<p>Bon en attendant j'ai fini ma moussaka, allons dormir en attendant vos réponses !</p>
+						<p>En attendant j'ai fini ma moussaka, je vais faire dodo en attendant vos réponses !</p>
 		    </div>
 </section>
