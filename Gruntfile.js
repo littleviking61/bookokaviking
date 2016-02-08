@@ -10,7 +10,8 @@ module.exports = function(grunt) {
             'js/vendor/jquery.fullPage.js',
             'js/vendor/jquery.vide.js',
             'js/vendor/jquery.cookie.js',
-            'js/vendor/sweetalert.js'
+            'js/vendor/sweetalert.js',
+            'js/vendor/jquery.panorama_viewer.js'
         ],
 
         watch: {

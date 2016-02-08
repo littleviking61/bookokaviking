@@ -19,24 +19,29 @@
 			$anchor;
 			$pages = [
 				[ 'title' => 'Intro', 'parts' => [
-						['Instruction','1-instruction'],
-						['Remerciement','2-remerciement'],
-						['Prologue','3-prologue'],
+						['Instruction','instruction'],
+						['Remerciement','remerciement'],
+						['Prologue','prologue'],
 					]
 				], [ 'title' => 'Avant Zagreb', 'parts' => [
-						['J\'irai là-bas','1-jirailabas'],
-						['Ce matin-là','2-cematinla'],
-						['Hier','3-hier'],
-						['Bon','4-bon'],
-						['Pizza','5-pizza'],
-						['Plitvice','6-plitvice'],
-						['Reparti','7-reparti'],
-						['Monténégro','8-montenegro'],
-						['Albanie','9-albanie'],
-						['Moussaka','10-grece'],
-						['Les bretons','11-campingcar'],
-						['Turquie','12-turquie'],
-						['De Rennes à Ankara','13-toankara'],
+						['J\'irai là-bas','jirailabas'],
+						['Ce matin-là','cematinla'],
+						['Hier','hier'],
+						['Bon','bon'],
+						['Pizza','pizza'],
+						['Plitvice','plitvice'],
+						['Reparti','reparti'],
+						['Monténégro','montenegro'],
+						['Albanie','albanie'],
+						['Moussaka','grece'],
+						['Les bretons','campingcar'],
+						['Turquie','turquie'],
+						['De Rennes à Ankara','toankara'],
+					]
+				], [ 'title' => 'Avant Baku', 'parts' => [
+						['Ankara','ankara'],
+						['Kadir','kadir'],
+						['Cappadoce','capadoce'],
 					]
 				]
 			]
@@ -67,9 +72,11 @@
 			    <?php 
 			    	$chap = 0;
 			    	foreach ($pages as $chapitre) {
+			    		$part = 1;
 			    		echo '<ul class="chap-'.$chap.'">';
 			    		foreach ($chapitre['parts'] as $page){
-			    			echo '<li><a href="#'.$chap.'-'.$page[1].'" title="'.$page[0].'">'.$page[0].'</a></li>';
+			    			echo '<li><a href="#'.$chap.'-'.$part.'-'.$page[1].'" title="'.$page[0].'">'.$page[0].'</a></li>';
+			    			$part++;
 			    		}
 			    		echo '</ul>';
 			    		$chap++;
@@ -124,10 +131,12 @@
 				<?php 
 					$chap = 0;
 					foreach ($pages as $chapitre) {
+						$part = 1;
 						foreach ($chapitre['parts'] as $page){
-							$open = "pages/".$chap."-".$page[1].".php";
-							$anchor = $chap."-".$page[1];
+							$open = "pages/".$chap."-".$part."-".$page[1].".php";
+							$anchor = $chap."-".$part."-".$page[1];
 							include $open;
+							$part++;
 						}
 						$chap++;
 					}
@@ -162,6 +171,8 @@
 			<script src="js/vendor/jquery.vide.js"></script>
 			<script src="js/vendor/jquery.cookie.js"></script>			
 			<script src="js/vendor/sweetalert.js"></script>			
+			<script src="js/vendor/imagesloaded.pkgd.js"></script>			
+			<script src="js/vendor/jquery.panorama_viewer.js"></script>			
 			<script src="js/main.js"></script>
 		<?php endif ?>
 
@@ -174,7 +185,7 @@
 			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			  ga('create', 'UA-69882311-1', 'auto');
+			  ga('create', 'UA-69882311', 'auto');
 			  ga('send', 'pageview');
 
 			  var analytics = true;
