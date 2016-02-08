@@ -42,6 +42,10 @@
 						['Ankara','ankara'],
 						['Kadir','kadir'],
 						['Cappadoce','capadoce'],
+						['Trabzon','trabzon'],
+						['Police','police'],
+						['Une longue attente','attente'],
+						['De Ankara à Baku','tobaku'],
 					]
 				]
 			]
