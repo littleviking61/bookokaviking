@@ -111,9 +111,9 @@
           $("<div class='pv-overlay'><i class='pvicon-overlay'></i></div>").appendTo(el.find(".pv-inner"))
 
           el.find(".pv-inner").bind("mouseenter", function() {
-            $(this).find(".pv-overlay ").fadeOut("fast");
+            $(this).find(".pv-overlay ").addClass("hover");
           }).bind("mouseleave", function() {
-            $(this).find(".pv-overlay ").fadeIn("fast");
+            $(this).find(".pv-overlay ").removeClass("hover");
           })
         }
 

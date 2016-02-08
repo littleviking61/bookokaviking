@@ -11,6 +11,7 @@ module.exports = function(grunt) {
             'js/vendor/jquery.vide.js',
             'js/vendor/jquery.cookie.js',
             'js/vendor/sweetalert.js',
+            'js/vendor/imagesloaded.pkgd.js',
             'js/vendor/jquery.panorama_viewer.js'
         ],
 

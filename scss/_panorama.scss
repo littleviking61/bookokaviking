@@ -66,10 +66,15 @@
   top: 0;
   left: 0;
   background: rgba(0,0,0,0.2);
+  @include single-transition(background, 0.4s);
+
+  &.hover{
+    background: rgba(0,0,0,0);
+  }
 }
 .pv-container .pv-overlay i.pvicon-overlay{
   margin-top: -43px;
-  top: 85%;
+  top: 65%;
   margin-left: -40px;
   position: absolute;
   left: 50%;

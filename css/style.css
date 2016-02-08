@@ -1177,11 +1177,17 @@ body.stop-scrolling {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s; }
+  .pv-container .pv-overlay.hover {
+    background: transparent; }
 
 .pv-container .pv-overlay i.pvicon-overlay {
   margin-top: -43px;
-  top: 85%;
+  top: 65%;
   margin-left: -40px;
   position: absolute;
   left: 50%;
