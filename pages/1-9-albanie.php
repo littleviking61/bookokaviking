@@ -1,4 +1,4 @@
-<section class="section albanie" data-anchor="<?= $anchor ?>" data-background="#E42221">
+<section class="section albanie" data-anchor="<?= $anchor ?>" data-background="#E42221" data-play="3">
 	<div class="content text-center" style="color:black;">
 		<p>
 			<img src="/media/img/albanie/albanie.svg" rel="tooltip" title="J'étais en train de traverser l'Albanie">

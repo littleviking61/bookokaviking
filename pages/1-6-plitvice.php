@@ -1,4 +1,4 @@
- <section class="section" data-anchor="<?= $anchor ?>" data-background="bg-plitvice.jpg"  data-play="2">
+ <section class="section" data-anchor="<?= $anchor ?>" data-background="bg-plitvice.jpg" data-play="2">
                 
     <div class="container text-center" style="transform: translateY(100px)">
         <div class="content">

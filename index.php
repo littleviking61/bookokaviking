@@ -10,7 +10,7 @@
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<link rel="stylesheet" href="css/normalize.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css?ver=1.1">
 
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	</head>
@@ -57,7 +57,7 @@
 			<hgroup>
 				<div class="container">
 					<h2 class="page-description">Récits de voyages par</h2>
-					<h1 class="page-title">L'aventurier viking</h1>
+					<h1 class="page-title"><a href="http://www.laventurierviking.fr" target="new">L'aventurier viking</a></h1>
 				</div>
 			</hgroup>
 
@@ -68,6 +68,7 @@
          --><li><a href="#menu" title="Afficher les chapitres" ><i class="icon-bookmark"></i></a></li><!--
 		     --><li><a href="#map" title="Voir la carte" ><i class="icon-map"></i></a></li><!--
 		     --><li><a href="#love" title="S'abonner ou laisser un commentaire" ><i class="icon-heart"></i></a></li><!--
+		     --><li><a href="http://www.laventurierviking.fr" target="new" title="Le blog de l'aventurier viking" ><i class="icon-user-outline"></i></a></li><!--
 		     --><li><a href="#son" title="Gérer la musique" class=""><i class="icon-volume-1"></i></a></li>
 			    </ul>
 			</nav>
@@ -123,7 +124,7 @@
 							<div class="container">
 								<h2 class="page-description">Récits de voyages par</h2>
 								<h1 class="page-title">
-									L'aventurier viking            
+									<a href="http://www.laventurierviking.fr" class="button no-bd" title="Blog de l'aventurier viking" target="new">L'aventurier viking</a>          
 								</h1>
 							</div>
 						</hgroup>
@@ -151,7 +152,7 @@
 				</section>
 				
 				<footer class="main section fp-auto-height"  data-anchor="merci">
-					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.nuagegraphik.com" target="new">Nuagegraphik</a>&nbsp;- © 2015 - Baptiste Régné - Contact :&nbsp;<a href="mailto:baptiste.regne@gmail.com">baptiste.regne@gmail.com</a>&nbsp;- Tous droits réservés</div>
+					<div class="flex-column-center-middle">Livre numérique réalisé par&nbsp;<a href="http://www.laventurierviking.fr" target="new">L'aventurier viking</a>&nbsp; ©2015 -&nbsp;<a href="http://www.nuagegraphik.com" target="new">Baptiste Régné</a>&nbsp;- Contact :&nbsp;<a href="mailto:baptiste.regne@gmail.com">baptiste.regne@gmail.com</a>&nbsp;- Tous droits réservés</div>
 				</footer>
 			</div>
 			<div class="arrow down loading active" data-fp-action="moveSectionDown"></div>

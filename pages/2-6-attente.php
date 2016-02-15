@@ -1,4 +1,4 @@
-<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku.jpg">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku.jpg" data-play="5">
 	<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
     <header>
         <h2>Une (longue) attente</h2>

@@ -66,6 +66,10 @@ button, .button {
   button:hover, .button:hover {
     background-color: rgba(17, 12, 8, 0.7);
     border-color: white; }
+  button.no-bd, .button.no-bd {
+    border: none;
+    padding-left: 0;
+    padding-right: 0; }
 
 /* paragraphe and title basic */
 h1, h2, h3, h4, h5, h6 {
@@ -222,6 +226,21 @@ p {
 
 .icon-camera:before {
   content: "\79"; }
+
+.icon-child:before {
+  content: "\78"; }
+
+.icon-hand-peace-o:before {
+  content: "\44"; }
+
+.icon-info:before {
+  content: "\45"; }
+
+.icon-like:before {
+  content: "\47"; }
+
+.icon-user-outline:before {
+  content: "\48"; }
 
 /**
  * fullPage 2.6.6

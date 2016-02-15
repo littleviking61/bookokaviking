@@ -1,4 +1,4 @@
-<section class="section ankara" data-anchor="<?= $anchor ?>" data-background="bg-ankara.jpg">
+<section class="section ankara" data-anchor="<?= $anchor ?>" data-background="bg-ankara.jpg" data-play="4">
 	<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
     <header>
         <h2>Petit pause sur la route</h2>

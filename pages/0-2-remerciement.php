@@ -1,7 +1,7 @@
 <section class="section" data-anchor="<?= $anchor ?>">
        
    <div class="text-center">
-       <img src="media/img/portrait.png" alt="Baptiste Régné">
+       <a href="http://www.laventurierviking.fr" title="Voir la blog de l'aventurier viking" target="new"> <img src="media/img/portrait.png" alt="Baptiste Régné"></a> 
        <p>À vous tous qui m'avez aidé</p>
        
        <p>À mes parents<br>

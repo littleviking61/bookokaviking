@@ -75,10 +75,10 @@
     return this.each(function(){
       var settings = $.extend({}, defaults, options),
       el = $(this);
-      console.log(el.find("> img"));
+      //console.log(el.find("> img"));
       
      el.find("> img").imagesLoaded(function () {
-      console.log('ok');
+     // console.log('ok');
         el.find("> img").addClass("pv-pano");
         el.addClass("pv-container").wrapInner("<div class='pv-inner pv-animating'></div>");
 
