@@ -44,8 +44,13 @@
 						['Cappadoce','capadoce'],
 						['Trabzon','trabzon'],
 						['Police','police'],
-						['Une longue attente','attente'],
+						['Jour 2','attente'],
+						['Jour 3','attente2'],
+						['Jour 6','attente3'],
 						['De Ankara à Baku','tobaku'],
+					]
+				], [ 'title' => 'Après la mer Caspienne', 'parts' => [
+						['Finalement','finalement'],
 					]
 				]
 			]

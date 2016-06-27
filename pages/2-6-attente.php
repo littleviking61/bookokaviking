@@ -1,9 +1,9 @@
-<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku.jpg" data-play="5">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku2.jpg">
 	<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
     <header>
-        <h2>Une (longue) attente</h2>
+        <h2>Premier jour à Baku</h2>
         <div class="stamp">
-            <span><i class="icon-cloud"></i> Souvenir</span>
+            <span><i class="icon-cloud"></i> Instantanné</span>
             <span><i class="icon-marker"></i> Baku, Azeraïdjan</span>
             <span><i class="icon-clock"></i> juin 2015</span>
         </div>

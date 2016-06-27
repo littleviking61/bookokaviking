@@ -3,7 +3,7 @@
     <header>
         <h2>Petit pause sur la route</h2>
         <div class="stamp">
-            <span><i class="icon-cloud"></i> Souvenir</span>
+            <span><i class="icon-cloud"></i> Instantanné</span>
             <span><i class="icon-marker"></i> Ankara, Turquie</span>
             <span><i class="icon-clock"></i> mai/juin 2015</span>
         </div>
