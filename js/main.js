@@ -267,24 +267,56 @@ function checkCookie() {
 
 function initCancelContainerButton(sections) {
 	// to activate minimize function
-	$('.icon-cancel', sections).unbind('click').click(function(){
+	$('.icon-cancel', sections).each(function(){
 		var container = $(this).closest('.container');
-
-		if(!container.hasClass('closed')) {
+		if(this.closeBtn === undefined) {
 			this.closeBtn = new TimelineLite();
 			this.closeBtn
+			.pause()
 			.to( container, 0.3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
 			.to( $('header', container), 0.2, { marginTop: "70px"}, "-=.2" )			
 			.to( container, 0.2, { width: "70px"}, "-=.1")
 			.to( container, 0.1, { borderRadius: "50%"}, "-=.15")
+			.addLabel("end")
 			.eventCallback('onReverseComplete', function() { 
 				container[0].style.removeProperty('width');
 				container[0].style.removeProperty('height');
 			});
+
+			if(container.hasClass('closed')) {
+				this.closeBtn.seek("end");
+			} 
+		}
+
+	}).unbind('click').click(function(){
+		var container = $(this).closest('.container');
+
+		if(!container.hasClass('closed')) {
+			this.closeBtn.play()
 		} else this.closeBtn.reverse();
 		
 		container.toggleClass('closed');
 	});
+	
+	if(sections.hasClass('closeIt')) {
+		var container = $('.container', sections);
+
+		this.closeBtn = new TimelineLite();
+		this.closeBtn
+		.pause()
+		.to( container, 0.3, { height: "70px", overflow: "hidden", ease: "Cubic.easeInOut"})
+		.to( $('header', container), 0.2, { marginTop: "70px"}, "-=.2" )			
+		.to( container, 0.2, { width: "70px"}, "-=.1")
+		.to( container, 0.1, { borderRadius: "50%"}, "-=.15")
+		.eventCallback('onReverseComplete', function() { 
+			container[0].style.removeProperty('width');
+			container[0].style.removeProperty('height');
+		})
+		.seek(1);
+
+		container.addClass('closed');
+
+	}	
 }
 
 function initMenu(){

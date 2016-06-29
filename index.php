@@ -45,12 +45,14 @@
 						['Trabzon','trabzon'],
 						['Police','police'],
 						['Jour 2','attente'],
-						['Jour 3','attente2'],
-						['Jour 6','attente3'],
 						['De Ankara à Baku','tobaku'],
+						['Finalement','finalement'],
 					]
 				], [ 'title' => 'Après la mer Caspienne', 'parts' => [
-						['Finalement','finalement'],
+						['Croisière','croisiere'],
+						['Déserts','deserts'],
+						['La famille','famille'],
+						['Des scorpions','scorpion'],
 					]
 				]
 			]

@@ -1,17 +1,33 @@
-<section class="section trabzon" data-anchor="<?= $anchor ?>" data-background="bg-trabzon.jpg">
-	<div class="container small" style="background-color: rgba(17, 12, 8, .7);">
-    <header>
-        <h2>Un sommet ?</h2>
-        <div class="stamp">
-            <span><i class="icon-cloud"></i> Instantanné</span>
-            <span><i class="icon-marker"></i> Tülü, Turquie</span>
-            <span><i class="icon-clock"></i> juin 2015</span>
-        </div>
-        <div class="icon-cancel"></div>
-    </header>
-    <div class="content column">
-        <p>Je viens de manger deux poissons fris et de comprendre pourquoi je ne me sentais pas bien. Je suis à 1800m d’altitude et je viens juste de descendre une bonne partie du col. J’étais bien plus haut tout à l’heure quand j’ai discuté une bonne heure avec les bergers nomades au sommet.</p>
-        <p>Bon, je repars tranquillement vers Trabzon en espérant que la route soit correcte !</p>
-    </div>
-	</div>
+<section class="section kazakh" data-anchor="<?= $anchor ?>" data-background="kazakh/bg-bateau.jpg">
+	<div id="p-cematinla" class="player text-center medium" style="background-color: rgba(2, 2, 0, .7);">
+        <audio class="audio" title="Il fait chaud ici" preload="auto">
+                <source src="media/audio/kazakh.mp3" type="audio/mp3">
+        </audio>
+    </div> 
+
+    <script>
+        
+    function f_3_2_deserts(section, anchorLink){
+        section = section || 'main';
+        var player = $('.audioplayer', section);
+
+        if(typeof player[0].tl === 'undefined') {
+            
+            tl = player[0].tl = new TimelineLite();
+            tl.pause()
+            .add(function() { changeBackground('kazakh/bg-bateau.jpg','kazakh/bg-desert2.jpg',anchorLink) }, 0.1)
+            .add(function() { changeBackground('kazakh/bg-desert2.jpg','kazakh/bg-desert3.jpg',anchorLink) }, 9)
+            .add(function() { changeBackground('kazakh/bg-desert3.jpg','kazakh/bg-desert4.jpg',anchorLink) }, 16)
+            .add(function() { changeBackground('kazakh/bg-desert4.jpg','kazakh/bg-desert5.jpg',anchorLink) }, 22)
+            .add(function() { changeBackground('kazakh/bg-desert5.jpg','kazakh/bg-desert6.jpg',anchorLink) }, 28)
+            .add(function() { changeBackground('kazakh/bg-desert6.jpg','kazakh/bg-desert7.jpg',anchorLink) }, 35)
+            .add(function() { changeBackground('kazakh/bg-desert7.jpg','kazakh/bg-desert8.jpg',anchorLink) }, 42)
+            .add(function() { changeBackground('kazakh/bg-desert8.jpg','kazakh/bg-desert9.jpg',anchorLink) }, 50)
+            .add(function() { changeBackground('kazakh/bg-desert9.jpg') }, 62);
+
+        }
+
+    };
+
+    </script>
 </section>
