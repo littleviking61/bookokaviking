@@ -55,8 +55,8 @@
                 <div class="content column">
                     <p>Le jour même de mon expulsion, juste après être sortie du bureau j'appelle et on m'annonce qu'il y a un bateau qui part le soir pour Aktau au Kazakhstan.
                     <p>Wouhouuuuuu !</p>
-                    <p>Au port je rencontre Emma, elle est partie d'angleterre et souhaite rejoindre le Kirgizstan avec son Vespa. Nous partagerons la cabine dans le bateau pendant deux nuits. Je vous épargne les invitations douteuse qu'elle a recu du capitaine et de toute la joyeuse bande de marin</p>
-                    <p>Moi j'étais au ange, j'avais enfin quitter ce pays.</p>
+                    <p>Au port je rencontre Emma, elle est partie d'angleterre et souhaite rejoindre le Kirgizstan avec son Vespa. Nous partagerons la cabine dans le bateau pendant deux nuits. Je vous épargne les invitations douteuses qu'elle a recu du capitaine et de toute la joyeuse bande de marins</p>
+                    <p>Moi j'étais aux anges, j'avais enfin quitté ce pays.</p>
                 </div>
             </div>
         </div>

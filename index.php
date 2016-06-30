@@ -53,6 +53,10 @@
 						['Déserts','deserts'],
 						['La famille','famille'],
 						['Des scorpions','scorpion'],
+						['Urganch','urganch'],
+						['Boukhara','boukhara'],
+						['Boysun','boysun'],
+						['La traversée des déserts','topamir'],
 					]
 				]
 			]
