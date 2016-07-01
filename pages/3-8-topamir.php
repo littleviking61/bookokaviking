@@ -4,26 +4,32 @@
             <div class="talks-container">
                 <div class="title"><h4>De Aktau à Dushanbe</h4><small>Vidéo commentée</small></div>
                 <div class="talks">
-                    <div class="talk"><small>L'aventurier viking : </small><p>Bonjour c'est l'aventurier viking. Voici la deuxième vidéo commentée du voyage</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Bon c'est pas la partie la plus palpitante mais c'était une expérience difficile et enrichissante</p></div>
                     <div class="talk"><small>L'aventurier viking : </small><p>Vous avez juste à cliquer sur lecture !</p></div>
-                    <div class="talk"><small>Le motarologue : </small><p>C'est trop naze ton truc !</p></div>
-                    <div class="talk"><small>Cigalou : </small><p>Ouai c'est clair c'est à chier</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Merci les gars :p</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Bon alors, les premières images c'est sur un château sur une colline à Ankara.</p></div>
-                    <div class="talk"><small>Adrian : </small><p>Je rêve d'aller en Cappadoce, c'était bien ?</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Trop beau, en plus je me suis bien amusé dans les chemins !</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Bon par contre y avait de l'orage dans l'air</p></div>
-                    <div class="talk"><small>Dom : </small><p>Oh punaise je me rappelle de cette belle descente pavée.</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Ouai, je suis passé vite fait, j'avais une averse au fesse.</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Après ça, j'ai tracé ma route vers Trabzon</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>C'était la période des élections alors il y avait des drapeaux partout !</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Là je suis arrivé en Georgie (la caméra a pas filmé entre les deux)</p></div>
-                    <div class="talk"><small>Cigalou : </small><p>Et on a le droit de doubler sur les lignes droites là-bas ?</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Pff, je ne pense pas...</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Là je suis dans un bled trop beau dans le nord de la Georgie en attendant mon visa pour l'Azerbaïdjan</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>Puis tout d'un coup j'ai fait 600 bornes et je débarque à Baku, au bord de la mer Caspienne, pour l'ouverture des 1ers jeux européens (chez eux)</p></div>
-                    <div class="talk"><small>Aliya : </small><p>;)</p></div>
-                    <div class="talk"><small>L'aventurier viking : </small><p>A partir de ce moment-là, je vais attendre un bateau pour traverser la mer.</p></div>
+                    <div class="talk"><small>Nico : </small><p>Bon on en est ou du coup là ?</p></div>
+                    <div class="talk"><small>Cigalou : </small><p>C'est avant ou après que tu rencontres la belle kazakh ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Euh :p</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>C'est après ! J'ai rencontré la kazakh à Baku avant de traverser la mer Caspienne.</p></div>
+                    <div class="talk"><small>Adrian : </small><p>Du coup la t'es arrivé de l'autre coté, pas loin de la mer d'Aral ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Oui c'est ça, à Aktau au Kazakhstan, au milieu du désert !</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Au début je roule avec Emma, la british en Vespa</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Et la c'est le couple de belges en acadiane</p></div>
+                    <div class="talk"><small>Nico : </small><p>La route est bien merdique nan ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Ouai, et en prime il fait plus de 45 degrée dans la journée.</p></div>
+                    <div class="talk"><small>Matthew : </small><p>Oh, I remember when we met you now.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Yes, Matthew sur la gauche est arrivée en Indonésie au moment où j'écris ces lignes</p></div>
+                    <div class="talk"><small>Cigalou : </small><p>C'est ici que tu dors avec les serpents et rencontre la famille uzbek ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Oui c'est là ! La vue était magnifique comme vous pouvez le voir</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Après je me dirige vers Boukhara, la route était en travaux sur plus de 500 km.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>C'est ici que je vais me baigner avec les locaux.</p></div>
+                    <div class="talk"><small>Nico : </small><p>Tu roulais combien d'heure par jour en général ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Entre 6 et 10 heures pour être précis, le maximum que j'ai fait c'est 13h.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>A partir de là je vais retrouver un peu de relief et de fraicheur.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Puis passer la frontière tadjik.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Direction Dushanbe puis la Pamir.</p></div>
+                    <div class="talk"><small>Cigalou : </small><p>C'est qui ce gars-là ? Ca t'arrivé souvent qu'on te pose des questions comme ça ?</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Oui souvent, c'est plaisant mais faut éviter qu'il soit trop nombreux par contre.</p></div>
+                    <div class="talk"><small>L'aventurier viking : </small><p>Bon voilà, la prochaine étape c'est la Pamir. À bientôt</p></div>
                 </div>
             </div>
         </div>
@@ -77,20 +83,26 @@
                     .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=5")
                     // explication
                     .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=8")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=16")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=11")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=14")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=18")
                     .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=22")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=30")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=26")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=31")
                     .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=36")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=43")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=49")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=53")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=61")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=63")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=66")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=70")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=42")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=46")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=52")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=58")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=65")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=72")
                     .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=76")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=80")
-                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=86")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=82")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=88")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=95")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=110")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=116")
+                    .to($(talks[p()]), 0.4, {maxHeight:150}, "start+=122")
                     ;
 
                 }
