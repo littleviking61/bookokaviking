@@ -1,4 +1,4 @@
-<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku2.jpg">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-baku2.jpg" data-play="5">
 	<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
     <header>
         <h2>Premier jour à Baku</h2>

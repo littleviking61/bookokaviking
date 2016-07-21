@@ -461,7 +461,11 @@ function initSoundCloudPlayer() {
 		});
 		
 		// create list of sound
-		addAllSound(widget);
+		//addAllSound(widget);
+		nav[0].tl2
+		.pause()
+		.to(soundcloudPlayer, 0.1, {opacity:1, display: 'block'})
+		.staggerFrom($('li', soundcloudPlayer), 0.09, { marginRight:'10px', opacity: 0}, 0.03);
 
 		widget.setVolume(0.3);
 
@@ -473,9 +477,11 @@ function initSoundCloudPlayer() {
 function addAllSound(widget) {
 	widget.getSounds(function(allsounds) {
 		var sounds = [];
+
 		$.each(allsounds, function(index, value) {
 			if(index > 15) return false;
 			// console.log(value);
+
 			sounds.push('<li><a href="#' + value.title + '" data-key="'+index+'" data-id="'+value.id+'">'+ value.title + '</a></li>');
 		});
 		$('.list-sounds', soundcloudPlayer).html(sounds);

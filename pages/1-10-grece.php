@@ -1,4 +1,4 @@
-<section class="section grece" data-anchor="<?= $anchor ?>" data-background="bg-grece.jpg" data-play="2">
+<section class="section grece" data-anchor="<?= $anchor ?>" data-background="bg-grece.jpg">
 	<div class="container medium" style="background-color: rgba(17, 12, 8, .7);">
 		        <header>
 		            <h2>Moussaka</h2>

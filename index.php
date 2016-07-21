@@ -113,7 +113,7 @@
 			</nav>
 
 			<div class="soundcloud-player">
-				<iframe id="soundcloud-player-iframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/162339580&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
+				<iframe id="soundcloud-player-iframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/162339580&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;enable_api=true"></iframe>
 			</div>
 
 		</header>
@@ -201,7 +201,7 @@
 			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			  ga('create', 'UA-69882311', 'auto');
+			  ga('create', 'UA-69882311-1', 'auto');
 			  ga('send', 'pageview');
 
 			  var analytics = true;

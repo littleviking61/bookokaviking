@@ -1,4 +1,4 @@
-<section class="section uzbek" data-anchor="<?= $anchor ?>" data-background="bg-uzbek.jpg">
+<section class="section uzbek" data-anchor="<?= $anchor ?>" data-background="bg-uzbek.jpg" data-play="6">
     <div class="slide" data-background="bg-uzbek.jpg">
         <div class="slide-content">
             <div class="container medium closed" style="background-color: rgba(17, 12, 8, .7);">

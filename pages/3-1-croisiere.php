@@ -1,4 +1,4 @@
-<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-bateau.jpg" data-play="5">
+<section class="section" data-anchor="<?= $anchor ?>" data-background="bg-bateau.jpg">
     <div class="player-youtube flex-column loading">
        <div class="player-container"><div id="playerBoat"></div></div>
     </div>
